@@ -1,6 +1,6 @@
 ---
 layout: null
-title: June 2013 - Today
+title: September 2014 - Today
 subtitle:
 image: "img/timeline/microsoft.jpg"
 ---
