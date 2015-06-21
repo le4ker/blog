@@ -1,0 +1,13 @@
+url: http://panossakkos.github.io
+
+# Site Settings
+title: Panos Sakkos
+description: "Blog of Panos Sakkos"
+keywords: "panos, sakkos, panos sakkos, MDCN, PwnMail, WriteRight, technology, computer science"
+# google-tracking-id:
+
+# Career Settings
+# Default career thumbnail image.
+career-img: "img/timeline/default.jpg"
+
+exclude: ["Rakefile", "LICENSE", "readme.markdown"]

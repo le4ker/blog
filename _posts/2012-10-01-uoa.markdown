@@ -1,0 +1,7 @@
+---
+layout: null
+title: October 2012 - August 2014
+subtitle:
+image: "img/timeline/uoa.jpg"
+---
+Master studies @ <a href="http://www.di.uoa.gr/eng" target="_blank">Department of Informatics and Telecommunications</a> on Software Engineering + <a href="https://scholar.google.com/citations?user=UtV6LFYAAAAJ&hl=en&oi=ao" target="_blank">Machine Learning researcher</a> @ <a href="http://kddlab.di.uoa.gr/" target="_blank">KDD</a> lab
