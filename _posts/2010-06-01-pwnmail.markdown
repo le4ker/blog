@@ -1,6 +1,6 @@
 ---
 layout: null
-title: Jun 2010 - February 2011
+title: June 2010 - November 2010
 subtitle:
 image: "img/timeline/pwnmail.jpg"
 ---
