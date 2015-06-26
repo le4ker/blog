@@ -1,7 +1,0 @@
----
-layout: null
-title: October 2007 - September 2011
-subtitle:
-image: "img/timeline/uoa.jpg"
----
-Bachelor studies @ <a href="http://www.di.uoa.gr/eng" target="_blank">Department of Informatics and Telecommunications</a> on Computer Science and Telecomunications

@@ -1,7 +1,0 @@
----
-layout: null
-title: October 2011 - September 2012
-subtitle:
-image: "img/timeline/cern.jpg"
----
-Security researcher @ <a href="http://www.cern.ch" target="_blank">CERN</a>, developed linux kernel extensions to prevent cyber attacks

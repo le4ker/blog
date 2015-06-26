@@ -1,7 +1,0 @@
----
-layout: null
-title: June 2010 - November 2010
-subtitle:
-image: "img/timeline/pwnmail.jpg"
----
-Released <a href="https://www.google.com/search?q=pwn+mail" target="_blank">Pwn Mail</a>, an iPhone app for spoofing emails. It served > 260,000 emails but it was discontinued after a legal threat by <strike>Steve Jobs</strike> a secretary of Steve Jobs
