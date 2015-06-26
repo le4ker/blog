@@ -5,11 +5,10 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" href="/index.html#page-top">
                     <i class="fa fa-play-circle"></i>  {{ site.title }}
                 </a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
@@ -19,13 +18,12 @@
                     </li>
 
                     {% for page in site.pages | sort: "title" %}
-                      {% unless page.url == "/index.html" or page.url == "/blog.html" %}
-                        <li>
-                          <a class="page-scroll" href="#{{ page.title }}">{{ page.title }}</a>
-                        </li>
-                      {% endunless %}
+                    {% unless page.url == "/index.html" or page.url == "/b-first-post.html"%}
+                    <li>
+                        <a class="page-scroll" href="/index.html#{{ page.title }}">{{ page.title }}</a>
+                    </li>
+                    {% endunless %}
                     {% endfor %}
-
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
