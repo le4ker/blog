@@ -1,12 +1,12 @@
 url: http://panossakkos.github.io
 
-# Site Settings
+# Site settings
 title: "{ Panos Sakkos }"
 description: "Panos Sakkos"
-keywords: "panos, sakkos, panos sakkos, MDCN, Pwn Mail, WriteRight, technology, computer science"
+keywords: "panos, sakkos, panos sakkos, technology, computer science, Pwn Mail, WriteRight, UoA, di, CERN, MDCN, Microsoft"
 google-tracking-id: UA-35880426-3
 
-# Navigation Bar Pages
+# Navigation bar links
 
 pages_list:
   About: 'about'
@@ -14,11 +14,12 @@ pages_list:
   Career: 'career'
   Contact: 'contact'
 
-# Career Settings
+# Career variables
+
 # Default career thumbnail image.
 career-img: "img/timeline/default.jpg"
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Social networks variables (many more available: facebook, flickr, dribbble, pinterest, instagram, tumblr etc.)
 social:
   - title: rss
     url: /feed.xml
@@ -31,4 +32,5 @@ social:
   - title: soundcloud
     url: https://soundcloud.com/psakkos/
 
+# Exclusion list from the generated _site
 exclude: ["Rakefile", "LICENSE", "readme.markdown"]
