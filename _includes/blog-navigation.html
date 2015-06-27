@@ -21,7 +21,7 @@
                     {% for page in site.pages_list %}
   		      {% if page[0] == "Blog" %}
                         <li>
-                          <a class="page-scroll" href="/blog.html"> {{ page[0] }} </a>
+                          <a class="page-scroll" href="/blog.html#{{ page[1] }}"> {{ page[0] }} </a>
                         </li>		        
 		      {% else %}
                         <li>
