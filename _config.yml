@@ -1,12 +1,15 @@
 url: http://panossakkos.github.io
 
 # Site settings
+
 title: "{ Panos Sakkos }"
 description: "Panos Sakkos"
 keywords: "panos, sakkos, panos sakkos, technology, computer science, Pwn Mail, WriteRight, UoA, di, CERN, MDCN, Microsoft"
 google-tracking-id: UA-35880426-3
 
 # Navigation bar links
+# Blog link in the blog and post pages will point to the blog.html#blog
+# In the default page it will point to the preview of the last post
 
 pages_list:
   About: 'about'
