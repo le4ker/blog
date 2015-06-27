@@ -28,7 +28,7 @@
 
                 {% assign post = site.posts.last %}
 		<h4><strong>{{ post.date | date: "%B %e, %Y" }} <small>. {{ post.category }} .</small> {{ post.title }}</strong></h4>
-		{{ post.content | truncatewords: 50  | markdownify }}
+		{{ post.content | truncatewords: 128  | markdownify }}
 	        <a href="/blog.html"><h4>Read more</h4></a>
               </div>
           </div>
