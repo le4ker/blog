@@ -1,0 +1,8 @@
+---
+layout: post
+title: Blogging Like a Hacker
+category: tech
+---
+I don't remember exactly how many blogs I created the last years, but this one feels like the one. I had at least one blog on Tumblr and three or four on wordpress. On Tumbrl I didn't like its brand, because it didn't fit my vision about my blog. I wanted a personal blog, where I could share my thoughts on technology but at the same time, keep it open to explore new areas. For example, at some point I might blog about music or personal thoughts on a viral and important matter, you name it. Tumblr wasn't the right place for this purpose. On the other hand, wordpress has a more elastic brand. You can use it for whatever purpose you want, but it was too complicated for me and of course too heavy. Moreover, migrating your blog was a pain in the ass. After creating and deleting several blogs, I gave up Wordpress. One week ago a friend told me about [Jekyll](jekyllrb.com) and I decided to give it a try. An easy decision, given my zero options at the time.
+
+First of all its origins are in GitHub, a company that I really appreciate and support. My personal opinion on GitHub is that they transformed Computer Science and Software Engineering, by improving significantly the day-to-day interaction with the best version control system into a user experience. Git is complicated and powerfull and GitHub's client Apps made it easy and playfull to use. 
