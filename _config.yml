@@ -6,6 +6,14 @@ description: "Panos Sakkos"
 keywords: "panos, sakkos, panos sakkos, MDCN, Pwn Mail, WriteRight, technology, computer science"
 google-tracking-id: UA-35880426-3
 
+# Navigation Bar Pages
+
+pages_list:
+  About: 'about'
+  Blog: 'blog'
+  Career: 'career'
+  Contact: 'contact'
+
 # Career Settings
 # Default career thumbnail image.
 career-img: "img/timeline/default.jpg"

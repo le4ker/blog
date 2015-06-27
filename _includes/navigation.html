@@ -18,12 +18,10 @@
                         <a href="#page-top"></a>
                     </li>
 
-                    {% for page in site.pages | sort: "title" %}
-                      {% unless page.url == "/index.html" or page.url == "/blog.html" %}
+                    {% for page in site.pages_list %}
                         <li>
-                          <a class="page-scroll" href="#{{ page.title }}">{{ page.title }}</a>
+                          <a class="page-scroll" href="#{{ page[1] }}"> {{ page[0] }} </a>
                         </li>
-                      {% endunless %}
                     {% endfor %}
 
                 </ul>
