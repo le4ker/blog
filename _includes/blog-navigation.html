@@ -9,21 +9,23 @@
                     <i class="fa fa-play-circle"></i>  {{ site.title }}
                 </a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        <a href="/index.html#page-top"></a>
                     </li>
 
                     {% for page in site.pages | sort: "title" %}
-                    {% unless page.url == "/index.html" or page.url == "/b-first-post.html"%}
-                    <li>
-                        <a class="page-scroll" href="/index.html#{{ page.title }}">{{ page.title }}</a>
-                    </li>
-                    {% endunless %}
+                      {% unless page.url == "/index.html" or page.url == "/blog.html" %}
+                        <li>
+                          <a class="page-scroll" href="/index.html#{{ page.title }}">{{ page.title }}</a>
+                        </li>
+                      {% endunless %}
                     {% endfor %}
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

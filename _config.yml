@@ -10,4 +10,17 @@ google-tracking-id: UA-35880426-3
 # Default career thumbnail image.
 career-img: "img/timeline/default.jpg"
 
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: rss
+    url: /feed.xml
+  - title: github
+    url: http://github.com/PanosSakkos
+  - title: linkedin
+    url: http://no.linkedin.com/in/PanosSakkos
+  - title: youtube
+    url: http://youtube.com/c/PanosSakkos
+  - title: soundcloud
+    url: https://soundcloud.com/psakkos/
+
 exclude: ["Rakefile", "LICENSE", "readme.markdown"]
