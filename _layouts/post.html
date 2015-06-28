@@ -12,6 +12,7 @@
       <div class="col-lg-8 col-lg-offset-2">
 
         <h1><strong>{{ page.title }}</strong></h1>
+	<h5>{{ page.date | date: "%B %e, %Y" }} <small>. {{ page.category }} .</small> <a href="{{ site.url | append: page.url }}#disqus_thread">Comments</a> </h5>
 
 	{{ page.content | markdownify }}
 	
@@ -33,5 +34,7 @@
 
   {% include js.html %}
 
+  {% include disqus-comments.html %}
+    
   </body>
 </html>
