@@ -12,7 +12,7 @@
       <div class="col-lg-8 col-lg-offset-2">
 
         <h1><strong>{{ page.title }}</strong></h1>
-	<h5>{{ post.date | date_to_string }} <small>. {{ page.category }} .</small> <a href="{{ site.url | append: page.url }}#disqus_thread">Comments</a> </h5>
+	<h5>{{ page.date | date_to_string }} <small>. {{ page.category }} .</small> <a href="{{ site.url | append: page.url }}#disqus_thread">Comments</a> </h5>
 
 	{{ page.content | markdownify }}
 	
