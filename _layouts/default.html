@@ -10,92 +10,25 @@
   {% include header.html %}
 
   {% for page in site.pages %}
+  
     {% if page.section-type == "about" %}
-      <!-- {{ page.title }} Section -->
-      <section id="{{ page.title }}" class="container content-section text-center">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2">
 
-                {{ page.content | markdownify }}
+      {% include about.html %}
 
-	      </div>
-          </div>
-      </section>
     {% elsif page.section-type == "blog" %}
-      <!-- {{ page.title }} Section -->
-      <section id="{{ page.title }}" class="container content-section text-center">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
 
-              {{ page.content | markdownify }}
+      {% include blog.html %}
 
-              {% assign post = site.posts.first %}
-	      <h4><strong>{{ post.date | date_to_string }}</strong> <small>. {{ post.category }} .</small> <a href="{{ post.url }}"> <strong>{{ post.title }} </a> </strong> <small><a href="{{ post.url }}#disqus_thread">Comments</a></small></h4>
-	      {{ post.content | truncatewords: 128  | markdownify }}
-
-	      <a href="/blog.html"><h4>Read more</h4></a>
-
-            </div>
-          </div>
-      </section>
     {% elsif page.section-type == "career" %}
-      <!-- {{ page.title }} Section -->
-      <section id="{{ page.title }}" class="container content-section text-center">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2">
-                {{ page.content | markdownify }}
-                <ul class="timeline">
-                {% for event in site.events %} <!-- for each site.events -->
-                  {% assign loopindex = forloop.index | modulo: 2 %}
-                  {% capture class %}
-                    {% if loopindex == 0 %}
-                      timeline-inverted
-                    {% endif %}
-                  {% endcapture %}
 
-                  <li class="{{ class }}">
-                      <div class="timeline-image">
-                          <img class="img-circle img-responsive" src="{{ site.baseurl }}/{{ event.image }}" alt="">
-                      </div>
-                      <div class="timeline-panel">
-                          <div class="timeline-heading">
-                              <h4>{{ event.date }}</h4>
-                          </div>
-                          <div class="timeline-body">
-                              <p class="text-muted">{{ event.description | markdownify }}</p>
-                          </div>
-                      </div>
-                  </li>
-                {% endfor %}
+      {% include career.html %}
 
-                <li class="timeline-inverted">
-                  <div class="timeline-image">
-                    <img class="img-circle img-responsive" src="{{ site.baseurl }}/{{ site.career-img }}" alt="">
-                  </div>
-                </li>   
-
-                </ul>
-              </div>
-          </div>
-      </section>
     {% elsif page.section-type == "contact" %}
-      <!-- {{ page.title }} Section -->
-      <section id="{{ page.title }}" class="container content-section text-center">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2">
 
-                {{ page.content | markdownify }}
+      {% include contact.html %}
 
-                {% if page.email %}
-                  <p><a href="mailto:{{ page.email }}">{{ page.email }}</a></p>
-                {% endif %}
-
-		{% include social-buttons.html %}
-		
-              </div>
-          </div>
-      </section>
     {% endif %}
+
   {% endfor %}
 
   {% include footer.html %}
