@@ -1,13 +1,14 @@
-url: http://panossakkos.github.io
+url: "http://panossakkos.github.io"
 
 # Site settings
 
 title: "{ Panos Sakkos }"
 description: "Blog and website of Panos Sakkos, blogging mainly for tech. Opinions expressed are mine."
 keywords: "panos, sakkos, panos sakkos, technology, computer science, Pwn Mail, WriteRight, UoA, di, CERN, MDCN, Microsoft"
-google-tracking-id: UA-35880426-3
 favicon: "/img/favicon.ico"
 black-favicon: "/img/black-lab-glass.ico"
+google-tracking-id: "UA-35880426-3"
+disqus-shortname: "panossakkos"
 
 # Navigation bar links
 # Blog link in the blog and post pages will point to the blog.html#blog
@@ -46,16 +47,16 @@ career-img: "img/career/default.jpg"
 
 # Social networks variables (many more available: facebook, flickr, dribbble, pinterest, instagram, tumblr etc.)
 social:
-  - title: rss
-    url: /feed.xml
-  - title: github
-    url: http://github.com/PanosSakkos
-  - title: linkedin
-    url: http://no.linkedin.com/in/PanosSakkos
-  - title: youtube
-    url: http://youtube.com/c/PanosSakkos
-  - title: soundcloud
-    url: https://soundcloud.com/psakkos/
+  - title: "rss"
+    url: "/feed.xml"
+  - title: "github"
+    url: "http://github.com/PanosSakkos"
+  - title: "linkedin"
+    url: "http://no.linkedin.com/in/PanosSakkos"
+  - title: "youtube"
+    url: "http://youtube.com/c/PanosSakkos"
+  - title: "soundcloud"
+    url: "https://soundcloud.com/psakkos/"
 
 # Exclusion list from the generated _site
 exclude: ["Rakefile", "LICENSE", "readme.markdown"]
