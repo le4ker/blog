@@ -6,6 +6,8 @@ title: "{ Panos Sakkos }"
 description: "Blog and website of Panos Sakkos, blogging mainly for tech. Opinions expressed are mine."
 keywords: "panos, sakkos, panos sakkos, technology, computer science, Pwn Mail, WriteRight, UoA, di, CERN, MDCN, Microsoft"
 google-tracking-id: UA-35880426-3
+favicon: "/img/favicon.ico"
+black-favicon: "/img/black-lab-glass.ico"
 
 # Navigation bar links
 # Blog link in the blog and post pages will point to the blog.html#blog
