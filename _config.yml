@@ -28,7 +28,7 @@ events:
     description: "Master studies @ <a href=\"http://www.di.uoa.gr/eng\" target=\"_blank\">Department of Informatics and Telecommunications</a> on Software Engineering + <a href=\"https://scholar.google.com/citations?user=UtV6LFYAAAAJ&amp;hl=en&amp;oi=ao\" target=\"_blank\">Machine Learning researcher</a> @ <a href=\"http://kddlab.di.uoa.gr\" target=\"_blank\">KDD</a> lab"
   - image: "img/career/cern.jpg"
     date: "October 2011 - September 2012"
-    description: "Security researcher @ <a href=\"http://www.cern.ch\" target=\"_blank\">CERN</a>, developed linux kernel extensions to prevent cyber attacks</"
+    description: "Security researcher @ <a href=\"http://www.cern.ch\" target=\"_blank\">CERN</a>, developed linux kernel extensions to prevent cyber attacks"
   - image: "img/career/writeright.jpg"
     date: "August 2011 - Today"
     description: "Released <a href=\"https://play.google.com/store/apps/details?id=panos.sakkos.softkeyboard.writeright\" target=\"_blank\">WriteRight</a>, an adaptive S/W keyboard for Android devices, which  shrinks the unlikely keys to tap next. Currently it holds &gt; 9,000 downloads"
