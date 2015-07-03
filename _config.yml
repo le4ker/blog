@@ -1,7 +1,6 @@
-url: "http://panossakkos.github.io"
-
 # Site settings
 
+url: "http://panossakkos.github.io"
 title: "{ Panos Sakkos }"
 description: "Blog and website of Panos Sakkos, blogging mainly for tech. Opinions expressed are mine."
 keywords: "panos, sakkos, panos sakkos, technology, computer science, Pwn Mail, WriteRight, UoA, di, CERN, MDCN, Microsoft"
@@ -20,6 +19,10 @@ pages_list:
   Career: 'career'
   Contact: 'contact'
 
+# Blog variables
+
+post-preview-words: 128
+  
 # Career variables
 
 events:
