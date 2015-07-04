@@ -1,3 +1,13 @@
+.img-me {
+    width: 150px;
+    height: 150px;
+    border: 7px solid #f1f1f1;
+    border-radius: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #f1f1f1;
+}
+
 .timeline {
     position: relative;
     padding: 0;

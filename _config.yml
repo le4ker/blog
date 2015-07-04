@@ -19,6 +19,10 @@ pages_list:
   Career: 'career'
   Contact: 'contact'
 
+# Abaout variables
+
+me-img: "img/me.jpg"
+
 # Blog variables
 
 post-preview-words: 128
