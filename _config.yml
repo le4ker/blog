@@ -19,9 +19,11 @@ pages_list:
   Career: 'career'
   Contact: 'contact'
 
-# Abaout variables
+background-img: "/img/intro-bg.jpg"
 
-me-img: "img/me.jpg"
+# About variables
+
+me-img: "/img/me.jpg"
 
 # Blog variables
 
