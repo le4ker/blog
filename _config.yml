@@ -68,4 +68,4 @@ social:
     url: "https://soundcloud.com/psakkos/"
 
 # Exclusion list from the generated _site
-exclude: ["Rakefile", "LICENSE", "readme.markdown"]
+exclude: ["Rakefile", "LICENSE", "readme.markdown", "vendor"]
