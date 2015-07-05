@@ -1,3 +1,5 @@
+https://travis-ci.org/PanosSakkos/panossakkos.github.io.svg?branch=master
+
 # { Panos Sakkos }
 
 Website and Blog of [Panos Sakkos](http://panossakkos.github.io), built with [jekyll](jekyllrb.com)
