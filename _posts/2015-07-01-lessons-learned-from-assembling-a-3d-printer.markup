@@ -2,6 +2,7 @@
 layout: post
 title: Software Lessons Learned From Assembling a 3D Printer
 category: tech
+tags: [ 'software', 'hardware' ]
 ---
 A few weeks ago the Garage team of my office got a little present, a<strike>n IKEA</strike> <a href="http://www.vertex3dprinter.eu/" target="_blank">DIY 3D printer</a>. It was gazillion of bolts, nuts, wires, motors, rods and tiny plastic pieces which I couldn't imagine that they could assemble a 3D printer. I got cold feet, believing that we will miss a piece and everything will collapse in front of us. Whenever I have dealt with hardware so far, I was always frightened. You don't call methods, you screw bolts, and they have to be screwed properly, not too tight and not too loose. It's not uncommon that testing will not be applicable, you just assemble, hit a big button and if every component works, then you call it a day. You can't copy-paste hardware, you don't have <strike>a versioning control system</strike> git to undo steps in an instance, you are on your own and mistakes can literally make your project fall apart. And on top of these, we shouldn't touch the rods with bare hands, because they would corrode. Bottom line, hardware always made me feel nervous and from the point of creating personal pet-projects, suddenly I had to collaborate with others in order to build a pyramid. It was the similar feeling that you get when you start at your first job after finishing your studies.
 

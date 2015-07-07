@@ -2,6 +2,7 @@
 layout: post
 title: "{ Personal } Jekyll Theme"
 category: tech
+tags: [ 'jekyll' ]
 ---
 As I <a href="http://panossakkos.github.io/tech/2015/06/27/blogging-like-a-hacker.html" target="_blank">wrote</a> before, I wanted to open source the current theme because I believe that it adds value to the existing Jekyll themes. Also, I feel that I owe it back to the community, because without the existing code that I forked, I would never have the current blog. And I love this blog.
 

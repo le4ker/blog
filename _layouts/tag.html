@@ -11,20 +11,19 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
 
-        <h1><strong>{{ page.title }}</strong></h1>
-      	<h4><strong>{{ page.date | date_to_string }}</strong>
-          <small> . {{ page.category }} . <a href="{{ site.url }}{{ page.url }}#disqus_thread">Comments</a>
-          {% for tag in page.tags %}
-          <a href="/tags/{{tag}}.html">#{{ tag }}</a>
-          {% endfor %}
-          </small>
-        </h4>
+        <ul>
 
-      	{{ page.content | markdownify }}
-
-      	{% include share.html %}
-
-        {% include comments.html %}
+        <div id="archives">
+          <div>
+            {% assign tag = page.title %}
+            <h3 id="#{{ tag }}">#{{ tag }}</h3>
+            {% for post in site.posts %}
+              {% if post.tags contains tag %}
+                <h4><strong>{{ post.date | date_to_string }}</strong> <small>. {{ post.category }} .</small> <a href="{{ post.url }}"> <strong>{{ post.title }} </a> </strong> <small><a href="{{ site.url }}{{post.url }}#disqus_thread">Comments</a></small></h4>
+              {% endif %}
+            {% endfor %}
+            </div>
+        </div>
 
       </div>
     </div>
@@ -37,10 +36,10 @@
       </div>
     </div>
   </section>
-  
+
   {% include footer.html %}
 
   {% include js.html %}
-    
-  </body>
+
+</body>
 </html>

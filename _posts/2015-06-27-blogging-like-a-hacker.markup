@@ -2,6 +2,7 @@
 layout: post
 title: Blogging Like a Hacker
 category: tech
+tags: [ 'jekyll' ]
 ---
 I don't remember exactly how many blogs I created the past years, but this one feels like the one. I had one blog on Tumblr and three or four on Wordpress. Tumblr's brand didn't align with my vision of  my blog. I wanted a truly personal blog. A blog where I could share my thoughts mainly on technology but at the same time, keep it open to explore other areas. For example, at some point I might wanted to blog about music or personal thoughts on a viral and important matter, you name it. Tumblr wasn't the right place for this purpose because its brand is purely recreational. On the other hand, Wordpress had a more elastic brand. You can use it for whatever purpose you want, but it was too complicated for me and of course the the output blog was too heavy, given how little control you have on the generated code. Moreover, migrating a blog was a pain in the ass. After creating and deleting several blogs, I gave up Wordpress. One week ago a <a href="http://dkotzias.com" target="_blank">friend<a/> told me about <a href="http://www.jekyllrb.com" target="_blank">Jekyll</a> and I decided to give it a try. An easy decision, given my zero options at the time.
 
