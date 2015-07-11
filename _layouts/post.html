@@ -15,7 +15,7 @@
       	<h4><strong>{{ page.date | date_to_string }}</strong>
           <small> . {{ page.category }} . <a href="{{ page.url }}#disqus_thread">Comments</a><p/>
           {% for tag in page.tags %}
-            <a href="/tags/{{tag}}.html">#{{ tag }}</a>
+            <a href="/tags/{{ tag }}.html">#{{ tag }}</a>
           {% endfor %}
           </small>
         </h4>
