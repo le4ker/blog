@@ -1,10 +1,13 @@
 #!/bin/bash
 
+echo "Generating categories..."
 ruby ./scripts/generate-categories
+echo "Generating posts..."
 ruby ./scripts/generate-tags
 
-git add .
-git commit -m "update"
-git push origin
+echo "Building site..."
+eval "$(rbenv init - zsh)"
+JEKYLL_ENV=production jekyll build
 
+echo "Publishing..."
 scp -r _site/* root@134.209.239.131:/usr/share/nginx/html
