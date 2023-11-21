@@ -1,0 +1,103 @@
+<!-- HEAD Start -->
+
+<head>
+  {% include force-https.html %}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{site.description}}" />
+  <meta name="author" content="{{site.author}}" />
+  <meta name="keywords" content="{{site.keywords}}" />
+  <link
+    rel="canonical"
+    href="{{page.url | replace:'index.html','' | prepend: site.baseurl}}"
+  />
+  <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  />
+
+  <!-- Custom CSS -->
+  <link href="/css/grayscale.css" rel="stylesheet" />
+
+  {% if page.section-type == "index" %}
+  <link href="/css/timeline.css" rel="stylesheet" />
+  {% endif %} {% if page.url == "/404.html" | prepend: {{site.baseurl}} %}
+  <link href="/css/error.css" rel="stylesheet" />
+  {% endif %}
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/img/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/img/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/img/favicon-16x16.png"
+  />
+  <link rel="manifest" href="/img/site.webmanifest" />
+
+  <!-- Custom Fonts -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+  />
+
+  <link rel="stylesheet" href="/css/rrssb.css" />
+
+  {% include syntax-highlight.html %} {% if jekyll.environment == "production"
+  %} {% if site.google-tracking-id %}
+
+  <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+  <script
+    type="text/javascript"
+    src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
+    charset="UTF-8"
+  ></script>
+  <script type="text/javascript" charset="UTF-8">
+    document.addEventListener("DOMContentLoaded", function () {
+      cookieconsent.run({
+        notice_banner_type: "simple",
+        consent_type: "express",
+        palette: "light",
+        language: "en",
+        page_load_consent_levels: ["strictly-necessary"],
+        notice_banner_reject_button_hide: false,
+        preferences_center_close_button_hide: false,
+        page_refresh_confirmation_buttons: false,
+        website_name: "le4ker.me",
+      });
+    });
+  </script>
+
+  <!-- Google Analytics -->
+  <script
+    type="text/plain"
+    data-cookie-consent="tracking"
+    async
+    src="https://www.googletagmanager.com/gtag/js?id={{site.google-tracking-id}}"
+  ></script>
+  <script type="text/plain" data-cookie-consent="tracking">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{site.google-tracking-id}}');
+  </script>
+
+  <!-- Google Analytics -->
+
+  {% endif %} {% endif %}
+</head>
+
+<!-- HEAD End -->

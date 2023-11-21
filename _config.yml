@@ -1,0 +1,120 @@
+# Site settings
+
+url: "https://le4ker.me"
+environment: prod
+baseurl: ""
+force-https: True
+google-tracking-id: "G-7FXE996VCB"
+syntax-highlight: True
+# Sections shown in the index page
+pages_list:
+  About: "about"
+  Blog: "latest-post"
+  Timeline: "timeline"
+  Contact: "contact"
+#############
+# HTML Head #
+#############
+author: "Panos Sakkos"
+lang: "en"
+title: "{ Panos Sakkos }"
+short-title: "{ Panos }"
+description: "Writing about cybersecurity, privacy and technology."
+keywords: "panos, sakkos, startups, security, privacy, open source, encryption"
+################
+# Intro layout #
+################
+background-img: ""
+me-img: "/img/me.jpg"
+##############################
+# Dynamic Text on the header #
+##############################
+dynamic-typing: True
+loop: False
+loop-count: 1
+type-speed: 3
+start-delay: 2000 # Default 200
+delete-delay: 50000 # Default 5000
+lines:
+  - text: "Protecting what you ❤️"
+########
+# Blog #
+########
+post-preview-words: 128
+paginate: 12
+email-share: True
+linkedin-share: True
+reddit-share: True
+twitter-share: True
+fb-share: True
+vkontakte-share: True
+disqus-shortname: "panossakkos"
+###############
+# Life Events #
+###############
+events:
+  - image: "/img/career/panther.png"
+    date: "October 2021 - today"
+    description: 'Engineering Manager @ <a href="https://panther.com" target="_blank">Panther</a>, Ingestion & Threat Research'
+  - image: "/img/career/orfium.png"
+    date: "June 2021 - September 2022"
+    description: 'Engineering Manager @ <a href="https://orfium.com" target="_blank">Orfium</a>, Ingestion'
+  - image: "/img/career/plum.jpeg"
+    date: "November 2019 - May 2021"
+    description: 'Tech Lead @ <a href="https://withplum.com" target="_blank">Plum Fintech</a>, Payments'
+  - image: "/img/career/blocktopus.png"
+    date: "November 2017 - October 2019"
+    description: 'Founder @ <a href="https://medium.com/blocktopus" target="_blank">Blocktopus</a>, a Plug and Play KYC/AML for Ethereum Smart Contracts'
+  - image: "/img/career/microsoft.png"
+    date: "October 2014 - October 2017"
+    description: 'Security Software Engineer @ Microsoft, <a href="https://www.office.com/" target="_blank">Office 365</a>'
+  - image: "/img/career/cern.jpg"
+    date: "October 2011 - September 2012"
+    description: 'Computer Security Researcher @ <a href="https://www.cern.ch" target="_blank">CERN</a>, Linux Kernel Hardening'
+  - image: "/img/career/pwnmail.jpg"
+    date: "June 2010 - September 2010"
+    description: 'Built <a href="https://www.google.com/search?q=pwn+mail" target="_blank">Pwn Mail</a>, a Cydia iPhone app for spoofing emails. It served more than 260,000 emails but it was discontinued after a legal threat by Steve Jobs'
+  - image: "/img/career/uoa.jpeg"
+    date: "October 2007 - September 2014"
+    description: '<a href="https://scholar.google.com/citations?user=UtV6LFYAAAAJ" target="_blank">Machine Learning researcher</a> @ <a href="http://kddlab.di.uoa.gr" target="_blank">KDD lab</a><br><br>Master studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Software Engineering<br><br>Bachelor studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Computer Science and Telecomunications'
+# First image of the Career timeline
+timeline-img: "/img/career/default.png"
+##################
+# Contact layout #
+##################
+email: "panos.sakkos@gmail.com"
+################
+# Author Blurb #
+################
+
+# The author blurb goes underneath blog posts.
+# This works best when your author blurb image has a transparent background, or matches your site background color.
+
+# if the author_blurb is not set, then this feature is skipped
+author_blurb: "A creative thinker who is not afraid to challenge the norm. His diverse track record includes failed startups, approved patents and scientific publications in top conferences and journals. On a mission to protect what matters most to you."
+author_blurb_image: "/img/me.jpg"
+##################
+# Social Buttons #
+##################
+social:
+  - title: "github"
+    url: "https://github.com/le4ker"
+  - title: "linkedin"
+    url: "https://www.linkedin.com/in/psakkos/"
+  - title: "twitter"
+    url: "https://twitter.com/le4ker"
+  - title: "rss"
+    url: "/feed.xml"
+################################################################################
+
+# Tread carefully if you want to change the variables bellow this point!
+
+# Pagination path
+paginate_path: "blog/page:num"
+# Enable minification SASS
+sass:
+  style: compressed
+# Exclusion list from the generated _site
+exclude: ["Rakefile", "LICENSE", "readme.markdown", "vendor", "scripts"]
+plugins:
+  - jekyll-paginate

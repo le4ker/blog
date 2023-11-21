@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ruby ./scripts/generate-categories
+ruby ./scripts/generate-tags
+
+git add .
+git commit -m "update"
+git push origin
+
+scp -r _site/* root@134.209.239.131:/usr/share/nginx/html
