@@ -36,7 +36,7 @@ type-speed: 3
 start-delay: 2000 # Default 200
 delete-delay: 50000 # Default 5000
 lines:
-  - text: "Protecting what you ❤️"
+  - text: "Protecting what you 🖤"
 ########
 # Blog #
 ########
