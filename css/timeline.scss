@@ -1,6 +1,9 @@
 ---
 ---
 
+@import "variables";
+@import "mixins";
+
 .timeline {
   position: relative;
   padding: 0;
@@ -15,7 +18,7 @@
   left: 40px;
   width: 2px;
   margin-left: -1.5px;
-  background-color: #eee8d5;
+  background-color: $background-color;
 }
 
 .timeline > li {
@@ -63,11 +66,11 @@
   width: 80px;
   height: 80px;
   margin-left: 0;
-  border: 7px solid #eee8d5;
+  border: 7px solid $background-color;
   border-radius: 100%;
   text-align: center;
   color: #f2f2f2;
-  background-color: #eee8d5;
+  background-color: $background-color;
 }
 
 .img-me {
@@ -76,11 +79,11 @@
   width: 100px;
   height: 100px;
   margin-left: 0;
-  border: 7px solid #eee8d5;
+  border: 7px solid $background-color;
   border-radius: 100%;
   text-align: center;
   color: #f2f2f2;
-  background-color: #eee8d5;
+  background-color: $background-color;
 }
 
 .timeline > li .timeline-image h4 {
