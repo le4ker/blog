@@ -27,19 +27,64 @@ Returning to the decryption diagram, if we flip a bit in a ciphertext block, we 
 
 However, what are the consequences of flipping a bit in the final plaintext? They are numerous! For example, suppose a server sends an encrypted cookie to the client:
 
+```text
 "admin=0"
+```
 
 The first mistake was giving authorization control to the client. When the client can manipulate information, including ciphertexts, security vulnerabilities arise.
 
 For instance, flipping the 7th byte of the IV (in cases where the output ciphertext is only two blocks long) allows us to flip the 7th bit of the first block of plaintext computed by the server. The result is:
 
+```text
 "admin=1"
+```
 
 In case the server doesn't authenticate the ciphertext that we submit, by using a MAC, and neglects to carry out additional authorization control on its side, we can escalate privileges and become an admin ourselves!
 
 Now let's examine how simple it is to execute this attack:
 
-<script src="https://gist.github.com/le4ker/2eceadbd3f64bf62d252f720bbb226d3.js"></script>
+```ruby
+require 'openssl'
+
+class UnauthenticatedEncryption
+
+  def encrypt(plaintext)
+
+    cipher = OpenSSL::Cipher::AES.new(256, :CBC)
+    cipher.encrypt
+    @key = cipher.random_key
+    iv = cipher.random_iv
+    ciphertext = cipher.update(plaintext) + cipher.final
+
+    return iv + ciphertext
+
+  end
+
+  def decrypt(ciphertext)
+
+    decipher = OpenSSL::Cipher::AES.new(256, :CBC)
+    decipher.decrypt
+    decipher.key = @key
+    decipher.iv = ciphertext[0..15]
+    plaintext = decipher.update(ciphertext[16..(ciphertext.length - 1)]) + decipher.final
+
+    return plaintext
+
+  end
+
+end
+
+plaintext = 'admin=0'
+
+unauthenticatedEncryption = UnauthenticatedEncryption.new()
+intercepted_ciphertext = unauthenticatedEncryption.encrypt(plaintext)
+intercepted_ciphertext[6] = (intercepted_ciphertext.bytes[6] ^ 0x01).chr
+
+new_plaintext = unauthenticatedEncryption.decrypt(intercepted_ciphertext)
+
+puts new_plaintext
+# admin=1
+```
 
 One might assume that flipping only one bit is easy, but flipping multiple bits to transform a "false" into a "true" is also a simple task. The process merely involves flipping additional bits.
 
