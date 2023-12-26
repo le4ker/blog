@@ -1,32 +1,25 @@
-require "yaml"
+require 'yaml'
 
-POSTS_DIR = "_posts/"
-TAGS_DIR = "tags/"
+POSTS_DIR = '_posts/'
+TAGS_DIR = 'tags/'
 
 Dir.foreach(POSTS_DIR) do |post|
+  next if ['.', '..', '.DS_Store'].include?(post)
 
-  if post == "." or
-      post == ".." or
-      post == ".DS_Store"
-    next
-  end
-
-  postYaml = YAML.load_file(POSTS_DIR + post)
-  unless (postYaml["tags"] == nil)
-    postYaml["tags"].each { |tag|
-
+  post_yaml = YAML.load_file(POSTS_DIR + post)
+  unless post_yaml['tags'].nil?
+    post_yaml['tags'].each do |tag|
       tag.downcase!
 
-      unless File.exist?(TAGS_DIR + tag + ".html")
+      next if File.exist?(TAGS_DIR + tag + '.html')
 
-        puts("[+] Generating #" + tag + " page")
+      puts('[+] Generating #' + tag + ' page')
 
-        File.open(TAGS_DIR + tag + ".html", "w") { |f|
-          f.write(
-            "---\nlayout: tag\nsection-type: tag\ntitle: " + tag + "\n---\n## Tag"
-          )
-        }
+      File.open(TAGS_DIR + tag + '.html', 'w') do |f|
+        f.write(
+          "---\nlayout: tag\nsection-type: tag\ntitle: " + tag + "\n---\n## Tag"
+        )
       end
-    }
+    end
   end
 end

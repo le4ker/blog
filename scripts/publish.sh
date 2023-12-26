@@ -2,11 +2,11 @@
 
 echo "Generating categories..."
 ruby ./scripts/generate-categories.rb
+
 echo "Generating posts..."
 ruby ./scripts/generate-tags.rb
 
 echo "Building site..."
-eval "$(rbenv init - zsh)"
 JEKYLL_ENV=production jekyll build
 
 echo "Publishing..."
