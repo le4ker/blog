@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require "yaml"
 
 POSTS_DIR = "_posts/"
