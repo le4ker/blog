@@ -1,20 +1,30 @@
 ---
 layout: post
 section-type: post
-title: "Enhancing Web Server Security with Event Monitoring and Detection - Part 2: Detection"
+title:
+  "Enhancing Web Server Security with Event Monitoring and Detection - Part 2:
+  Detection"
 category: tech
 tags: ["security", "panther"]
 ---
 
-[Last time]({% post_url 2023-04-17-panther %}) we configured [Fluentd](https://www.fluentd.org/) to collect
-and transmit activity data from my personal server to [Panther](https://panther.com/).
-Sinse then, I also onboarded more data sources using [Zeek](https://zeek.org/) because "all data is security data", and the more we have, the more sophisticated [detections](https://panther.com/cyber-explained/detection-engineering-benefits/) we'll be able to build.
+[Last time]({% post_url 2023-04-17-panther %}) we configured
+[Fluentd](https://www.fluentd.org/) to collect and transmit activity data from
+my personal server to [Panther](https://panther.com/). Sinse then, I also
+onboarded more data sources using [Zeek](https://zeek.org/) because "all data is
+security data", and the more we have, the more sophisticated
+[detections](https://panther.com/cyber-explained/detection-engineering-benefits/)
+we'll be able to build.
 
-In this post, we'll create our first detection.
-Our goal is to detect any unexpected port that gets opened on the server, as we want to minimize the attack surface of our server.
-Whenever an unexpected port is detected, we want to be alerted immediately with a High level alert.
+In this post, we'll create our first detection. Our goal is to detect any
+unexpected port that gets opened on the server, as we want to minimize the
+attack surface of our server. Whenever an unexpected port is detected, we want
+to be alerted immediately with a High level alert.
 
-First, we'll use the `Custom.Netstat` schema that [we built]({% post_url 2023-04-17-panther %}) using [pantherlog](https://docs.panther.com/panther-developer-workflows/pantherlog) to create a detection rule that triggers on unexpected open ports:
+First, we'll use the `Custom.Netstat` schema that [we
+built]({% post_url 2023-04-17-panther %}) using
+[pantherlog](https://docs.panther.com/panther-developer-workflows/pantherlog) to
+create a detection rule that triggers on unexpected open ports:
 
 ```python
 allowed_open_ports = [
@@ -55,8 +65,8 @@ Next, we'll test our detection with a few test cases:
 
 ![test_triggers](/img/posts/panther-detections/test-2.png)
 
-As we can see, the detection works as expected.
-To further validate our detection, we'll start the FTP daemon on our server using the following command:
+As we can see, the detection works as expected. To further validate our
+detection, we'll start the FTP daemon on our server using the following command:
 
 ```bash
 systemctl start vsftpd.service
@@ -66,4 +76,5 @@ Less than a minute later, the detection triggers a High level alert:
 
 ![alert](/img/posts/panther-detections/alert-port-21.png)
 
-In the next post, we'll continue building detections, and we'll detect successful Tor SSH authentications to trigger Critical level alerts.
+In the next post, we'll continue building detections, and we'll detect
+successful Tor SSH authentications to trigger Critical level alerts.
