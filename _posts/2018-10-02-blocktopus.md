@@ -1,24 +1,28 @@
 ---
 layout: post
 section-type: post
-title: "Embracing Regulation in Distributed Public Ledgers"
+title: "Blocktopus, the one-stop KYC gateway"
 category: tech
 tags: ["security", "blocktopus"]
 ---
 
-Since the very first Bitcoin transaction, decentralized systems have evolved
-beyond the expectations of even cypherpunks. Decentralization not only enables
-digital transactions without the need for a central authority, but also
-automates financial agreements, allows for digital crowdfunding, tokenization of
-"real world" assets, creation of digital assets, and more in a decentralized
-fashion. Despite these innovative advancements, decentralization has faced its
-share of struggles.
+Since the very first transaction on Bitcoin, the first Distributed Public
+Ledger, a decade ago, decentralization has evolved beyond the expectations that
+even cypherpunks had for it. Decentralization, apart from enabling digital
+transactions between parties without the need to trust a central authority, has
+enabled automation of financial agreements between parties, digital
+crowdfundings, tokenization of “real world” assets, creation of digital assets
+and many more, all of them in a decentralized fashion. All these innovative new
+ways to expand the value proposition of Distributed Public Ledgers has not been
+without a struggle.
 
-Technology and society are interdependent; regulations from every jurisdiction
-around the world aim to adapt technology to the standards of society. This
-happened with the proliferation of the Internet and is happening now with
-Distributed Public Ledgers. Although these regulations introduce friction to
-decentralized systems, it is a friction we must embrace and strive to mitigate.
+Societies cannot thrive without Technology and Technology cannot thrive without
+Societies. And for that reason there are regulations from every jurisdiction
+around the world, that try to adapt all kind of Technologies to the standards of
+each Society. It happened with the proliferation of the Internet before, it’s
+happening right now with the proliferation of Distributed Public Ledgers. These
+regulations are introducing friction to Distributed Public Ledgers, but it’s a
+friction that we need to embrace and do our best to make it less painful.
 
 **Continue reading
 [here](https://medium.com/blocktopus/blocktopus-the-one-stop-kyc-gateway-e715aac796c3)**

@@ -6,7 +6,7 @@ category: tech
 tags: ["security", "redteam", "tor"]
 ---
 
-Welcome to the start of the [#redteam](/tags/redteam.html) series of posts. In
+Welcome to the start of the [#redteam](tags/redteam.html) series of posts. In
 this post, we'll be using [Kali Linux](https://www.kali.org/) as our setup since
 it comes equipped with all the necessary tools. You can install Kali either on a
 VM, or on a USB stick. Install it on a USB stick, will allow you to boot from it
@@ -38,7 +38,7 @@ easily. Start by finding your IP address using the following command:
 
 ```bash
 curl https://ipv4.icanhazip.com/
-193.71.106.208
+# 193.71.106.208
 ```
 
 By default, `proxychains` uses the Tor network as a proxy, so let's start the
@@ -61,7 +61,7 @@ canhazip page through proxychains:
 ![proxychains](/img/posts/proxychains/proxychains-0.png)
 
 You can verify that your IP is one of Tor's exit nodes by searching for it
-[here](https://check.torproject.org/exit-addresses).. To chain multiple proxies
+[here](https://check.torproject.org/exit-addresses). To chain multiple proxies
 together, add them to the proxychains configuration file by typing:
 
 ```bash

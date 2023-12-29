@@ -6,7 +6,7 @@ category: tech
 tags: ["security", "redteam", "dvwa"]
 ---
 
-In this post, we will demonstrate how to exploit SQL injections in the [DVWA web
+In this post, we'll demonstrate how to exploit SQL injections in the [DVWA web
 app]({% post_url 2017-04-02-dvwa-kali %}) to access user passwords. SQL
 injections are similar to other attacks such as
 [XSS]({% post_url 2017-04-15-dvwa-xss %}) and [command
@@ -67,5 +67,5 @@ injected one by using the `#` character.
 
 ![sqli-passwords](/img/posts/sqli/sqli-passwords.png)
 
-We were successful! The passwords are hashed, but we will cover how to crack
-them in a future post.
+It worked, as you'll notice the passwords are hashed, but we will cover how to
+crack them in another post.

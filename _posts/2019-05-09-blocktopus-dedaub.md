@@ -1,24 +1,31 @@
 ---
 layout: post
 section-type: post
-title:
-  "Securing Decentralized Systems: The Importance of Cybersecurity in Smart
-  Contracts - Part 2"
+title: "Navigating the minefield of Token Offerings — Part 2"
 category: tech
 tags: ["security", "privacy", "blocktopus"]
 ---
 
-[Last]({% post_url 2019-04-19-cointelligence %}) time, we discussed the critical
-role of trust in a decentralized environment, particularly in Token Offerings.
-However, one issue that has significantly damaged trust in decentralized
-ecosystems is cybersecurity. Decentralized systems consist of many building
-blocks, each of which can negatively impact the entire system if compromised.
-Smart Contracts are a specific category of building blocks. They are executable
-code that runs on a decentralized network, much like a vending machine that,
-once programmed and filled with items, serves them to users who deposit coins.
-Smart Contracts are the beating heart of a decentralized system, and any bug can
-be catastrophic to the entire system, as it will likely affect the Contract's
-funds and stakeholders.
+Last time we highlighted how critical trust is in a decentralized environment
+(ironically) and especially in Token Offerings. One aspect of the damaged trust
+between the end users and the decentralized ecosystem is cybersecurity. A
+decentralized system is usually built from many different building blocks
+(subsystems) and each one of them can have a negative impact on the overall
+system, when it gets compromised. A special category of building block is Smart
+Contracts. Smart Contracts are executable code that runs on a decentralized
+network, in an automated way. You can picture them as a vending machine that,
+once it’s programmed and filled with items, will keep serving the available
+items when someone drops a coin in it. Smart Contracts are the beating heart of
+a decentralized system. Αny kind of bug can be fatal to the overall system,
+since it will almost always have an impact on the funds of the Contract itself
+and its stakeholders.
+
+The first major Smart Contract incident was the one of the DAO, which took place
+less than two months since its launch and affected 18,000 stakeholders who lost
+more than 3,6 million Ether. Another severe incident was the Parity wallet hack
+which resulted in more than 150,000 stolen Ether. Just these two incidents on
+the Smart Contract level, had an impact on funds that are currently valued close
+to $700,000,000.
 
 **Continue reading
 [here](https://medium.com/blocktopus/navigating-the-minefield-of-token-offerings-part-2-c218bbc8146a)**

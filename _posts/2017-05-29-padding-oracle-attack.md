@@ -14,11 +14,12 @@ signature, and the length of the key used to sign it. Today, we'll discuss how
 to decrypt ciphertexts without having knowledge of the key used to encrypt the
 original plaintext. All that is required to achieve this is for a decryption
 module to reveal whether the padding of the ciphertext being decrypted has valid
-padding or not. This seemingly innocuous vulnerability is known as the Padding
+padding or not. This seemingly minor vulnerability is known as the Padding
 Oracle Attack and can completely compromise your cryptographic security.
 
 The Padding Oracle, in this case, is the decryption module responsible for
-leaking the aforementioned information. This attack was initially introduced by
+leaking the padding validity of the subitted message. This attack was initially
+introduced by
 [Vaudenay](https://www.iacr.org/cryptodb/archive/2002/EUROCRYPT/2850/2850.pdf)
 and is categorized as a side-channel chosen-ciphertext attack that targets the
 Cipher Block Chaining (CBC) mode and the Public Key Cryptography Standards #7

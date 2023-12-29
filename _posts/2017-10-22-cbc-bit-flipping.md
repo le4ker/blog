@@ -111,9 +111,7 @@ to transform a "false" into a "true" is also a simple task. The process merely
 involves flipping additional bits.
 
 To prevent this type of attack, one solution is to use the MAC-then-encrypt
-scheme or a block cipher mode that provides authentication automatically.
-
-The primary takeaway from this attack is that user input should always be
-authenticated before being processed. This principle is a crucial part of the
-Cryptographic Doom Principle,
-[as articulated by Moxie Marlinspike](https://moxie.org/blog/the-cryptographic-doom-principle/).
+scheme or to use a block cipher mode that provides authentication automatically.
+As always, all user input must be authenticated before being processed, like the
+[Cryptographic Doom Principle](https://moxie.org/2011/12/13/the-cryptographic-doom-principle.html)
+states.

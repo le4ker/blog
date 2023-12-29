@@ -9,8 +9,8 @@ tags: ["security", "redteam", "crypto"]
 Digital signatures are a crucial tool in the digital world, used to verify the
 authenticity and integrity of a message. Essentially, they provide a way to
 prove that you sent a piece of data and that it was not tampered with in
-transit. However, if the signature scheme is not designed correctly, serious
-problems can arise.
+transit. However, if the signature scheme is not designed correctly, it can be
+exploited in order to corrupt data without being detected.
 
 The way digital signatures work is by operating on a secret key that is shared
 between the parties who need to use the authentication scheme, the data that
@@ -18,7 +18,7 @@ needs to be signed, and a mathematical function. To generate a signature, you
 apply the mathematical function to the secret key and the data, resulting in a
 signature that is transmitted along with the message.
 
-Upon receipt of the message and signature, the receiver performs the same
+When the message and signature are received, the receiver performs the same
 computation and compares the resulting signature with the transmitted one. If
 the signatures match, the receiver knows that the message came from you and that
 the data was not tampered with.
@@ -71,8 +71,8 @@ For example, the message _"Hello world"_ would be padded to:
                                    # 88
 ```
 
-The compression function, denoted as f, is applied to each 256-bit block of the
-message and the previous result of the compression function. For the first
+The _compression function_, denoted as f, is applied to each 256-bit block of
+the message and the previous result of the compression function. For the first
 round, a fixed value called the Initialization Vector (IV) is used as the output
 of the "previous" compression function. The result of f is then used as the
 input for the next round of compression, and so on. Once the compression
@@ -177,10 +177,8 @@ The authentic signature would be:
 SHA256('secret' | input) -> 'f9f333d547088763f8767a241baae7b50532f95a5ad75071a8e2960bc430fd37'
 ```
 
-Great work!
-
 Our computation has been successful, which guarantees that our message will pass
-the integrity check and be authenticated without any issues. 😊
+the integrity check and be authenticated without any issues.
 
-You can find the source code
+You can find the complete source code
 [here](https://gist.github.com/le4ker/58fda8b16f12a4b52790b0011322d4c9).
