@@ -55,7 +55,7 @@ disqus-shortname: "panossakkos"
 events:
   - image: "/img/career/panther.png"
     date: "October 2021 - today"
-    description: 'Engineering Manager @ <a href="https://panther.com" target="_blank">Panther</a>, Ingestion & Threat Research'
+    description: 'Senior Engineering Manager @ <a href="https://panther.com" target="_blank">Panther</a>, Ingestion & Threat Research'
   - image: "/img/career/orfium.png"
     date: "June 2021 - September 2022"
     description: 'Engineering Manager @ <a href="https://orfium.com" target="_blank">Orfium</a>, Ingestion'
