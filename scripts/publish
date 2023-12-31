@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "Generating categories..."
-ruby ./scripts/generate-categories.rb
+ruby ./scripts/generate-categories
 
 echo "Generating posts..."
-ruby ./scripts/generate-tags.rb
+ruby ./scripts/generate-tags
 
 echo "Building site..."
 JEKYLL_ENV=production jekyll build

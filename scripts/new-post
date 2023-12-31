@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'date'
 
 POSTS_DIR = '_posts/'
