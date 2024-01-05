@@ -10,7 +10,7 @@
       {% if page.section-type == "index" %}
         <a class="navbar-brand page-scroll" href="#page-top">
       {% else %}
-        <a class="navbar-brand" href="{{site.baseurl}}/">
+        <a class="navbar-brand" href="/">
       {% endif %}
           <div>
             {{ site.title }}
@@ -34,13 +34,13 @@
           {% for p in site.pages_list %}
             <li>
             {% if p[1] == "latest-post" %}
-              {% if page.url == "/blog/index.html" | prepend: {{site.baseurl}} %}
+              {% if page.url == "/blog/index.html" | prepend:  %}
                 <a class="page-scroll" href="#page"> {{p[0]}} </a>
               {% else %}
-                <a href="{{site.baseurl}}/blog/"> {{p[0]}} </a>
+                <a href="/blog/"> {{p[0]}} </a>
               {% endif %}
             {% else %}
-                <a href="{{site.baseurl}}/#{{ p[1] }}"> {{p[0]}} </a>
+                <a href="/#{{ p[1] }}"> {{p[0]}} </a>
             {% endif %}
             </li>
           {% endfor %}

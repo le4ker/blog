@@ -2,7 +2,6 @@
 
 url: "https://le4ker.me"
 environment: prod
-baseurl: ""
 force-https: True
 google-tracking-id: "G-7FXE996VCB"
 syntax-highlight: True

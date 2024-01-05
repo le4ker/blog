@@ -121,7 +121,7 @@ page.section-type == "index" or page.section-type == "tag" %}
 
 <!-- Share buttons Start -->
 
-<script src="{{site.baseurl}}/js/rrssb.min.js"></script>
+<script src="/js/rrssb.min.js"></script>
 
 <!-- Share buttons End -->
 
@@ -156,11 +156,7 @@ page.section-type == "index" or page.section-type == "tag" %}
 <script>
   function addTohistory() {
     if (!window.location.host.startsWith("127.0.0.1")) {
-      history.pushState(
-        {},
-        "{{page.title}}",
-        "{{site.url}}{{site.baseurl}}{{page.url}}",
-      );
+      history.pushState({}, "{{page.title}}", "{{site.url}}{{page.url}}");
     }
   }
 </script>
