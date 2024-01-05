@@ -153,12 +153,4 @@ page.section-type == "index" or page.section-type == "tag" %}
 
 {% endif %}
 
-<script>
-  function addTohistory() {
-    if (!window.location.host.startsWith("127.0.0.1")) {
-      history.pushState({}, "{{page.title}}", "{{site.url}}{{page.url}}");
-    }
-  }
-</script>
-
 <!-- Javascript End -->
