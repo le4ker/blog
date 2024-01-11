@@ -21,6 +21,9 @@ body {
   font-family: my-font;
   color: $font-color;
   background-color: $primary-color;
+  p {
+    margin-bottom: 2em;
+  }
 }
 
 html {
