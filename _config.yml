@@ -1,6 +1,6 @@
 # Site settings
 
-url: "https://le4ker.me"
+url: "https://memoryleaks.blog"
 environment: prod
 force-https: True
 google-tracking-id: "G-7FXE996VCB"
@@ -16,8 +16,7 @@ pages_list:
 #############
 author: "Panos Sakkos"
 lang: "en"
-title: "{ Panos Sakkos }"
-short-title: "{ Panos }"
+title: "Memory Leaks"
 description: "Writing about cybersecurity, privacy and technology."
 keywords: "panos, sakkos, startups, security, privacy, open source, encryption"
 ################
