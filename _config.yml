@@ -2,7 +2,6 @@
 
 url: "https://memoryleaks.blog"
 environment: prod
-force-https: True
 google-tracking-id: "G-7FXE996VCB"
 syntax-highlight: True
 # Sections shown in the index page
