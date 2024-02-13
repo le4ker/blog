@@ -111,6 +111,6 @@ paginate_path: "blog/page:num"
 sass:
   style: compressed
 # Exclusion list from the generated _site
-exclude: ["Rakefile", "LICENSE", "readme.markdown", "vendor", "scripts"]
+exclude: ["LICENSE", "README.md", "Dockerfile", "docker-compose.yml", "scripts"]
 plugins:
   - jekyll-paginate
