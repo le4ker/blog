@@ -3,7 +3,6 @@
 url: "https://memoryleaks.blog"
 environment: prod
 google-tracking-id: "G-7FXE996VCB"
-syntax-highlight: True
 # Sections shown in the index page
 pages_list:
   About: "about"
