@@ -25,14 +25,7 @@ me-img: "/img/me.jpg"
 ##############################
 # Dynamic Text on the header #
 ##############################
-dynamic-typing: True
-loop: False
-loop-count: 1
-type-speed: 3
-start-delay: 2000 # Default 200
-delete-delay: 50000 # Default 5000
-lines:
-  - text: "Protecting what you 🖤"
+quote: "Protecting what you 🖤"
 ########
 # Blog #
 ########

@@ -135,31 +135,21 @@
 
 {% endif %} 
 
-{% if site.dynamic-typing and page.section-type == "index" %}
-
 <!-- Dynamic Typing Start -->
 
 <script type="text/javascript" src="/js/typed.min.js"></script>
 <script type="text/javascript">
 
-  var myQuotes =  new Array();
-  {% for line in site.lines %}
-    myQuotes.push("{{ line.text }}");
-  {% endfor %}
-
   $(".intro-text").typed({
-    strings: myQuotes,
-    typeSpeed: {{ site.type-speed }},
-    backDelay: {{ site.delete-delay }},
-    startDelay: {{ site.start-delay }},
-    loop: {{ site.loop }},
-    loopCount: {{ site.loop-count }},
+    strings: ["{{ site.quote }}"],
+    typeSpeed: 3, 
+    startDelay: 1000,
+    loop: false,
+    loopCount: 1,
     cursorChar: "|"
   });
 </script>
 
 <!-- Dynamic Typing End  -->
-
-{% endif %}
 
 <!-- Javascript End -->
