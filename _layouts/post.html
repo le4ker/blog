@@ -2,9 +2,11 @@
 
 <!doctype html>
 <html lang="{{ site.lang }}">
+
   {% include head.html %}
 
   <body>
+
     {% include navigation.html %}
 
     <section id="post" class="container content-section text-center">
@@ -24,7 +26,7 @@
               <a href="{{page.url }}#disqus_thread">Comments</a>
               <br />
               {% for tag in page.tags %}
-              <a class="tag" href="/tags/{{tag}}.html">#{{ tag }}</a>
+                <a class="tag" href="/tags/{{tag}}.html">#{{ tag }}</a>
               {% endfor %}
             </small>
           </h4>
@@ -33,28 +35,32 @@
             {{ page.content | markdownify }}
           </section>
 
-          {% include share.html %} {% if jekyll.environment == "production" %}
-          {% include comments.html %} {% endif %}
+          {% include share.html %}
+
+          {% include comments.html %}
 
           <hr />
 
           {% if site.author_blurb %}
-          <div class="author row">
-            <img
-              class="col-xs-4 col-sm-3 col-md-2"
-              src="{{site.author_blurb_image}}"
-              alt="Me"
-            />
-            <p class="col-xs-8 col-sm-9 col-md-10 blurb">
-              {{ site.author_blurb }}
-            </p>
-          </div>
+            <div class="author row">
+              <img
+                class="col-xs-4 col-sm-3 col-md-2"
+                src="{{site.author_blurb_image}}"
+                alt="Me"
+              />
+              <p class="col-xs-8 col-sm-9 col-md-10 blurb">
+                {{ site.author_blurb }}
+              </p>
+            </div>
           {% endif%}
         </div>
       </div>
     </section>
 
-    {% include footer.html %} {% include js.html %}
+    {% include footer.html %}
+
+    {% include js.html %}
+
   </body>
 </html>
 
