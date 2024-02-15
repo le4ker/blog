@@ -18,7 +18,7 @@
 
           <div>
             {% for post in site.posts %} 
-              {% for t in post.tags | strip %} 
+              {% for t in post.tags %} 
                 {% if t == tag %} 
                   {% include post-list.html%} 
                 {% endif %} 
