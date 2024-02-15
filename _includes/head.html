@@ -21,7 +21,9 @@
 
   {% if page.section-type == "index" %}
     <link href="/css/timeline.css" rel="stylesheet" />
-  {% endif %} {% if page.url == "/404.html" %}
+  {% endif %} 
+
+  {% if page.section-type == "error" %}
     <link href="/css/error.css" rel="stylesheet" />
   {% endif %}
 
