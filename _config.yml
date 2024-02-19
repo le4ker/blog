@@ -1,45 +1,26 @@
-# Site settings
-
 url: "https://memoryleaks.blog"
 environment: prod
 google-tracking-id: "G-7FXE996VCB"
-# Sections shown in the index page
 pages_list:
   About: "about"
   Blog: "latest-post"
   Timeline: "timeline"
   Contact: "contact"
-#############
-# HTML Head #
-#############
 author: "Panos Sakkos"
 lang: "en"
 title: "Memory Leaks"
 description: "Writing about cybersecurity, privacy and technology."
 keywords: "panos, sakkos, startups, security, privacy, open source, encryption"
-################
-# Intro layout #
-################
 me-img: "/img/me.jpg"
-##############################
-# Dynamic Text on the header #
-##############################
 quote: "Protecting what you 🖤"
-########
-# Blog #
-########
 post-preview-words: 128
 paginate: 12
 email-share: True
 linkedin-share: True
 reddit-share: True
 twitter-share: True
-fb-share: True
 vkontakte-share: True
 disqus-shortname: "panossakkos"
-###############
-# Life Events #
-###############
 events:
   - image: "/img/career/panther.png"
     date: "October 2021 - today"
@@ -65,25 +46,10 @@ events:
   - image: "/img/career/uoa.jpeg"
     date: "October 2007 - September 2014"
     description: '<a href="https://scholar.google.com/citations?user=UtV6LFYAAAAJ" target="_blank">Machine Learning researcher</a> @ <a href="http://kddlab.di.uoa.gr" target="_blank">KDD lab</a><br><br>Master studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Software Engineering<br><br>Bachelor studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Computer Science and Telecomunications'
-# First image of the Career timeline
 timeline-img: "/img/career/default.png"
-##################
-# Contact layout #
-##################
 email: "panos.sakkos@gmail.com"
-################
-# Author Blurb #
-################
-
-# The author blurb goes underneath blog posts.
-# This works best when your author blurb image has a transparent background, or matches your site background color.
-
-# if the author_blurb is not set, then this feature is skipped
 author_blurb: "A creative thinker who is not afraid to challenge the norm. His diverse track record includes failed startups, approved patents and scientific publications in top conferences and journals. On a mission to protect what matters most to you."
 author_blurb_image: "/img/me.jpg"
-##################
-# Social Buttons #
-##################
 social:
   - title: "github"
     url: "https://github.com/le4ker"
@@ -93,16 +59,14 @@ social:
     url: "https://twitter.com/le4ker"
   - title: "rss"
     url: "/feed.xml"
-################################################################################
-
-# Tread carefully if you want to change the variables bellow this point!
-
-# Pagination path
 paginate_path: "blog/page:num"
-# Enable minification SASS
 sass:
   style: compressed
-# Exclusion list from the generated _site
-exclude: ["LICENSE", "README.md", "Dockerfile", "docker-compose.yml", "scripts"]
+exclude: 
+  - LICENSE
+  - README.md
+  - scripts
+  - Dockerfile
+  - docker-compose.yml
 plugins:
   - jekyll-paginate
