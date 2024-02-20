@@ -7,7 +7,6 @@ pages_list:
   Timeline: "timeline"
   Contact: "contact"
 author: "Panos Sakkos"
-lang: "en"
 title: "Memory Leaks"
 description: "Writing about cybersecurity, privacy and technology."
 keywords: "panos, sakkos, startups, security, privacy, open source, encryption"
@@ -48,7 +47,10 @@ events:
     description: '<a href="https://scholar.google.com/citations?user=UtV6LFYAAAAJ" target="_blank">Machine Learning researcher</a> @ <a href="http://kddlab.di.uoa.gr" target="_blank">KDD lab</a><br><br>Master studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Software Engineering<br><br>Bachelor studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Computer Science and Telecomunications'
 timeline-img: "/img/career/default.png"
 email: "panos.sakkos@gmail.com"
-author_blurb: "A creative thinker who is not afraid to challenge the norm. His diverse track record includes failed startups, approved patents and scientific publications in top conferences and journals. On a mission to protect what matters most to you."
+author_blurb: 
+  "A creative thinker who is not afraid to challenge the norm. 
+  His diverse track record includes failed startups, approved patents and scientific publications 
+  in top conferences and journals. On a mission to protect what matters most to you."
 author_blurb_image: "/img/me.jpg"
 social:
   - title: "github"
