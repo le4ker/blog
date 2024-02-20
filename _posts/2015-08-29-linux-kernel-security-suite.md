@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+has-comments: true
 title: "Introducing a Suite of Whitehat Rootkits for the Linux kernel"
 category: tech
 tags: ["security", "opensource"]

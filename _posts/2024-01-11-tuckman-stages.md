@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+has-comments: true
 title: Tuckman's stages, startup edition
 category: tech
 tags: ["psychology", "startups"]

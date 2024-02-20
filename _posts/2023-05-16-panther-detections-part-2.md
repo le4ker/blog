@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+has-comments: true
 title:
   "Enhancing Web Server Security with Event Monitoring and Detection - Part 3:
   Enrichment"

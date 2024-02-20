@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+has-comments: true
 title: "User Experience, the Unseen Hero in Security Products"
 category: tech
 tags: ["security", "ux"]

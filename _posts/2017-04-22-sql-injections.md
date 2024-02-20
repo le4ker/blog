@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+has-comments: true
 title: "Exploiting SQL Injections to Access User Passwords"
 category: tech
 tags: ["security", "redteam", "dvwa"]

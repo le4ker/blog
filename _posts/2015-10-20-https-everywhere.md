@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+has-comments: true
 title: "Expanding HTTPS Everywhere's Domain Support"
 category: tech
 tags: ["privacy", "opensource"]

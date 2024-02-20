@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+has-comments: true
 title: "Enhancing End Users' Privacy: Leveraging Tor Hidden Services"
 category: tech
 tags: ["privacy", "tor"]
