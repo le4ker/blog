@@ -39,7 +39,7 @@ would still work though.
 
 Next, trying to map "can't live without", "hard to imagine my day-to-day
 workflow" and "very inconvenient" to monthly funding amounts, the following
-monthly funding structure made me feel comfortable:
+structure made me feel comfortable:
 
 ```mermaid!
 %%{init:{'theme':'forest'}}%%
