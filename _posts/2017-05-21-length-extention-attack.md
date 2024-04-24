@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: "Understanding Length Extension Attacks in Digital Signature Schemes"
+title: Understanding Length Extension Attacks
 category: tech
 tags: ["security", "redteam", "crypto"]
 ---

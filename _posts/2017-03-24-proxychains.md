@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: "A Guide to Hiding Your MAC and IP Addresses"
+title: Hiding Your MAC and IP Addresses
 category: tech
 tags: ["security", "redteam", "tor"]
 ---

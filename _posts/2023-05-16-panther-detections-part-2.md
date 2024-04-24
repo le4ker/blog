@@ -2,9 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title:
-  "Enhancing Web Server Security with Event Monitoring and Detection - Part 3:
-  Enrichment"
+title: Monitoring a Web Server with Panther - Part 3 (Enrichment)
 category: tech
 tags: ["security", "panther"]
 ---

@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: "Exploiting Command Injection Vulnerability in DVWA with Metasploit"
+title: Exploiting Command Injection Vulnerability in DVWA
 category: tech
 tags: ["security", "redteam", "dvwa"]
 ---

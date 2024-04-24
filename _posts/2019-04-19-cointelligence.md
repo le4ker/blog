@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: "Navigating the minefield of Token Offerings — Part 1"
+title: Navigating the minefield of Token Offerings — Part 1
 category: tech
 tags: ["security", "privacy", "blocktopus"]
 ---

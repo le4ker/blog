@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: "Security and Privacy at Blocktopus"
+title: Security and Privacy at Blocktopus
 category: tech
 tags: ["security", "privacy", "blocktopus"]
 ---

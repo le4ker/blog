@@ -2,9 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title:
-  "Decrypting Ciphertexts Without Knowing the Key: The Padding Oracle Attack
-  Explained"
+title: The Padding Oracle Attack Explained
 category: tech
 tags: ["security", "redteam", "crypto"]
 ---

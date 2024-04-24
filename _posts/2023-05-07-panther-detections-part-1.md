@@ -2,9 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title:
-  "Enhancing Web Server Security with Event Monitoring and Detection - Part 2:
-  Detection"
+title: Monitoring a Web Server with Panther - Part 2 (Detection)
 category: tech
 tags: ["security", "panther"]
 ---
