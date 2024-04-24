@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+has-comments: true
 title: A Practical Approach to Open-Source Funding
 category: tech
 tags: ["opensource"]
