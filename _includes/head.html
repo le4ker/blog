@@ -10,13 +10,8 @@
   <link rel="canonical" href="{{page.url | replace:'index.html' }}" />
   <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
 
-  <!-- Bootstrap Core CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"
-  />
-
-  <!-- Custom CSS -->
+  <!-- CSS links -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
   <link href="/css/grayscale.css" rel="stylesheet" />
 
   {% if page.section-type == "index" %}
@@ -27,75 +22,62 @@
     <link href="/css/error.css" rel="stylesheet" />
   {% endif %}
 
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="/img/apple-touch-icon.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/img/favicon-32x32.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="/img/favicon-16x16.png"
-  />
+  {% if page.layout == "post" %}
+    {% include syntax-highlight.html %} 
+    <link rel="stylesheet" href="/css/rrssb.css" />
+  {% endif %}
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
   <link rel="manifest" href="/img/site.webmanifest" />
 
-  <!-- Custom Fonts -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-
-  <link rel="stylesheet" href="/css/rrssb.css" />
-
-  {% include syntax-highlight.html %} 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
   {% if site.google-tracking-id %}
 
-  <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
-  <script
-    type="text/javascript"
-    src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
-    charset="UTF-8"
-  ></script>
-  <script type="text/javascript" charset="UTF-8">
-    document.addEventListener("DOMContentLoaded", function () {
-      cookieconsent.run({
-        notice_banner_type: "simple",
-        consent_type: "express",
-        palette: "light",
-        language: "en",
-        page_load_consent_levels: ["strictly-necessary"],
-        notice_banner_reject_button_hide: false,
-        preferences_center_close_button_hide: false,
-        page_refresh_confirmation_buttons: false,
-        website_name: "{{ site.url }}",
+    <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <script
+      type="text/javascript"
+      src="https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js"
+      charset="UTF-8"
+    ></script>
+    <script type="text/javascript" charset="UTF-8">
+      document.addEventListener("DOMContentLoaded", function () {
+        cookieconsent.run({
+          notice_banner_type: "simple",
+          consent_type: "express",
+          palette: "light",
+          language: "en",
+          page_load_consent_levels: ["strictly-necessary"],
+          notice_banner_reject_button_hide: false,
+          preferences_center_close_button_hide: false,
+          page_refresh_confirmation_buttons: false,
+          website_name: "{{ site.url }}",
+        });
       });
-    });
-  </script>
+    </script>
 
-  <!-- Google Analytics -->
+    <!-- Google Analytics -->
 
-  <script
-    type="text/plain"
-    data-cookie-consent="tracking"
-    async
-    src="https://www.googletagmanager.com/gtag/js?id={{site.google-tracking-id}}"
-  ></script>
-  <script type="text/plain" data-cookie-consent="tracking">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{site.google-tracking-id}}');
-  </script>
+    <script
+      type="text/plain"
+      data-cookie-consent="tracking"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{site.google-tracking-id}}"
+    ></script>
+    <script type="text/plain" data-cookie-consent="tracking">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{site.google-tracking-id}}');
+    </script>
 
-  <!-- Google Analytics -->
+    <!-- Google Analytics -->
 
   {% endif %}
 </head>
