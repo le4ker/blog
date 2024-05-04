@@ -9,15 +9,9 @@
       {{ page.content | markdownify }}
 
       <ul class="timeline">
-        {% for event in site.events %} 
-        
-        {% assign loopindex = forloop.index | modulo: 2 %} 
-        
-        {% capture class %} 
-          {% if loopindex == 0 %}
-          timeline-inverted 
-          {% endif %} 
-        {% endcapture %}
+        {% for event in site.events %} {% assign loopindex = forloop.index |
+        modulo: 2 %} {% capture class %} {% if loopindex == 0 %}
+        timeline-inverted {% endif %} {% endcapture %}
 
         <li class="{{ class }}">
           <div class="timeline-image">
@@ -46,6 +40,8 @@
               class="img-circle img-responsive"
               src="{{ site.timeline-img }}"
               alt=""
+              width="156"
+              height="156"
             />
           </div>
         </li>
