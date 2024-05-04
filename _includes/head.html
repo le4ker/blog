@@ -6,8 +6,12 @@
   <meta name="description" content="{{site.description}}" />
   <meta name="author" content="{{site.author}}" />
   <meta name="keywords" content="{{site.keywords}}" />
-  <link rel="canonical" href="{{page.url | replace:'index.html' }}" />
+  {% if page.layout == "error" %}
+    <meta http-equiv="refresh" content="20; url=/" />
+  {% endif %}
   <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
+
+  <link rel="canonical" href="{{page.url | replace:'index.html' }}" />
 
   <!-- CSS links -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" defer/>
@@ -16,10 +20,6 @@
   {% if page.section-type == "index" %}
     <link href="/css/timeline.css" rel="stylesheet" />
   {% endif %} 
-
-  {% if page.section-type == "error" %}
-    <link href="/css/error.css" rel="stylesheet" />
-  {% endif %}
 
   {% if page.layout == "post" %}
     {% include syntax-highlight.html %} 
