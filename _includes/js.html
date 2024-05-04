@@ -74,52 +74,52 @@
 {% endif %} 
 
 
-{% if site.disqus-shortname and page.has-comments %}
+{% if site.disqus-shortname %}
 
-<!-- Comments Counter Start -->
+  {% if page.has-comments %}
 
-<script type="text/javascript">
-  var disqus_shortname = "{{ site.disqus-shortname }}";
+    <!-- Comments Counter Start -->
 
-  (function () {
-    var s = document.createElement("script");
-    s.async = true;
-    s.type = "text/javascript";
-    s.src = "//" + disqus_shortname + ".disqus.com/count.js";
-    (
-      document.getElementsByTagName("HEAD")[0] ||
-      document.getElementsByTagName("BODY")[0]
-    ).appendChild(s);
-  })();
-</script>
+    <script type="text/javascript">
+      var disqus_shortname = "{{ site.disqus-shortname }}";
 
-<!-- Comments Counter End -->
+      (function () {
+        var s = document.createElement("script");
+        s.async = true;
+        s.type = "text/javascript";
+        s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+        (
+          document.getElementsByTagName("HEAD")[0] ||
+          document.getElementsByTagName("BODY")[0]
+        ).appendChild(s);
+      })();
+    </script>
 
-{% endif %} 
+    <!-- Comments Counter End -->
 
-{% if page.section-type == "post" %}
+  {% endif %}
 
-  {% if site.disqus-shortname %}
+  {% if page.section-type == "post" %}
 
-  <!-- Disqus Comments -->
+    <!-- Disqus Comments -->
 
-  <script>
-    (function () {
-      var d = document,
-        s = d.createElement("script");
-      s.src = "https://{{ site.disqus-shortname }}.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
+    <script>
+      (function () {
+        var d = document,
+          s = d.createElement("script");
+        s.src = "https://{{ site.disqus-shortname }}.disqus.com/embed.js";
+        s.setAttribute("data-timestamp", +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+
+    <!-- Share buttons Start -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rrssb/1.14.0/js/rrssb.min.js"></script>
+
+    <!-- Share buttons End -->
 
   {% endif %} 
-
-  <!-- Share buttons Start -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/rrssb/1.14.0/js/rrssb.min.js"></script>
-
-  <!-- Share buttons End -->
 
 {% endif %} 
 
