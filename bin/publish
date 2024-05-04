@@ -10,4 +10,4 @@ echo "Building site..."
 JEKYLL_ENV=production jekyll build
 
 echo "Publishing..."
-scp -r _site/* root@134.209.239.131:/usr/share/nginx/html
+rsync -ru _site/* root@134.209.239.131:/usr/share/nginx/html --delete --progress --stats
