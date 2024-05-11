@@ -36,7 +36,7 @@ the type of switch and then move to the more advanced ones.
 
 #### Linear vs Tactile vs Clicky
 
-Probably the first choise you'll have to make is to decide on the type of the
+Probably the first choice you'll have to make is to decide on the type of the
 switch. You have three high level options, linear, tactile and clickly switches.
 These three options will give you different typing experience when pressing the
 key. The linear switches offer the most smooth typing experience in my opinion,
@@ -51,7 +51,7 @@ example not an office friendly option.
 After choosing the type, there will be more options like the longevity,
 actuation force, spring force and travel distance. Don't get lost in the details
 and instead try out different options, with your closed eyes as well so you can
-focus better on the feel of each options, and make the choise that fits you the
+focus better on the feel of each option, and make the choice that fits you the
 best.
 
 #### Profile
@@ -74,7 +74,7 @@ switches and soldering the new ones. Apart from needing the soldering and
 desoldering skills, you need to spend quite some time to do this since for each
 switch you have two pins to desolder and then solder, and at the same time you
 risk to destroy your keyboard. So, it's highly recommended that you buy a
-keyboard that supports hotswappable switches, or to make the switch choise
+keyboard that supports hotswappable switches, or to make the switch choice
 before buying the keyboard, and stick to it.
 
 #### Lubed vs Unlubed
@@ -200,4 +200,3 @@ Last, QMK supports a huge variety of features, like
 [WPM Calculation](https://docs.qmk.fm/#/feature_wpm), manipulating OLED screens
 and more, and of course with this great power great responsibility comes as
 well, so tread carefully.
-
