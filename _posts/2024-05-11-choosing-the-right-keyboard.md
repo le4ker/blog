@@ -11,8 +11,8 @@ If you are a~~n office~~ desk worker, you spend most of the time on your
 keyboard. Up until about a year ago, the only customization I thougt was
 possible was the type of switch you choose, but there are many more options to
 consider that will improve your typing experience, your hands posture and even
-your typing speed. We'll start with the most basic options, like the type of
-switch and then move to the more advanced options.
+your typing speed and accuracy. We'll start with the most basic options, like
+the type of switch and then move to the more advanced ones.
 
 <!--toc:start-->
 
@@ -36,10 +36,10 @@ switch and then move to the more advanced options.
 
 #### Linear vs Tactile vs Clicky
 
-After figuring out the profile, you need to decide on the type of the switch.
-You have three high level options, linear, tactile and clickly switches. These
-three options will give you different typing experience when pressing the key.
-The linear switches offer the most smooth typing experience in my opionion,
+Probably the first choise you'll have to make is to decide on the type of the
+switch. You have three high level options, linear, tactile and clickly switches.
+These three options will give you different typing experience when pressing the
+key. The linear switches offer the most smooth typing experience in my opinion,
 since the keystroke is consistent and quiet. Tactiles give you a bump when the
 key is triggered, and a bump when the key is released, while making a moderate
 noise when the key reaches the bottom. Last, clicky switches will give you the
@@ -68,19 +68,20 @@ triggered with a smaller movement.
 #### Hotswappable switches
 
 Changing the switch in the keyboard you already own probably won't be easy. You
-need to make sure that your keyboards supports hotswappable switches. What this
+need to make sure that your keyboard supports hotswappable switches. What this
 means is that you can change the switches without desoldering the equipped
 switches and soldering the new ones. Apart from needing the soldering and
 desoldering skills, you need to spend quite some time to do this since for each
-switch you have two pins to desolder and then solder. So, it's highly
-recommended that you buy a keyboard that supports hotswappable switches, or to
-make the switch choise before buying the keyboard, and stick to it.
+switch you have two pins to desolder and then solder, and at the same time you
+risk to destroy your keyboard. So, it's highly recommended that you buy a
+keyboard that supports hotswappable switches, or to make the switch choise
+before buying the keyboard, and stick to it.
 
 #### Lubed vs Unlubed
 
-One more aspect to consider when it comes the switches, is whether they should
-be lubbed or not. Lubbed switches will offer a more smooth typing experience,
-while changing the sound of the key press. Again, it comes down to personal
+One more aspect to consider when it comes to switches, is whether they should be
+lubbed or not. Lubbed switches will offer a more smooth typing experience, while
+changing the sound of the key press. Again, it comes down to personal
 preference, and you should try out different options, but keep in mind that if
 you decide to lube them yourself instead of buying them pre-lubbed, it's a very
 time consuming process, while you risk to damage the switches.
@@ -118,9 +119,9 @@ factors vary from a full blown keyboard with a numpad, known as 100%, down to
 40%, which have 40-45 keys. Keep in mind that the lower the form factor, the
 more layers your keymap will have, which apart from raising its complexity might
 also end up requiring more effort to type a key that you need frequently. For
-example A 40% keyboard can't support number keys on its default layer, which
-means that each time you want totype a number or a symbol, you'll have to switch
-layer.
+example a 40% keyboard can't support number keys on its default layer, which
+means that each time you want to type a number or a symbol, you'll have to
+switch layer.
 
 #### Keymap
 
@@ -128,9 +129,9 @@ Depending on your keyboard's form factor, and the OS, Media or other shortcuts
 you want to have available, you'll have to choose the right keymap for you.
 Usually keyboards come with preinstalled keymaps that can be configured, or you
 can create your own key map from scratch, if your keyboard is compatible with
-[QMK](https://qmk.fm/)] or other similar firmware. The lower the form factor the
+[QMK](https://qmk.fm) or other similar firmware. The lower the form factor the
 keyboard has, the more layers it will need, so there is balance you have to
-strike that will keep the keys you use mand their layer depth.
+strike that will keep the keys you use frequently closer to your default layer.
 
 For example a keymap that aims to have all the keys that you use for programming
 on the default layer can have the following two layers:
@@ -141,13 +142,14 @@ on the default layer can have the following two layers:
 
 #### Ortholinear vs Staggered
 
-Did you know that the conventional keybaord layout is called stagered and it's a
-result of how the mechanical typewriters were designed? Each key back then was
-connected with a physical bar that hit the paper, so the keys had to be
-stagerred in order to allow the bars to pass between them. Typewriters got
-replaced, but their layout stayed. The alternative to the staggered layout is
-the ortholinear, where the keys are aligned in a grid, which is considered more
-ergonomic, since your fingers will be moving up and down, instead of diagonally.
+Did you know that the conventional keyboard layout is called staggered and it's
+a result of how the mechanical typewriters were designed? Each key back then was
+connected to the paper with a physical bar, so the keys had to be staggered in
+order to allow the bars from each key to reach the paper on the top. Typewriters
+got replaced, but their layout stayed. The alternative to the staggered layout
+is the ortholinear, where the keys are aligned in a grid, which is considered
+more ergonomic, since your fingers will be moving up and down, instead of
+diagonally.
 
 ![ortholinear](/img/posts/choosing-the-right-keyboard/ortholinear.jpg)
 
@@ -172,8 +174,8 @@ reach your previous typing accuracy and speed.
 #### Firmware tweaks
 
 Enter a bit deeper into the weirdo zone. If you have a QMK compatible keyboard,
-you have the option to highly customize your firmware. The most important
-options this unlocks in my opinion is tweaking the
+you have the option to highly customize your firmware. The most important option
+this unlocks in my opinion is tweaking the
 [Debounce Algorithm](https://docs.qmk.fm/#/feature_debounce_type?id=types-of-debounce-algorithms)
 and its debounce time. The Debounce Algorithm is a software logic that
 compensates the
