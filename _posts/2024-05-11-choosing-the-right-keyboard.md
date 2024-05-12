@@ -123,6 +123,8 @@ example a 40% keyboard can't support number keys on its default layer, which
 means that each time you want to type a number or a symbol, you'll have to
 switch layer.
 
+![form-factor](/img/posts/choosing-the-right-keyboard/form-factor.jpg)
+
 #### Keymap
 
 Depending on your keyboard's form factor, and the OS, Media or other shortcuts
