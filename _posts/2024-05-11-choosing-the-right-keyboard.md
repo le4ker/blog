@@ -95,7 +95,8 @@ sculpted. The uniform keycaps are easier to rearrange since all of them have the
 same profile, while the sculpted ones are not, because they have one profile per
 keyboard row. The sculpted ones are considered more ergonomic, so they might be
 worth their inconvenience of rearranging them. In the image bellow, DSA and XDA
-are the uniform profiles, while the rest are scuplted ones:
+are the uniform profiles, while the rest are sculpted ones, with Cherry being
+the most popular one, and the one that most keyboards come with by default.
 
 ![keycap-profiles](/img/posts/choosing-the-right-keyboard/keycap-profiles.jpg)
 
@@ -106,6 +107,8 @@ is important. There are two major options, ABS and PBT. PBT are more durable,
 textured, grippier and resistant to shine, when compared to ABS. Again, that
 might be a personal preference, but PBT are considered as a better option, which
 comes with a higher cost as well though.
+
+![abs-vs-pbt](/img/posts/choosing-the-right-keyboard/abs-vs-pbt.jpg)
 
 ### Keyboard
 
