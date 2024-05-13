@@ -184,7 +184,7 @@ compensates the
 [contact chatter](https://docs.qmk.fm/#/feature_debounce_type?id=contact-bounce-contact-chatter)
 of the switch. In simple words, it draws a line between misstypes and key
 responsiveness. You'll have to try different algorithms and times, even though
-the symetric eager algorithm offers the most natural and responsive typing
+the Symetric Eager algorithm offers the most natural and responsive typing
 experience in my opinion.
 
 Then there are other options like the
