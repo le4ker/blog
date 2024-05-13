@@ -173,6 +173,8 @@ since you can move the two halves apart to match your shoulders width, and
 rotate them to the right angle, or even tilt them with stands. The downside is
 that you'll have to learn to type on them, which will take several weeks to
 reach your previous typing accuracy and speed.
+[Monkeytype](https://monkeytype.com/) can be very helpful for measuring your
+before and after typing speed and accuracy.
 
 ![split-keyboard](/img/posts/choosing-the-right-keyboard/split.jpg)
 
@@ -188,7 +190,9 @@ compensates the
 of the switch. In simple words, it draws a line between misstypes and key
 responsiveness. You'll have to try different algorithms and times, even though
 the Symetric Eager algorithm offers the most natural and responsive typing
-experience in my opinion.
+experience in my opinion. Again, Monkeytype can be a great tool to measure how
+each algorithm and time performs, but don't forget to focus on the feel of the
+typing as well while trying out the different combinations.
 
 Then there are other options like the
 [N-Key Roll Over](https://en.wikipedia.org/wiki/Key_rollover#n-key_rollover)
