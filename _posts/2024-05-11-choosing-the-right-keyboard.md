@@ -80,11 +80,12 @@ before buying the keyboard, and stick to it.
 #### Lubed vs Unlubed
 
 One more aspect to consider when it comes to switches, is whether they should be
-lubbed or not. Lubbed switches will offer a more smooth typing experience, while
-changing the sound of the key press. Again, it comes down to personal
-preference, and you should try out different options, but keep in mind that if
-you decide to lube them yourself instead of buying them pre-lubbed, it's a very
-time consuming process, while you risk to damage the switches.
+lubed or not. Lubed switches will offer a more smooth typing experience, while
+damping the sound of the key press and affecting its tactility. Again, it comes
+down to personal preference, and you should try out different options, but keep
+in mind that if you decide to lube them yourself instead of buying them
+pre-lubed, it's a very time consuming process, while you risk to damage the
+switches.
 
 ### Keycaps
 
