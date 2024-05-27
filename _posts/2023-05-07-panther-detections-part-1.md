@@ -36,13 +36,13 @@ allowed_open_ports = [
 
 def get_open_port(event):
     port_delimiter = ':'
-    port_index = event['local_address'].rfind(port_delimiter) + 1
-    open_port = event['local_address'][port_index:]
+    port_index = event.get('local_address').rfind(port_delimiter) + 1
+    open_port = event.get('local_address')[port_index:]
 
     return open_port
 
 def rule(event):
-    # Return True to match the log event and trigger an alert.
+   # Return True to match the log event and trigger an alert.
     open_port = get_open_port(event)
 
     if open_port not in allowed_open_ports:
@@ -54,7 +54,6 @@ def title(event):
     # (Optional) Return a string which will be shown as the alert title.
     # If no 'dedup' function is defined, the return value of this method will act as deduplication string.
     open_port = get_open_port(event)
-
     return f"Unexpected Port Opened: {open_port}"
 ```
 
