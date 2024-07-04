@@ -163,6 +163,11 @@ When you switch to an ortholinear layout, initially you'll misstype keys, since
 you'll be hitting the previous or next one in the row. But not only your brain
 will adjust to it, it will also adjust automatically when switching to a
 staggerred layout, like when you switch to typing your laptop for example.
+Something to keep in mind is that the ortholinear layout shines when you
+[touch type](https://en.wikipedia.org/wiki/Touch_typing), since the keys that
+each finger has to reach are right above or bellow your fingers in most of the
+cases. A great resource to learn touch typing is the typing
+[TypingClub](https://www.typingclub.com/).
 
 #### Split Keyboards
 
