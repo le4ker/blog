@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: Understanding Length Extension Attacks
 category: tech
-tags: ["security", "redteam", "crypto"]
+tags: ["security", "redteam", "cryptography"]
 ---
 
 Digital signatures are a crucial tool in the digital world, used to verify the

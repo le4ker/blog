@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: Monitoring a Web Server with Panther - Part 3 (Enrichment)
 category: tech
-tags: ["security", "panther"]
+tags: ["security", "siem"]
 ---
 
 [Last time]({% post_url 2023-05-07-panther-detections-part-1 %}), we built a

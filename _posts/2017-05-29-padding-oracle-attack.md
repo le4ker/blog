@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: The Padding Oracle Attack Explained
 category: tech
-tags: ["security", "redteam", "crypto"]
+tags: ["security", "redteam", "cryptography"]
 ---
 
 [Previously]({% post_url 2017-05-21-length-extention-attack %}), we explored how

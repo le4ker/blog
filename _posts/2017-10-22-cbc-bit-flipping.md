@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: "Exploring Bit-Flipping Attacks on CBC Block Cipher Mode in Cryptography"
 category: tech
-tags: ["security", "redteam", "crypto"]
+tags: ["security", "redteam", "cryptography"]
 ---
 
 Let's explore how attackers can exploit vulnerabilities in crypto primitives.

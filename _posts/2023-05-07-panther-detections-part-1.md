@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: Monitoring a Web Server with Panther - Part 2 (Detection)
 category: tech
-tags: ["security", "panther"]
+tags: ["security", "siem"]
 ---
 
 [Last time]({% post_url 2023-04-17-panther %}) we configured
