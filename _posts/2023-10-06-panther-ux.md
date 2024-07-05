@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: User Experience, the Unseen Hero in Security Products
 category: tech
-tags: ["security"]
+tags: ["security", "siem"]
 ---
 
 In the constantly changing field of cybersecurity, the importance of strong

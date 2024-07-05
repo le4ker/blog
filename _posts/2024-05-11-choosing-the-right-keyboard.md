@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: Choosing the right keyboard for you
 category: tech
-tags: ["productivity", "keyboards"]
+tags: ["productivity"]
 ---
 
 If you are a~~n office~~ desk worker, you spend most of the time on your
