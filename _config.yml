@@ -57,7 +57,7 @@ social:
   - icon: "linkedin-in"
     url: "https://www.linkedin.com/in/psakkos/"
   - icon: "x-twitter"
-    url: "https://twitter.com/le4ker"
+    url: "https://x.com/le4ker"
   - icon: "rss"
     url: "/feed.xml"
 paginate_path: "blog/page:num"
