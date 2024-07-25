@@ -7,4 +7,4 @@ COPY . .
 RUN ruby bin/generate_tags.rb
 RUN ruby bin/generate_categories.rb
 
-CMD ["jekyll", "serve", "--watch", "--livereload"]
+CMD ["jekyll", "serve", "--livereload", "--force_polling"]
