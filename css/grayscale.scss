@@ -4,15 +4,12 @@
 @import "variables";
 @import "mixins";
 
-strong {
-  font-weight: 500;
-}
-
 /*!
  * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+
 html,
 body {
   width: 100%;
@@ -47,6 +44,10 @@ h4 {
   }
 }
 
+strong {
+  font-weight: 500;
+}
+
 p {
   padding: 0.5rem 0rem;
   line-height: 1.5;
@@ -54,14 +55,6 @@ p {
     padding: 0.3rem 0rem;
     line-height: 1.6;
   }
-}
-
-div {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  -o-user-select: text;
-  user-select: text;
 }
 
 a {
@@ -120,17 +113,8 @@ a {
       outline: none;
     }
   }
-  .navbar-brand {
-    &:focus {
-      outline: none;
-    }
-    font-size: 1.5rem;
-  }
   a {
     color: $navbar-color;
-    @if $header-text-shadow {
-      text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
-    }
   }
   .nav {
     text-align: center;
@@ -159,13 +143,17 @@ a {
   }
 }
 
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
 .intro {
   display: table;
   width: 100%;
   height: auto;
   padding: 100px 0;
   text-align: center;
-  color: $intro-text-color;
+  color: $font-color;
   background-color: $header-background-color;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -179,9 +167,6 @@ a {
     }
     .intro-text {
       font-size: 1.8rem;
-      @if $navbar-text-shadow {
-        text-shadow: 1px 0 1px #222222;
-      }
     }
   }
   @media (min-width: 768px) {
@@ -300,9 +285,7 @@ ul.social-buttons li a {
   border-radius: 100%;
   line-height: 40px;
   outline: 0;
-  color: $social-buttons-color;
-  //background-color: #222;
-
+  color: $secondary-color;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
@@ -311,7 +294,7 @@ ul.social-buttons li a {
   &:focus,
   &:active {
     color: #222;
-    background-color: darken($social-buttons-color, 10%);
+    background-color: darken($secondary-color, 10%);
   }
 }
 

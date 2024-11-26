@@ -6,7 +6,7 @@
     <div class="col-md-10 col-12">
       {{ page.content | markdownify }} {% assign post = site.posts.first %}
       <h3>
-        <strong> {{ post.date | date_to_string }} </strong>
+        {{ post.date | date_to_string }}
         <small>
           .
           <a
@@ -17,9 +17,7 @@
           </a>
           .
         </small>
-        <strong>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </strong>
+        <a href="{{ post.url }}">{{ post.title }}</a>
         <small> <a href="{{ post.url }}#disqus_thread">Comments</a></small>
       </h3>
 
