@@ -19,21 +19,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        {% if page.section-type == "index" %} {% for p in site.pages_list %}
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#{{ p[1] }}">{{ p[0] }}</a>
-        </li>
-        {% endfor %} {% else %} {% for p in site.pages_list %}
-        <li class="nav-item">
-          {% if p[1] == "latest-post" %} {% if page.url == "/blog/index.html" %}
-          <a class="nav-link page-scroll" href="#page">{{ p[0] }}</a>
-          {% else %}
-          <a class="nav-link" href="/blog/">{{ p[0] }}</a>
-          {% endif %} {% else %}
-          <a class="nav-link" href="/#{{ p[1] }}">{{ p[0] }}</a>
-          {% endif %}
-        </li>
-        {% endfor %} {% endif %}
+        {% if page.section-type == "index" %} 
+          {% for p in site.pages_list %}
+            <li class="nav-item pr-3">
+              <a class="nav-link page-scroll" href="#{{ p[1] }}">{{ p[0] }}</a>
+            </li>
+          {% endfor %} 
+        {% else %} 
+            {% for p in site.pages_list %}
+            <li class="nav-item pr-3">
+              {% if p[1] == "latest-post" %} {% if page.url == "/blog/index.html" %}
+              <a class="nav-link page-scroll" href="#page">{{ p[0] }}</a>
+              {% else %}
+              <a class="nav-link pr-3" href="/blog/">{{ p[0] }}</a>
+              {% endif %} {% else %}
+              <a class="nav-link pr-3" href="/#{{ p[1] }}">{{ p[0] }}</a>
+              {% endif %}
+            </li>
+          {% endfor %} 
+        {% endif %}
       </ul>
     </div>
   </div>
