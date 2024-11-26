@@ -1,20 +1,16 @@
-<!-- Post List Start -->
-
-<h4 align="left">
+<h4 class="text-left">
   <strong>{{ post.date | date_to_string }}</strong>
-  <small
-    >.
+  <small>
+    .
     <a class="category" href="/categories/{{ post.category | downcase }}.html">
       {{ post.category }}
     </a>
-    .</small
-  >
-  <br class="visible-xs-block" />
-  <a href="{{post.url}}">
+    .
+  </small>
+  <br class="d-block d-sm-none" />
+  <a href="{{ post.url }}">
     <strong>{{ post.title }}</strong>
   </a>
-  <br class="visible-xs-block" />
-  <small><a href="{{post.url}}#disqus_thread">Comments</a></small>
+  <br class="d-block d-sm-none" />
+  <small><a href="{{ post.url }}#disqus_thread">Comments</a></small>
 </h4>
-
-<!-- Post List End -->
