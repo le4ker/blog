@@ -184,7 +184,7 @@ a {
       font-size: 40px;
     }
     .intro-text {
-      font-size: 2.3rem;
+      font-size: 1.8rem;
       @if $navbar-text-shadow {
         text-shadow: 1px 0 1px #222222;
       }
@@ -198,7 +198,7 @@ a {
         font-size: 100px;
       }
       .intro-text {
-        font-size: 2.5rem;
+        font-size: 1.6rem;
       }
     }
   }
@@ -366,10 +366,10 @@ body {
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   vertical-align: top;
   @media (min-width: 768px) {
-    font-size: 2.3rem;
+    font-size: 1.6rem;
   }
 }
 @keyframes blink {
