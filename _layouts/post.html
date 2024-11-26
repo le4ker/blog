@@ -1,5 +1,3 @@
-<!-- Post Layout Start -->
-
 <!doctype html>
 <html lang="en">
 
@@ -11,23 +9,23 @@
 
     <section id="post" class="container content-section text-center">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-10 offset-md-1">
           <h1>{{ page.title }}</h1>
           <h4>
             {{ page.date | date_to_string }}
             <small>
-              . 
+              .
               <a
                 class="category"
-                href="/categories/{{page.category | downcase}}.html"
+                href="/categories/{{ page.category | downcase }}.html"
               >
-                {{ page.category }} 
+                {{ page.category }}
               </a>
               .
-              <a href="{{page.url}}#disqus_thread">Comments</a>
-              <br/>
+              <a href="{{ page.url }}#disqus_thread">Comments</a>
+              <br />
               {% for tag in page.tags %}
-                <a class="tag" href="/tags/{{tag}}.html">#{{ tag }}</a>
+                <a class="tag" href="/tags/{{ tag }}.html">#{{ tag }}</a>
               {% endfor %}
             </small>
           </h4>
@@ -44,16 +42,18 @@
 
           {% if site.author_blurb %}
             <div class="author row">
-              <img
-                class="col-xs-4 col-sm-3 col-md-2"
-                src="{{site.author_blurb_image}}"
-                alt="Me"
-              />
-              <p class="col-xs-8 col-sm-9 col-md-10 blurb">
-                {{ site.author_blurb }}
-              </p>
+              <div class="col-4 col-sm-3 col-md-2">
+                <img
+                  class="img-fluid"
+                  src="{{ site.author_blurb_image }}"
+                  alt="Me"
+                />
+              </div>
+              <div class="col-8 col-sm-9 col-md-10 blurb">
+                <p>{{ site.author_blurb }}</p>
+              </div>
             </div>
-          {% endif%}
+          {% endif %}
         </div>
       </div>
     </section>
@@ -64,5 +64,3 @@
 
   </body>
 </html>
-
-<!-- Post Layout End -->
