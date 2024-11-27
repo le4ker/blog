@@ -162,8 +162,8 @@ a {
   display: table;
   width: 100%;
   height: auto;
-  padding: 100px 0;
   text-align: center;
+  padding-top: 20rem;
   color: $font-color;
   background-color: $header-background-color;
   -webkit-background-size: cover;
@@ -182,7 +182,7 @@ a {
   }
   @media (min-width: 768px) {
     height: 100%;
-    padding: 0;
+    padding-top: 5rem;
     .intro-body {
       .brand-heading {
         font-size: 100px;
