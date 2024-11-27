@@ -16,6 +16,8 @@ body {
   color: $font-color;
   background-color: $primary-color;
   font-size: 1.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 h1,
@@ -27,6 +29,26 @@ h6 {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.07rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.3rem;
 }
 
 h4 {
@@ -98,7 +120,6 @@ a {
 
   .navbar-toggler {
     padding: 4px 6px;
-    font-size: 1.5rem;
     color: $font-color;
     &:focus,
     &:active {

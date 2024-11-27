@@ -1,17 +1,15 @@
 <!doctype html>
 <html lang="en">
-
   {% include head.html %}
 
   <body>
-
     {% include navigation.html %}
 
     <section id="post" class="container content-section text-center">
       <div class="row">
         <div class="col-md-10 offset-md-1">
-          <h1>{{ page.title }}</h1>
-          <h4>
+          <h2>{{ page.title }}</h2>
+          <h6>
             {{ page.date | date_to_string }}
             <small>
               .
@@ -25,42 +23,39 @@
               <a href="{{ page.url }}#disqus_thread">Comments</a>
               <br />
               {% for tag in page.tags %}
-                <a class="tag" href="/tags/{{ tag }}.html">#{{ tag }}</a>
+              <a class="tag" href="/tags/{{ tag }}.html">#{{ tag }}</a>
               {% endfor %}
             </small>
-          </h4>
+          </h6>
 
-          <section class="text-justify" style="padding-bottom: 3rem">
+          <section class="text-justify pt-5">
             {{ page.content | markdownify }}
           </section>
 
-          {% include share.html %}
-
+          {% include share.html %} 
           {% include comments.html %}
 
           <hr />
 
           {% if site.author_blurb %}
-            <div class="author row">
-              <div class="col-4 col-sm-3 col-md-2">
-                <img
-                  class="img-fluid"
-                  src="{{ site.author_blurb_image }}"
-                  alt="Me"
-                />
-              </div>
-              <div class="col-8 col-sm-9 col-md-10 blurb">
-                <p>{{ site.author_blurb }}</p>
-              </div>
+          <div class="author row">
+            <div class="col-4 col-sm-3 col-md-2">
+              <img
+                class="img-fluid"
+                src="{{ site.author_blurb_image }}"
+                alt="Me"
+              />
             </div>
+            <div class="col-8 col-sm-9 col-md-10 blurb">
+              <p>{{ site.author_blurb }}</p>
+            </div>
+          </div>
           {% endif %}
         </div>
       </div>
     </section>
 
-    {% include footer.html %}
-
+    {% include footer.html %} 
     {% include js.html %}
-
   </body>
 </html>
