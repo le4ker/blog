@@ -60,15 +60,30 @@
     .addEventListener("click", function () {
       const navbarCollapse = document.getElementById("navbarNav");
 
-      // Check if the navbar is currently visible
       if (navbarCollapse.classList.contains("show")) {
-        // Explicitly collapse the navbar
         const collapseInstance =
           bootstrap.Collapse.getInstance(navbarCollapse) ||
           new bootstrap.Collapse(navbarCollapse);
         collapseInstance.hide();
       }
     });
+</script>
+
+<!-- Collapse navbar when clicked outside of it -->
+
+<script>
+  document.addEventListener("click", function (event) {
+    const navbar = document.querySelector(".navbar-collapse");
+    const isClickInsideNavbar = navbar.contains(event.target);
+    const isNavbarOpen = navbar.classList.contains("show");
+
+    if (!isClickInsideNavbar && isNavbarOpen) {
+      const collapseInstance =
+        bootstrap.Collapse.getInstance(navbar) ||
+        new bootstrap.Collapse(navbar);
+      collapseInstance.hide();
+    }
+  });
 </script>
 
 <!-- Dynamic Typing Start -->
