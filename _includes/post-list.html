@@ -1,5 +1,5 @@
-<h5 class="text-left pt-3">
-  <strong>{{ post.date | date_to_string }}</strong>
+<h5 class="post-list pt-3">
+  {{ post.date | date_to_string }}
   <small>
     .
     <a class="category" href="/categories/{{ post.category | downcase }}.html">
@@ -8,9 +8,7 @@
     .
   </small>
   <br class="d-block d-sm-none" />
-  <a href="{{ post.url }}">
-    <strong>{{ post.title }}</strong>
-  </a>
+  <a href="{{ post.url }}"> {{ post.title }} </a>
   <br class="d-block d-sm-none" />
   <small><a href="{{ post.url }}#disqus_thread">Comments</a></small>
 </h5>
