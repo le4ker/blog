@@ -191,6 +191,9 @@ a {
       }
     }
   }
+  @media (min-width: 1200px) {
+    padding-top: 30rem;
+  }
 }
 
 @-webkit-keyframes pulse {
