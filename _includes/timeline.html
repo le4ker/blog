@@ -6,7 +6,7 @@
     <div class="col-md-10 col-12 mx-auto">
       {{ page.content | markdownify }}
 
-      <ul class="timeline">
+      <ul class="timeline pt-5">
         {% for event in site.events %} {% assign loopindex = forloop.index |
         modulo: 2 %} {% capture class %} {% if loopindex == 0 %}
         timeline-inverted {% endif %} {% endcapture %}
