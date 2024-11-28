@@ -52,6 +52,25 @@
 
 {% if page.section-type == "index" %}
 
+<!-- Collapse navbar when navbar-brand is clicked -->
+
+<script>
+  document
+    .querySelector(".navbar-brand")
+    .addEventListener("click", function () {
+      const navbarCollapse = document.getElementById("navbarNav");
+
+      // Check if the navbar is currently visible
+      if (navbarCollapse.classList.contains("show")) {
+        // Explicitly collapse the navbar
+        const collapseInstance =
+          bootstrap.Collapse.getInstance(navbarCollapse) ||
+          new bootstrap.Collapse(navbarCollapse);
+        collapseInstance.hide();
+      }
+    });
+</script>
+
 <!-- Dynamic Typing Start -->
 
 <script

@@ -1,13 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top" role="navigation">
   <div class="container">
+    <!-- Navbar Brand -->
     <a
       class="navbar-brand page-scroll"
       href="{% if page.section-type == 'index' %}#page-top{% else %}/{% endif %}"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-label="Collapse navigation"
     >
       <div>{{ site.title }}</div>
     </a>
+
+    <!-- Navbar Toggler -->
     <button
       class="navbar-toggler"
       type="button"
@@ -19,6 +22,8 @@
     >
       <i class="fa fa-bars"></i>
     </button>
+
+    <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         {% if page.section-type == "index" %} {% for p in site.pages_list %}
