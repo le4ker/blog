@@ -408,11 +408,9 @@ body {
 .timeline:before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 40px;
-  width: 2px;
-  margin-left: -1.5px;
+  top: 3rem;
+  bottom: 1rem;
+  width: 0.4rem;
   background-color: $background-color;
 }
 
@@ -460,7 +458,7 @@ body {
   left: 0;
   width: 80px;
   height: 80px;
-  margin-left: 0;
+  margin-left: -38px;
   border: 7px solid $background-color;
   border-radius: 100%;
   text-align: center;
@@ -629,7 +627,6 @@ body {
   .timeline > li .timeline-image {
     width: 156px;
     height: 156px;
-    margin-left: -85px;
   }
 
   .timeline > li .img-me {
