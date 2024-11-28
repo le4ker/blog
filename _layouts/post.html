@@ -5,11 +5,11 @@
   <body>
     {% include navigation.html %}
 
-    <section id="post" class="container content-section text-center">
+    <section id="post" class="container content-section">
       <div class="row">
         <div class="col-md-10 offset-md-1">
-          <h2>{{ page.title }}</h2>
-          <h6>
+          <h2 class="text-center">{{ page.title }}</h2>
+          <h6 class="text-center">
             {{ page.date | date_to_string }}
             <small>
               .
@@ -32,8 +32,7 @@
             {{ page.content | markdownify }}
           </section>
 
-          {% include share.html %} 
-          {% include comments.html %}
+          {% include share.html %} {% include comments.html %}
 
           <hr />
 
@@ -55,7 +54,6 @@
       </div>
     </section>
 
-    {% include footer.html %} 
-    {% include js.html %}
+    {% include footer.html %} {% include js.html %}
   </body>
 </html>
