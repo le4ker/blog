@@ -31,7 +31,7 @@ events:
     description: 'Tech Lead, Payments @ <a href="https://withplum.com" target="_blank">Plum Fintech</a>'
   - image: "/img/career/blocktopus.png"
     date: "November 2017 - October 2019"
-    description: 'Founder & CTO @ <a href="https://medium.com/blocktopus" target="_blank">Blocktopus</a>, KYC/AML Provider'
+    description: 'Founder & CTO @ <a href="https://blocktopus.ai" target="_blank">Blocktopus</a>'
   - image: "/img/career/microsoft.png"
     date: "October 2014 - October 2017"
     description: 'Security Software Engineer @ Microsoft <a href="https://www.office.com/" target="_blank">Office 365</a>'
