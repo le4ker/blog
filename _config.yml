@@ -20,7 +20,7 @@ twitter-share: True
 vkontakte-share: True
 disqus-shortname: "panossakkos"
 events:
-  - image: "/img/career/panther.png"
+  - image: "/img/career/panther.jpeg"
     date: "October 2022 - today"
     description: 'Senior Engineering Manager, Ingestion & Threat Research @ <a href="https://panther.com" target="_blank">Panther</a>'
   - image: "/img/career/orfium.png"
