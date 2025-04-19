@@ -242,6 +242,7 @@ a {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+    border-radius: 5px;
   }
   ul,
   ol {
@@ -252,6 +253,7 @@ a {
   }
   pre {
     padding: 0;
+    border-radius: 5px;
     > code {
       text-align: left;
     }
@@ -640,4 +642,11 @@ body {
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
+}
+
+.highlight {
+  /* Add rounded corners to the code block container */
+  border-radius: 5px;
+  /* Ensure overflow respects the rounded corners */
+  overflow: hidden; 
 }
