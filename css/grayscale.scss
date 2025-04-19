@@ -87,7 +87,7 @@ a {
 }
 
 .nav-item {
-  text-align: center;
+  text-align: left;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
@@ -117,21 +117,6 @@ a {
   text-transform: uppercase;
   background-color: $primary-color;
   overflow-y: auto;
-
-  .navbar-toggler {
-    padding: 4px 6px;
-    color: $font-color;
-    &:focus,
-    &:active {
-      outline: none;
-    }
-  }
-  a {
-    color: $font-color;
-  }
-  .nav {
-    text-align: center;
-  }
   @media (min-width: 768px) {
     padding: 20px 0;
     border-bottom: none;
@@ -151,6 +136,20 @@ a {
       background: $primary-color;
       border-bottom: 1px solid rgba($font-color, 0.3);
     }
+  }
+  .navbar-toggler {
+    padding: 4px 6px;
+    color: $font-color;
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+  a {
+    color: $font-color;
+  }
+  .nav {
+    text-align: left;
   }
 }
 
