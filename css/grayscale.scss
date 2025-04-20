@@ -3,6 +3,11 @@
 
 @import "variables";
 
+/* Conditionally import syntax highlighting theme */
+{% if site.syntax_theme %}
+  @import "syntax_{{ site.syntax_theme }}";
+{% endif %}
+
 /*!
  * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.

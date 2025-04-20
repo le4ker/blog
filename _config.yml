@@ -62,6 +62,7 @@ social:
 paginate_path: "blog/page:num"
 sass:
   style: compressed
+syntax_theme: everforest
 exclude:
   - LICENSE
   - README.md
