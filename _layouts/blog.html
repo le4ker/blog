@@ -15,7 +15,7 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
         <div class="col-md-10 col-12">
           {{ page.content | markdownify }}
 
-          <div>
+          <div class="post-list-container">
             {% for post in paginator.posts %}
               {% include post-list.html %}
             {% endfor %}

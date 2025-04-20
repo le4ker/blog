@@ -19,7 +19,7 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
 
           <h3 id="#{{ tag }}">#{{ tag }}</h3>
 
-          <div>
+          <div class="post-list-container">
             {% for post in site.posts %} 
               {% for t in post.tags %} 
                 {% if t == tag %} 
