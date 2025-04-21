@@ -3,10 +3,8 @@
 
 @import "variables";
 
-/* Conditionally import syntax highlighting theme */
-{% if site.syntax_theme %}
-  @import "syntax_{{ site.syntax_theme }}";
-{% endif %}
+@import "syntax_{{ site.syntax_theme }}";
+
 
 /*!
  * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
@@ -689,5 +687,8 @@ body {
 
 .highlight {
   border-radius: 0.3125rem;
-  overflow: hidden;
+  overflow-x: auto; /* Add horizontal scroll for wide code */
+  max-width: 66ch; /* Match paragraph width */
+  margin-left: auto; /* Center the block */
+  margin-right: auto; /* Center the block */
 }
