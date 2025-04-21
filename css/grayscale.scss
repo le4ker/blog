@@ -85,6 +85,16 @@ p {
   }
 }
 
+// Justify the author blurb text
+.blurb {
+  text-align: justify;
+}
+
+// Utility class for text justification
+.text-justify {
+    text-align: justify;
+}
+
 a {
   color: $secondary-color;
   -webkit-transition: all 0.2s ease-in-out;
