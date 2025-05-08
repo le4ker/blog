@@ -46,10 +46,10 @@ events:
     description: '<a href="https://scholar.google.com/citations?user=UtV6LFYAAAAJ" target="_blank">Machine Learning researcher</a> @ <a href="http://kddlab.di.uoa.gr" target="_blank">KDD lab</a><br/><br/>Master studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Software Engineering<br/><br/>Bachelor studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Computer Science and Telecomunications'
 timeline-img: "/img/career/default.png"
 email: "panos.sakkos@gmail.com"
-author_blurb: > 
-    An experienced engineering leader focused on building innovative and secure technology.
-    He has a diverse background spanning research at CERN, security engineering at Microsoft, founding a startup, and leading teams at Series A to B stage companies.
-    His proven track record includes several patents, published research in security and machine learning, and several investment rounds in the startups he has been part of.
+author_blurb: >
+  An experienced engineering leader focused on building innovative and secure technology.
+  He has a diverse background spanning cybersecurity research at CERN, security engineering at Microsoft, founding a KYC/AML startup, and leading teams at Series A to B stage companies.
+  His proven track record includes several patents, published research in security and machine learning, and several investment rounds in the startups he has been part of.
 author_blurb_image: "/img/me.jpg"
 social:
   - icon: "github"
