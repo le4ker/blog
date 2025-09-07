@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: Exploiting Command Injection Vulnerability in DVWA
 category: tech
-tags: ["security", "redteam", "dvwa"]
+tags: ["security", "redteam"]
 ---
 
 In this post we'll go through the process of exploiting command injection

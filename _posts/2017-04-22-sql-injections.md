@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: Exploiting SQL Injections to Access User Passwords
 category: tech
-tags: ["security", "redteam", "dvwa"]
+tags: ["security", "redteam"]
 ---
 
 In this post, we'll demonstrate how to exploit SQL injections in the [DVWA web
