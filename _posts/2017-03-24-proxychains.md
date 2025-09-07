@@ -7,19 +7,19 @@ category: tech
 tags: ["security", "redteam", "tor"]
 ---
 
-Welcome to the start of the [#redteam](tags/redteam.html) series of posts. In
-this post, we'll be using [Kali Linux](https://www.kali.org/) as our setup since
-it comes equipped with all the necessary tools. You can install Kali either on a
-VM, or on a USB stick. Install it on a USB stick, will allow you to boot from it
-in any workstation you may need, while not leaving digital traces behind you.
+Welcome to the start of my [#redteam](tags/redteam.html) series! In these posts, I'll walk you through various penetration testing techniques using [Kali Linux](https://www.kali.org/) as our platform. Kali comes pre-loaded with all the tools we'll need, making it perfect for this type of work.
 
-Our goal in this series is to gain access to resources that we are not
-authorized to access. However, the owner of the resource should not be able to
-detect that we've accessed it. First, we need to hide our MAC address to avoid
-being identified by our network provider. Your MAC address is a physical unique
-machine identifier that can be logged by your network provider, such as
-Starbucks' WiFi network. To avoid this, we'll be using `macchanger` to randomly
-change our MAC address. Simply run the following command if you're using WiFi:
+You can run Kali in a VM or on a USB stick - I actually prefer the USB approach since it allows you to boot on any workstation without leaving digital traces behind.
+
+## The Goal: Stealthy Access
+
+In this series, we'll explore techniques for gaining access to resources while remaining undetected. The key principle is that the resource owner shouldn't be able to tell that we've accessed their systems.
+
+## Step 1: Hiding Your MAC Address
+
+Your MAC address is like a unique fingerprint for your network interface - it can be logged by network providers (think Starbucks WiFi, hotel networks, etc.). To avoid being tracked this way, we'll use `macchanger` to randomly change your MAC address.
+
+If you're using WiFi, run these commands:
 
 ```bash
 ifconfig wlan0 down
@@ -27,59 +27,63 @@ macchanger -r wlan0 # -r for asking for a random MAC
 ifconfig wlan0 up
 ```
 
-If you're using Ethernet, replace `wlan0` with `eth0`. You can add these
-commands to your bash profile to ensure that you never forget to run them.
+If you're using Ethernet, just replace `wlan0` with `eth0`. Pro tip: you can add these commands to your bash profile so you never forget to run them automatically.
 
-Next, we need to hide our IP address. Although your IP address can't be spoofed,
-we can use a proxy to redirect our traffic through another server. This will
-make it difficult for third parties to trace our original IP address.
+## Step 2: Hiding Your IP Address
 
-We can use the `proxychains` tool to issue any web requestthrough a proxy
-easily. Start by finding your IP address using the following command:
+While you can't directly spoof your IP address, you can route your traffic through proxy servers to make it much harder for third parties to trace back to your original location.
+
+The `proxychains` tool makes this process incredibly easy - you can route any network request through a proxy with just a simple command prefix.
+
+Let's start by checking your current IP address:
 
 ```bash
 curl https://ipv4.icanhazip.com/
 # 193.71.106.208
 ```
 
-By default, `proxychains` uses the Tor network as a proxy, so let's start the
-Tor service by running:
+By default, `proxychains` uses the Tor network as a proxy, so let's start the Tor service:
 
 ```bash
 service tor start
 ```
 
-Then you simply add `proxychains` before the command that will make web requests
-you want to execute. For instance, if you want to perform a network scan, run:
+Now you can route any network command through the proxy by simply adding `proxychains` before it. For example, if you want to perform a network scan:
 
 ```bash
 proxychains nmap -sS 192.168.1.0/24
 ```
 
-To see your IP address changing, let's use the following command to GET the
-canhazip page through proxychains:
+Let's test it by checking our IP address through proxychains:
 
 ![proxychains](/img/posts/proxychains/proxychains-0.png)
 
-You can verify that your IP is one of Tor's exit nodes by searching for it
-[here](https://check.torproject.org/exit-addresses). To chain multiple proxies
-together, add them to the proxychains configuration file by typing:
+You can verify that your new IP is actually a Tor exit node by checking it [here](https://check.torproject.org/exit-addresses).
+
+## Advanced: Chaining Multiple Proxies
+
+For even more anonymity, you can chain multiple proxies together. Edit the proxychains configuration file:
 
 ```bash
 nano /etc/proxychains.conf
 ```
 
-Here's an example of how to add a proxy located in Venezuela:
+Here's an example of adding a proxy in Venezuela to your chain:
 
 ![proxychains](/img/posts/proxychains/proxychains-1.png)
 
-You can chain as many proxies as you want to make it more difficult to trace
-your original IP address.
+You can add as many proxies as you want to make tracing your original IP even more difficult.
 
-Finally, let's randomize the chain order by commenting out the `strict_chain`
-option and uncommenting the `random_chain` option:
+## Randomizing Your Proxy Chain
+
+For maximum stealth, you can randomize the order of your proxy chain by commenting out `strict_chain` and uncommenting `random_chain`:
 
 ![proxychains](/img/posts/proxychains/proxychains-2.png)
 
-Now, your traffic will go through either the three Tor nodes and then the proxy
-in Venezuela or vice versa.
+Now your traffic will randomly route through either the three Tor nodes first, then the Venezuela proxy, or vice versa - making your traffic patterns even more unpredictable.
+
+## What's Next?
+
+In the next post, we'll set up DVWA (Damn Vulnerable Web Application) and start exploring web application vulnerabilities. This will give you hands-on experience with some of the most common security issues found in real-world applications.
+
+Have you used proxychains before? What's your preferred setup for maintaining anonymity during security testing?
