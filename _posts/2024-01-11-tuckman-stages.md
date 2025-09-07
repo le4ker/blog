@@ -4,7 +4,7 @@ section-type: post
 has-comments: true
 title: Tuckman's stages, startup edition
 category: tech
-tags: ["management"]
+tags: ["leadership"]
 ---
 
 Teams and groups within organizations are chaotic environments, people come and
