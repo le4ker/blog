@@ -287,6 +287,13 @@ a {
       border-radius: 50%;
     }
   }
+
+  // Center paragraphs when section has text-center class
+  &.text-center p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 
 .btn {
@@ -402,6 +409,15 @@ ul.social-buttons li a {
 footer {
   padding: 3.11rem 0; /* Golden Ratio Spacing */
   text-align: center;
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 
 ::-moz-selection {
