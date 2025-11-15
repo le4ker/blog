@@ -9,7 +9,7 @@ tags: ["productivity"]
 
 ## Table of Contents
 
-- [What's a productivity stack?]
+- [What's a productivity stack?](#whats-a-productivity-stack)
 - [Software](#software)
   - [Status Bar](#status-bar)
   - [Terminal Emulator](#terminal-emulator)
@@ -23,8 +23,8 @@ tags: ["productivity"]
 
 ## What's a productivity stack?
 
-What's a productivity stack? Definitions may vary depending on context, so let's
-define it in the context of a tech worker:
+Definitions may vary depending on context, so let's define it in the context of
+a tech worker:
 
 > A productivity stack is the collection of tools, and workflows that form the
 > backbone of how you interact with your computer. It's more than just
@@ -38,7 +38,8 @@ define it in the context of a tech worker:
 > every element plays a role in shaping your digital experience.
 
 In this post, I'll walk you through my personal productivity stack, sharing the
-tools that have fundamentally changed how I work and why I chose each one.
+tools that have fundamentally changed how I work and why I've chosen each one of
+them.
 
 ## Software
 
@@ -46,8 +47,9 @@ tools that have fundamentally changed how I work and why I chose each one.
 
 When it comes to the status bar, I just want something minimal that won't be
 distracting me from my tasks, while providing my any information that I need,
-varying from date up to the battery level of my air pods. I've been using
-sketchybar, with this config and the result is the following:
+from the time and date up to the battery level of my air pods. I've been using
+[Sketchybar](https://github.com/FelixKratz/SketchyBar), with [this](following)
+config and the result is the following:
 
 ![rotate](/img/posts/productivity/statusbar.png)
 
@@ -58,8 +60,6 @@ No frills, right? Just the information you need.
 The terminal is where I spend a significant part of my time, so having the right
 terminal emulator is key. I use [Kitty](https://sw.kovidgoyal.net/kitty/) with a
 minimal visually configuration, while focusing on readability.
-
-**Font and Visual Appeal**
 
 ```config
 font_family Hack Nerd Font
@@ -95,7 +95,7 @@ map cmd+minus change_font_size all -1.0
 map cmd+0 change_font_size all 0
 ```
 
-Notice now how the status bar blends with the terminal emulator:
+Now notice now how the status bar blends with the terminal emulator:
 
 ![status-bar-terminal](/img/posts/productivity/statusbar-terminal.png)
 
@@ -115,12 +115,12 @@ plugins=(
 )
 ```
 
-The `zsh-autosuggestions` plugin is particularly powerful—it learns from your
+The `zsh-autosuggestions` plugin is the most powerful, since it learns from your
 command history and suggests completions as you type. Combined with `autojump`,
 I rarely type full paths anymore. Just `j project` takes me to
 `/path/to/my/project`.
 
-The git plugin provides shortcuts that speed up common operations:
+The `git` plugin provides shortcuts that speed up common operations:
 
 ```bash
 # Instead of typing these:
@@ -246,11 +246,14 @@ neovim [here](https://github.com/le4ker/NvMegaChad).
 
 Keyboards are an entire rabbit hole by themselves, you can read more about them
 in [Choosing the right keyboard for
-you]({% post_url 2024-05-11-choosing-the-right-keyboard %})
+you]({% post_url 2024-05-11-choosing-the-right-keyboard %}) where I documented
+my journey of learning everything about them in order to built my daily driver:
+
+![split-keyboard](/img/posts/choosing-the-right-keyboard/split.jpg)
 
 ### Mouse
 
-Mouse are a matter of personal preference, but since I switched to
+The mouse is a matter of personal preference, but since I switched to
 [trackball one](https://www.logitech.com/en-us/shop/p/mx-ergo-s-wireless-trackball-mouse),
 I can't go back.
 
