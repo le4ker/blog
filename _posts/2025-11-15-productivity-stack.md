@@ -23,43 +23,56 @@ tags: ["productivity"]
 
 ## What's a productivity stack?
 
-Definitions may vary depending on context, so let's define it in the context of
+Definitions will vary depending on context, so let's define it in the context of
 a tech worker:
 
 > A productivity stack is the collection of tools, and workflows that form the
-> backbone of how you interact with your computer. It's more than just
-> software—it's a cohesive ecosystem where each component is chosen to
-> complement the others, creating an environment that minimizes friction and
-> maximizes efficiency. Whether you're a developer, designer, or knowledge
-> worker, **your productivity stack becomes an extension of your thinking
-> process, automating repetitive tasks and keeping you in a state of flow**.
-> From the terminal you live in, to the window manager that organizes your
-> workspace, to the browser extensions that streamline your web interactions,
-> every element plays a role in shaping your digital experience.
+> backbone of how you interact with your computer. It's more than just software,
+> it's a cohesive ecosystem where each component is chosen to complement the
+> others, creating an environment that minimizes friction and maximizes
+> efficiency. Whether you're a developer, designer, or knowledge worker, **your
+> productivity stack becomes an extension of your thinking process, automating
+> repetitive tasks and keeping you in a state of flow**. From the terminal you
+> live in, to the window manager that organizes your workspace, to the browser
+> extensions that streamline your web interactions, every element plays a role
+> in shaping your digital experience.
 
-In this post, I'll walk you through my personal productivity stack, sharing the
-tools that have fundamentally changed how I work and why I've chosen each one of
-them.
+In this post, I'll walk you through my own productivity stack, sharing the tools
+that have fundamentally changed how I work and why I've chosen each one of them.
+**A stack is always a matter of taste** and this is not a "This is how you
+should do it" guide. Instead, it should serve as an inspiration for finding your
+own productivity stack that works for you.
 
-## Software
+## Software Stack
+
+### Keyboard Keymap
+
+Let's start with the keymap, which capitalizes on vim shortcuts, for arrow,
+navigation keys and media keys as well:
+
+![base-layer](/img/posts/choosing-the-right-keyboard/base.png)
+
+![lower-layer](/img/posts/choosing-the-right-keyboard/lower.png)
 
 ### Status Bar
 
-When it comes to the status bar, I just want something minimal that won't be
-distracting me from my tasks, while providing my any information that I need,
-from the time and date up to the battery level of my air pods. I've been using
-[Sketchybar](https://github.com/FelixKratz/SketchyBar), with [this](following)
-config and the result is the following:
+When it comes to the status bar, I want something minimal and informational
+only, that won't be distracting me aways from my tasks, while providing my the
+information that I need, from the time and date up to the battery level of my
+AirPods. I've been using [Sketchybar](https://github.com/FelixKratz/SketchyBar),
+with [this](https://github.com/le4ker/dotfiles/tree/main/sketchybar) config and
+the result is the following:
 
 ![rotate](/img/posts/productivity/statusbar.png)
 
-No frills, right? Just the information you need.
+No frills, right? Just the information I need.
 
 ### Terminal Emulator
 
-The terminal is where I spend a significant part of my time, so having the right
-terminal emulator is key. I use [Kitty](https://sw.kovidgoyal.net/kitty/) with a
-minimal visually configuration, while focusing on readability.
+The terminal is where I spend a significant part of my time and I've chosen
+[Kitty](https://sw.kovidgoyal.net/kitty/) since it's highly configurable using a
+config file that I can track on git. I have designed it with minimal as the
+driver for my design decisions, while focusing on readability.
 
 ```config
 font_family Hack Nerd Font
@@ -77,21 +90,21 @@ warm, forest-green aesthetic that's easy on the eyes during long coding
 sessions. The medium contrast variant strikes a great balance between
 readability and comfort.
 
-The right shortcuts that will complement the ones of the window manager, are
-essential for navigation within the terminal emulator:
+The shortcust are essential here as well, and follow the same vim aesthetic,
+like my keyboard keymap does:
 
 ```config
-# Tab navigation (matching browser behavior)
+# Tab navigation
 map cmd+] next_tab
 map cmd+[ previous_tab
 
 # Tab management
-map shift+cmd+right move_tab_forward
-map shift+cmd+left move_tab_backward
+map shift+cmd+l move_tab_forward
+map shift+cmd+h move_tab_backward
 
 # Font size controls
-map cmd+plus change_font_size all +1.0
-map cmd+minus change_font_size all -1.0
+map cmd+k change_font_size all +1.0
+map cmd+j change_font_size all -1.0
 map cmd+0 change_font_size all 0
 ```
 
