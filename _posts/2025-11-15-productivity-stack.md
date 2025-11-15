@@ -10,8 +10,9 @@ tags: ["productivity"]
 ## Table of Contents
 
 - [What's a productivity stack?](#whats-a-productivity-stack)
-- [Software](#software)
+- [Software](#software-stack)
   - [Status Bar](#status-bar)
+  - [Keyboard Keymap](#keyboard-keymap)
   - [Terminal Emulator](#terminal-emulator)
   - [Shell Aliases](#shell-aliases)
   - [Window Manager](#window-manager)
@@ -39,29 +40,34 @@ a tech worker:
 
 In this post, I'll walk you through my own productivity stack, sharing the tools
 that have fundamentally changed how I work and why I've chosen each one of them.
-**A stack is always a matter of taste** and this is not a "This is how you
-should do it" guide. Instead, it should serve as an inspiration for finding your
-own productivity stack that works for you.
+**A stack is a matter of taste** and this is not a "This is how you should do
+it" guide. Instead, it should serve as an inspiration for finding your own
+productivity stack that works for you.
 
 ## Software Stack
 
 ### Keyboard Keymap
 
-Let's start with the keymap, which capitalizes on vim shortcuts, for arrow,
-navigation keys and media keys as well:
+Let's start with the keyboard keymap, which capitalizes on vim shortcuts, for
+arrow, navigation and media keys, while it has the `Esc` button in an easily
+reachable position (where the `Caps Lock` would normally be), since it's being
+used heavily in vim's keybindings philosophy:
 
 ![base-layer](/img/posts/choosing-the-right-keyboard/base.png)
 
 ![lower-layer](/img/posts/choosing-the-right-keyboard/lower.png)
 
+I have also replaced the `Caps Lock` key with the `Esc` in my Mackbook's
+keyboard as well, for when I'm not working from my home office.
+
 ### Status Bar
 
 When it comes to the status bar, I want something minimal and informational
-only, that won't be distracting me aways from my tasks, while providing my the
-information that I need, from the time and date up to the battery level of my
+only, that won't be distracting me away from my tasks, while providing my the
+information that I need. From the time and date up to the battery level of my
 AirPods. I've been using [Sketchybar](https://github.com/FelixKratz/SketchyBar),
-with [this](https://github.com/le4ker/dotfiles/tree/main/sketchybar) config and
-the result is the following:
+with [this](https://github.com/le4ker/dotfiles/tree/main/sketchybar)
+configuration that is tracked with git and the result is the following:
 
 ![rotate](/img/posts/productivity/statusbar.png)
 
@@ -81,9 +87,9 @@ background_opacity 0.9
 hide_window_decorations yes
 ```
 
-I use Hack Nerd Font at a comfortable 19pt size with 90% background opacity.
-This gives a modern, clean look while maintaining strong readability. Hiding
-window decorations maximizes screen real estate.
+I prefer the Hack Nerd Font at a comfortable 19pt size with 90% background
+opacity. This gives a modern, clean look while maintaining strong readability.
+Hiding window decorations maximizes screen real estate.
 
 The [Everforest](https://github.com/sainnhe/everforest) colorscheme, provides a
 warm, forest-green aesthetic that's easy on the eyes during long coding
