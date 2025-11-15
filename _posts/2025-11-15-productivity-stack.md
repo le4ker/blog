@@ -256,4 +256,3 @@ my journey of learning everything about them in order to built my daily driver:
 The mouse is a matter of personal preference, but since I switched to
 [trackball one](https://www.logitech.com/en-us/shop/p/mx-ergo-s-wireless-trackball-mouse),
 I can't go back.
-

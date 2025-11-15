@@ -279,6 +279,24 @@ a {
     display: inline !important;
   }
 
+  blockquote {
+    border-left: 0.25rem solid $secondary-color;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba($secondary-color, 0.05);
+    border-radius: 0.25rem;
+    font-style: italic;
+    color: darken($font-color, 10%);
+
+    p {
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &#post {
     div.author img {
       border: 0;
