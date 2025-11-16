@@ -7,14 +7,15 @@ category: tech
 tags: ["productivity"]
 ---
 
-## Table of Contents
+### Table of Contents
 
 - [What's a productivity stack?](#whats-a-productivity-stack)
+- [Design Philosophy](#design-philosophy)
 - [Software](#software-stack)
   - [Status Bar](#status-bar)
   - [Keyboard Keymap](#keyboard-keymap)
   - [Terminal Emulator](#terminal-emulator)
-  - [Shell Aliases](#shell-aliases)
+  - [Shell](#shell)
   - [Window Manager](#window-manager)
   - [IDE](#ide)
   - [Browser Shortcuts](#browser-shortcuts)
@@ -22,13 +23,13 @@ tags: ["productivity"]
   - [Keyboard](#keyboard)
   - [Mouse](#mouse)
 
-## What's a productivity stack?
+### What's a productivity stack?
 
 Definitions will vary depending on context, so let's define it in the context of
 a tech worker:
 
 > A productivity stack is the collection of tools and workflows that form the
-> backbone of how you interact with your computer. It's more than just software;
+> backbone of how you interact with your computer. It's more than just software,
 > it's a cohesive ecosystem where each component is chosen to complement the
 > others, creating an environment that minimizes friction and maximizes
 > efficiency. Whether you're a developer, designer, or knowledge worker, **your
@@ -44,9 +45,55 @@ that have fundamentally changed how I work and why I've chosen each one of them.
 should do it" guide. Instead, it should serve as an inspiration for finding your
 own productivity stack that works for you.
 
-## Software Stack
+### Design Philosophy
 
-### Keyboard Keymap
+My productivity stack is built around three core principles that helped me make
+decisions when it comes to which tools to pick or how to configure them.
+
+#### 1. Minimalism and Focus
+
+Minimalism doesn't mean feature-poor, it means intentional. Each tool is chosen
+because it excels at its specific role without bloating the experience. To
+achieve that, I prioritize:
+
+- **Clean, distraction-free interfaces** that keep me focused on the task at
+  hand
+- **Reducing context switching** by making similar operations feel identical
+  across tools
+- **Automation of repetitive tasks** so I can focus on creative work
+
+#### 2. Configuration as Code
+
+My productivity stack is version-controlled and reproducible. This approach
+offers several benefits:
+
+- **Every configuration is tracked in git**, making it easy to iterate and roll
+  back changes
+- **Experimentation is safer** when changes are tracked and reversible
+- **Sharing and learning from others** becomes natural when configurations are
+  code
+- **New machine setup becomes trivial**—a few git clones and make installs
+  restore my entire environment
+
+#### 3. vim Philosophy
+
+At the heart of my setup is the vim philosophy that, you should control your
+computer at the speed of thought. This isn't just about text editing, it's a
+fundamental approach to interacting with every piece of software. The modal
+nature of vim, where different modes serve different purposes, extends
+throughout my entire stack:
+
+- **Keyboard shortcuts follow consistent patterns** (`hjkl` for navigation,
+  `[/]` for back/forward, first letters of actions)
+- **Muscle memory transfers between tools**, making the entire system feel
+  cohesive
+
+This philosophy started with Neovim but has influenced every tool choice, from
+window management shortcuts to browser navigation.
+
+### Software Stack
+
+#### Keyboard Keymap
 
 Let's start with the keyboard keymap, which capitalizes on vim shortcuts, for
 arrow, navigation and media keys, while it has the `Esc` button in an easily
@@ -62,7 +109,7 @@ as well, for when I'm not working from my home office:
 
 ![esc](/img/posts/productivity/esc.png)
 
-### Status Bar
+#### Status Bar
 
 When it comes to the status bar, I want something minimal and informational
 only, that won't be distracting me away from my tasks, while providing me the
@@ -76,7 +123,7 @@ that is tracked with git and the result is the following:
 
 No frills, right? Just the information I need.
 
-### Terminal Emulator
+#### Terminal Emulator
 
 The terminal is where I spend a significant part of my time and I've chosen
 [Kitty](https://sw.kovidgoyal.net/kitty/) since it's highly configurable using a
@@ -123,7 +170,7 @@ Now notice how the status bar blends with the terminal emulator:
 
 ![status-bar-terminal](/img/posts/productivity/statusbar-terminal.png)
 
-### Shell Aliases
+#### Shell
 
 While I keep my custom aliases minimal, the secret sauce is no other than the
 good old [Oh My Zsh](https://ohmyz.sh/) and a couple of its plugins that provide
@@ -131,7 +178,7 @@ dozens of useful shortcuts. Here's which I use:
 
 ```bash
 plugins=(
-  zsh-autosuggestions  # Suggests commands as you type
+  zsh-autosuggestions # Suggests commands as you type
   autojump            # Jump to frequently used directories
   git                 # Dozens of git shortcuts
   docker-compose      # Docker compose shortcuts
@@ -164,7 +211,7 @@ gp     # git push
 gl     # git pull
 ```
 
-### Window Manager
+#### Window Manager
 
 A window manager shines when it offloads you from arranging your windows. I did
 a thorough walkthrough of my setup in [Your Windows on
@@ -198,7 +245,7 @@ shift + alt - x : yabai -m space --mirror x-axis
 shift + alt - f : yabai -m window --toggle zoom-fullscreen
 ```
 
-### IDE
+#### IDE
 
 For code editing, I use Neovim with the [NvChad](https://nvchad.com/)
 distribution. NvChad provides a well-configured, modern Neovim setup out of the
@@ -234,16 +281,13 @@ the most feature-rich one:
 
 ![cc](/img/posts/productivity/cc.gif)
 
-You can find the neovim configuration
-[here](https://github.com/le4ker/NvMegaChad).
-
-### Browser Shortcuts
+#### Browser Shortcuts
 
 The browser is where I spend most of my time, and keyboard-driven navigation is
 essential for maintaining flow. I use [Vimium](https://vimium.github.io/), a
-Chrome extension that brings Vim-style navigation to web browsing.
+browser extension that enables vim-style navigation to web browsing.
 
-I've customized Vimium to align with Vim's navigation philosophy:
+I've customized it to align with vim's navigation philosophy:
 
 ```config
 # Page Navigation
@@ -254,7 +298,7 @@ k           # Scroll up
 <C-d>       # Scroll page down
 <C-u>       # Scroll page up
 
-# Tab Navigation (matching vim movements)
+# Tab Navigation
 h           # Previous tab
 l           # Next tab
 u           # Restore closed tab
@@ -262,7 +306,7 @@ u           # Restore closed tab
 # Using find
 /           # Enter find mode
 
-# Navigatin History
+# Navigating History
 [           # Go back
 ]           # Go forward
 ```
@@ -271,7 +315,7 @@ These mappings feel natural when combined with Neovim's key bindings, `h/l` for
 horizontal movement translates perfectly to tab navigation, while `[/]` brackets
 provide intuitive back/forward navigation. I use a streamlined hint character
 set: `asdfghjkl`. This home-row configuration minimizes finger movement and
-makes link selection lightning-fast:
+makes link selection very fast:
 
 ```config
 # Link Navigation
@@ -279,33 +323,24 @@ f           # Show link hints (using asdfghjkl)
 F           # Open link in new tab
 ```
 
-The beauty of this setup is how it creates a consistent navigation experience
-across your entire system, from window management with `h/j/k/l`, to text
-editing in Neovim, to web browsing with Vimium. Your muscle memory works
-everywhere.
+### Hardware
 
-You can find the vimium overrides
-[here](https://github.com/le4ker/dotfiles/blob/main/vimium/backup.json).
-
-## Hardware
-
-### Keyboard
+#### Keyboard
 
 Keyboards are an entire rabbit hole by themselves, you can read more about them
 in [this post]({% post_url 2024-05-11-choosing-the-right-keyboard %}), where I
 documented my journey of learning everything about them in order to built my
 daily driver. I decided to give a try to a split keyboard, which took a month to
 design and build, a week to get to a 50-ish WPM and a total of three weeks to
-get back to my usuak WPM. The split keyboard is not about increasing your WPMs
-though, it's all about making your typing experience less stressfull on your
-wrists.
+get back to my usual WPM. The split keyboard is not about increasing your WPMs
+though, it's about making your typing experience less stressfull on your wrists.
 
 ![split-keyboard](/img/posts/choosing-the-right-keyboard/split.jpg)
 
-### Mouse
+#### Mouse
 
 The mouse is a matter of personal preference as well, but since I switched to a
-trackball one, I can't go back. I've minimized my moves from the keyboard to the
-mouse with all the vim shortcuts that I have in place, but when I have to use
-the mouse it's definitely more relaxing not moving the mouse and using my thumbs
-instead.
+trackball mouse, I can't go back. I've minimized my moves from the keyboard to
+the mouse with all the vim shortcuts that I have in place, but when I have to
+use the mouse it's definitely more relaxing not moving the mouse and using my
+thumbs instead.
