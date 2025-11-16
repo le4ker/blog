@@ -66,10 +66,11 @@ as well, for when I'm not working from my home office:
 
 When it comes to the status bar, I want something minimal and informational
 only, that won't be distracting me away from my tasks, while providing me the
-information that I need. From the time and date up to the battery level of my
-AirPods. I've been using [Sketchybar](https://github.com/FelixKratz/SketchyBar),
-with [this](https://github.com/le4ker/dotfiles/tree/main/sketchybar)
-configuration that is tracked with git and the result is the following:
+information that I need. From my current workspace, up to the battery level of
+my AirPods. I've been using
+[Sketchybar](https://github.com/FelixKratz/SketchyBar), with
+[this](https://github.com/le4ker/dotfiles/tree/main/sketchybar) configuration
+that is tracked with git and the result is the following:
 
 ![rotate](/img/posts/productivity/statusbar.png)
 
@@ -229,7 +230,12 @@ What about AI capabilities, like using an LLM to search codebases or write code
 for you? Everything is possible in neovim, including this. There are several
 plugins for AI features and my personal preference is
 [Code Companion](https://github.com/olimorris/codecompanion.nvim/) since it's
-the most feature-rich one.
+the most feature-rich one:
+
+![cc](/img/posts/productivity/cc.gif)
+
+You can find the neovim configuration
+[here](https://github.com/le4ker/NvMegaChad).
 
 ### Browser Shortcuts
 
@@ -240,21 +246,28 @@ Chrome extension that brings Vim-style navigation to web browsing.
 I've customized Vimium to align with Vim's navigation philosophy:
 
 ```config
+# Page Navigation
+yy          # Copy tab's URL in clipboard
+gi          # Focus on input
+j           # Scroll down
+k           # Scroll up
+<C-d>       # Scroll page down
+<C-u>       # Scroll page up
+
 # Tab Navigation (matching vim movements)
 h           # Previous tab
 l           # Next tab
 u           # Restore closed tab
 
-# Browser History
+# Using find
+/           # Enter find mode
+
+# Navigatin History
 [           # Go back
 ]           # Go forward
-
-# Scrolling
-<C-d>       # Scroll page down
-<C-u>       # Scroll page up
 ```
 
-These mappings feel natural when combined with Neovim's key bindings—`h/l` for
+These mappings feel natural when combined with Neovim's key bindings, `h/l` for
 horizontal movement translates perfectly to tab navigation, while `[/]` brackets
 provide intuitive back/forward navigation. I use a streamlined hint character
 set: `asdfghjkl`. This home-row configuration minimizes finger movement and
@@ -267,25 +280,32 @@ F           # Open link in new tab
 ```
 
 The beauty of this setup is how it creates a consistent navigation experience
-across your entire system—from window management with `h/j/k/l`, to text editing
-in Neovim, to web browsing with Vimium. Your muscle memory works everywhere.
+across your entire system, from window management with `h/j/k/l`, to text
+editing in Neovim, to web browsing with Vimium. Your muscle memory works
+everywhere.
 
-You can find all the configs [here](https://github.com/le4ker/dotfiles), and for
-neovim [here](https://github.com/le4ker/NvMegaChad).
+You can find the vimium overrides
+[here](https://github.com/le4ker/dotfiles/blob/main/vimium/backup.json).
 
 ## Hardware
 
 ### Keyboard
 
 Keyboards are an entire rabbit hole by themselves, you can read more about them
-in [Choosing the right keyboard for
-you]({% post_url 2024-05-11-choosing-the-right-keyboard %}) where I documented
-my journey of learning everything about them in order to built my daily driver:
+in [this post]({% post_url 2024-05-11-choosing-the-right-keyboard %}), where I
+documented my journey of learning everything about them in order to built my
+daily driver. I decided to give a try to a split keyboard, which took a month to
+design and build, a week to get to a 50-ish WPM and a total of three weeks to
+get back to my usuak WPM. The split keyboard is not about increasing your WPMs
+though, it's all about making your typing experience less stressfull on your
+wrists.
 
 ![split-keyboard](/img/posts/choosing-the-right-keyboard/split.jpg)
 
 ### Mouse
 
-The mouse is a matter of personal preference, but since I switched to a
-[trackball one](https://www.logitech.com/en-us/shop/p/mx-ergo-s-wireless-trackball-mouse),
-I can't go back.
+The mouse is a matter of personal preference as well, but since I switched to a
+trackball one, I can't go back. I've minimized my moves from the keyboard to the
+mouse with all the vim shortcuts that I have in place, but when I have to use
+the mouse it's definitely more relaxing not moving the mouse and using my thumbs
+instead.
