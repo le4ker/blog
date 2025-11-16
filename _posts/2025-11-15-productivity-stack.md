@@ -27,8 +27,8 @@ tags: ["productivity"]
 Definitions will vary depending on context, so let's define it in the context of
 a tech worker:
 
-> A productivity stack is the collection of tools, and workflows that form the
-> backbone of how you interact with your computer. It's more than just software,
+> A productivity stack is the collection of tools and workflows that form the
+> backbone of how you interact with your computer. It's more than just software;
 > it's a cohesive ecosystem where each component is chosen to complement the
 > others, creating an environment that minimizes friction and maximizes
 > efficiency. Whether you're a developer, designer, or knowledge worker, **your
@@ -40,9 +40,9 @@ a tech worker:
 
 In this post, I'll walk you through my own productivity stack, sharing the tools
 that have fundamentally changed how I work and why I've chosen each one of them.
-**A stack is a matter of taste** and this is not a "This is how you should do
-it" guide. Instead, it should serve as an inspiration for finding your own
-productivity stack that works for you.
+**A productivity stack is a matter of taste** and this is not a "This is how you
+should do it" guide. Instead, it should serve as an inspiration for finding your
+own productivity stack that works for you.
 
 ## Software Stack
 
@@ -57,13 +57,15 @@ used heavily in vim's keybindings philosophy:
 
 ![lower-layer](/img/posts/choosing-the-right-keyboard/lower.png)
 
-I have also replaced the `Caps Lock` key with the `Esc` in my Mackbook's
-keyboard as well, for when I'm not working from my home office.
+I have also replaced the `Caps Lock` key with the `Esc` in my MacBook's keyboard
+as well, for when I'm not working from my home office:
+
+![esc](/img/posts/productivity/esc.png)
 
 ### Status Bar
 
 When it comes to the status bar, I want something minimal and informational
-only, that won't be distracting me away from my tasks, while providing my the
+only, that won't be distracting me away from my tasks, while providing me the
 information that I need. From the time and date up to the battery level of my
 AirPods. I've been using [Sketchybar](https://github.com/FelixKratz/SketchyBar),
 with [this](https://github.com/le4ker/dotfiles/tree/main/sketchybar)
@@ -77,8 +79,10 @@ No frills, right? Just the information I need.
 
 The terminal is where I spend a significant part of my time and I've chosen
 [Kitty](https://sw.kovidgoyal.net/kitty/) since it's highly configurable using a
-config file that I can track on git. I have designed it with minimal as the
-driver for my design decisions, while focusing on readability.
+config file that
+[I can track](https://github.com/le4ker/dotfiles/tree/main/kitty) on git. I have
+designed it with minimal as the driver for the design decisions, while focusing
+on readability:
 
 ```config
 font_family Hack Nerd Font
@@ -88,16 +92,16 @@ hide_window_decorations yes
 ```
 
 I prefer the Hack Nerd Font at a comfortable 19pt size with 90% background
-opacity. This gives a modern, clean look while maintaining strong readability.
-Hiding window decorations maximizes screen real estate.
+opacity to spice it up. This gives a modern, clean look while maintaining strong
+readability. Hiding window decorations maximizes screen real estate.
 
 The [Everforest](https://github.com/sainnhe/everforest) colorscheme, provides a
 warm, forest-green aesthetic that's easy on the eyes during long coding
 sessions. The medium contrast variant strikes a great balance between
 readability and comfort.
 
-The shortcust are essential here as well, and follow the same vim aesthetic,
-like my keyboard keymap does:
+The shortcuts are essential here as well, and follow the same vim aesthetic,
+like the keyboard keymap does:
 
 ```config
 # Tab navigation
@@ -114,7 +118,7 @@ map cmd+j change_font_size all -1.0
 map cmd+0 change_font_size all 0
 ```
 
-Now notice now how the status bar blends with the terminal emulator:
+Now notice how the status bar blends with the terminal emulator:
 
 ![status-bar-terminal](/img/posts/productivity/statusbar-terminal.png)
 
@@ -142,38 +146,48 @@ I rarely type full paths anymore. Just `j project` takes me to
 The `git` plugin provides shortcuts that speed up common operations:
 
 ```bash
-# Instead of typing these:
+# Instead of typing:
 git status
 git add .
+git add --all
 git commit -m "message"
 git push
+git pull
 
 # I use these:
 gst    # git status
 ga .   # git add .
-gcmsg "message"  # git commit -m "message"
+gaa    # git add --all
+gc -m "message"  # git commit -m "message"
 gp     # git push
+gl     # git pull
 ```
 
 ### Window Manager
 
-A window manager shines when it offloads you from arraning your windows. I did a
-thorough walkthrough of my setup in [Your Windows on
+A window manager shines when it offloads you from arranging your windows. I did
+a thorough walkthrough of my setup in [Your Windows on
 Autopilot]({% post_url 2024-07-04-yabai %}), but the gist of it is that you can
 rely on workspaces and
 [Binary Space Partitioning](https://en.wikipedia.org/wiki/Binary_space_partitioning)
-in order to let the window manager to automatically organize your windows as the
+in order to let the window manager automatically organize your windows as they
 open and close.
 
-![rotate](/img/posts/yabai/rotate.gif)
+![bsp](/img/posts/yabai/bsp.gif)
 
 You'll need some shortcuts in order to control some aspects, like rearranging
 windows in a workspace when needed, and it's key to use different key
 combinations for managing the windows in your workspace, or the focus of the
-windows. Trying to conform with vim shortcuts guideance will make changes
-feeling natural:
+windows. Trying to conform with vim shortcuts guidance will make changes feel
+natural:
 
 ```config
+# Focus Window
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+
 # Window Tree Manipulation
 shift + alt - r : yabai -m space --rotate 270
 shift + alt - y : yabai -m space --mirror y-axis
@@ -181,12 +195,6 @@ shift + alt - x : yabai -m space --mirror x-axis
 
 # Window Manipulation
 shift + alt - f : yabai -m window --toggle zoom-fullscreen
-
-# Focus Window
-alt - h : yabai -m window --focus west
-alt - l : yabai -m window --focus east
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
 ```
 
 ### IDE
@@ -194,28 +202,34 @@ alt - k : yabai -m window --focus north
 For code editing, I use Neovim with the [NvChad](https://nvchad.com/)
 distribution. NvChad provides a well-configured, modern Neovim setup out of the
 box, but the real power comes from the additional plugins and customizations. To
-be honest, my whole obsesion with defining and continuously refining my
-productivity stack, started with neovim. Neovim tought me that **you can control
-your computer at speed of thought**. It's philosophy was simple, you need to
+be honest, my whole obsession with defining and continuously refining my
+productivity stack, started with neovim. Neovim taught me that **you can control
+your computer at speed of thought**. Its philosophy was simple, you need to
 control everything with your keyboard, while complying with some simple key
-binding norms, like `hjkl` for arrrows, `[` and `]` for back and forth, and
+binding norms, like `hjkl` for arrows, `[` and `]` for back and forth, and
 remembering the first name of what you want to do, and embedding them in your
-key bindings, like using `fmt` as a shortcut of a toggle on the formatting of
-your document.
+key bindings, like using `fmt` as a shortcut of a toggle the formatting of your
+document.
 
-You might think of vim or neovim being simple editors, but the truth is that
-when you through at them the right tooling on top, they become an IDE. Setting
-up the LSP, Formatters and Debuggers for the langauges you need will take a
-while, but it will pay dividends over time. What about AI IDEs? You can bring it
-up to par with them, by integrating plugins that essentially will turn your
-neovim IDE into an AI IDE, the best of both worlds. The theme of neovim follows
-the one of my terminal emulator, but in light mode:
+You might think of vim or neovim as being simple editors, but the truth is that
+when you add the right tooling on top, they become an IDE. Setting up the LSP,
+formatters, and debuggers for the languages you need will take a while, but it
+will pay dividends over time. What about AI IDEs? You can bring it up to par
+with them by integrating plugins that will turn your neovim IDE into an AI
+IDE—the best of both worlds. The theme of neovim follows the one of my terminal
+emulator, but in light mode:
 
-The beauty of this setup is that it combines the modal editing power of Vim with
+The beauty of this setup is that it combines the modal editing power of vim with
 modern IDE features, creating a fast, distraction-free coding environment that
 adapts to different programming languages seamlessly.
 
 ![neovim](/img/posts/productivity/nvim.png)
+
+What about AI capabilities, like using an LLM to search codebases or write code
+for you? Everything is possible in neovim, including this. There are several
+plugins for AI features and my personal preference is
+[Code Companion](https://github.com/olimorris/codecompanion.nvim/) since it's
+the most feature-rich one.
 
 ### Browser Shortcuts
 
@@ -272,6 +286,6 @@ my journey of learning everything about them in order to built my daily driver:
 
 ### Mouse
 
-The mouse is a matter of personal preference, but since I switched to
+The mouse is a matter of personal preference, but since I switched to a
 [trackball one](https://www.logitech.com/en-us/shop/p/mx-ergo-s-wireless-trackball-mouse),
 I can't go back.
