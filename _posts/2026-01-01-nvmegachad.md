@@ -31,7 +31,7 @@ back then why, but I had to give it a try.
 Initially, I was lost and overwhelmed. I was watching influencers building their
 configurations from scratch and starting from scratch with Neovim is just
 daunting. You need to configure everything: syntax highlighting, file explorer,
-status line, buffer management, and more. This could take weeks of tweaking
+status line, buffer management, and many more. This could take weeks of tweaking
 before you even have something usable. This has now changed, since you can start
 a configuration from scratch using AI tooling, but even in this case, you need
 to really know what you need, and you just don't know when you start. Then I
@@ -47,9 +47,10 @@ I had to get more out of it.
 I started with blindly stitching Lua code from other configurations and guides
 and ended up supporting all the languages I was using. To my surprise back then,
 you could have all the features of an IDE, like autocompletion, formatting,
-linting and even debugging. All these thanks to VSCode which pioneered the
-Language Server Protocol (LSP), making it possible for any editor to leverage
-the same language intelligence that powers modern IDEs.
+linting and even debugging. All these thanks to VSCode which introduced
+protocols for all these IDE components which allowed the interoperability of
+tools across different IDEs, making it possible for any editor to leverage the
+same language intelligence that powers modern IDEs.
 
 ### So after all, why Neovim?
 
