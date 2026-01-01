@@ -12,10 +12,10 @@ tags: ["productivity", "opensource"]
 - [So after all, why Neovim?](#so-after-all-why-neovim)
 - [General Structure of a Neovim Config](#general-structure-of-a-neovim-config)
 - [Overview of the main modern Neovim plugins](#overview-of-the-main-modern-neovim-plugins)
-  - [Language Server Protocol (LSP) Setup](#language-server-protocol-lsp-setup)
+  - [Language Server Protocol Setup](#language-server-protocol-setup)
   - [Formatting with Conform](#formatting-with-conform)
   - [Linting with nvim-lint](#linting-with-nvim-lint)
-  - [Debugging with DAP](#debugging-with-dap)
+  - [Debug Adapter Protocol Setup](#debug-adapter-procotol-setup)
   - [Mason for Tool Management](#mason-for-tool-management)
   - [AI-Powered Development with CodeCompanion](#ai-powered-development-with-codecompanion)
 - [What's Next?](#whats-next)
@@ -58,12 +58,13 @@ same language intelligence that powers modern IDEs.
 After many months of working on my config, and eventually my vim config for
 simple text editing over ssh, I started to understand why Neovim was the cool
 kid on the block. Neovim is a modern fork of [Vim](https://www.vim.org/) that
-brings Lua as the scripting interface for configuration, built-in LSP support,
-and an extensible architecture that makes it a joy to customize. You will never
-appreciate Lua, unless you write Vimscript. Also, when compared to traditional
-IDEs, Neovim is lightweight, runs in the terminal, and can be tailored to fit
-exactly how you work. And of course, the "Edit Text at the Speed of Thought"
-mantra, which you can't comprehend unless you experience it.
+brings Lua as the scripting interface for configuration, built-in Language
+Server Protocol (LSP) support, and an extensible architecture that makes it a
+joy to customize. You will never appreciate Lua, unless you write Vimscript.
+Also, when compared to traditional IDEs, Neovim is lightweight, runs in the
+terminal, and can be tailored to fit exactly how you work. And of course, the
+"Edit Text at the Speed of Thought" mantra, which you can't comprehend unless
+you experience it.
 
 ### General Structure of a Neovim Config
 
@@ -77,7 +78,7 @@ flowchart TD
     B --> C[Core Options<br/>options.lua]
     B --> D[Key Mappings<br/>mappings.lua]
     B --> E[UI Plugins]
-    B --> F[LSP & Completion]
+    B --> F[LSP]
     B --> G[Formatting & Linting]
     B --> H[Debugging]
     B --> I[Utilities]
@@ -128,7 +129,7 @@ and mouse for a while, which sometimes was fun, other times it wasn't. Since
 then, the ecosystem has stabilized for about a year, so here are the core
 plugins and a sample setup.
 
-#### Language Server Protocol (LSP) Setup
+#### Language Server Protocol Setup
 
 The LSP configuration is where Neovim truly shines. Instead of configuring each
 server inline, with Neovim 0.11 you can keep custom configurations in separate
@@ -188,7 +189,8 @@ return {
 #### Formatting with Conform
 
 Automatic formatting on save is usually a non-negotiable.
-[conform.nvim](https://github.com/stevearc/conform.nvim) handles this elegantly:
+[conform.nvim](https://github.com/stevearc/conform.nvim) handles the formatting
+for each file type and the formatting on save elegantly:
 
 ```lua
 -- lua/configs/conform.lua
@@ -220,9 +222,9 @@ quickly toggle with `<leader>tf` when I need to save without formatting.
 
 #### Linting with nvim-lint
 
-While LSPs catch many issues, dedicated linters often provide deeper analysis.
-[nvim-lint](https://github.com/mfussenegger/nvim-lint) runs linters on save and
-when leaving insert mode:
+While LSPs catch many issues early, dedicated linters often provide deeper
+analysis. [nvim-lint](https://github.com/mfussenegger/nvim-lint) offers linter
+setup by file type and runs them on save and when leaving insert mode:
 
 ```lua
 -- lua/configs/lint.lua
@@ -244,7 +246,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 })
 ```
 
-#### Debugging with DAP
+#### Debug Adapter Procotol Setup
 
 Debugging directly in Neovim was a game-changer for me, since I realized you can
 simply drop the need for an IDE for good. The Debug Adapter Protocol (DAP) setup
@@ -330,8 +332,9 @@ editor.
 ### What's next?
 
 I consider it a done project which has entered maintenance mode. If you're
-interested in trying it, it's the NvMegaChad configuration and you can find it
-on [GitHub](https://github.com/le4ker/NvMegaChad). The installation is
+interested in trying it, it's the
+[NvMegaChad](https://dotfyle.com/le4ker/nvmegachad) configuration and you can
+find it on [GitHub](https://github.com/le4ker/NvMegaChad). The installation is
 straightforward, and you'll have a fully configured environment for polyglot
 development in seconds. Feel free to use it as-is, fork it, or just cherry-pick
 the parts that work for you.
