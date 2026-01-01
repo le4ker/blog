@@ -7,14 +7,7 @@ category: tech
 tags: ["productivity"]
 ---
 
-If you are a~~n office~~ desk worker, you spend most of the time on your
-keyboard. Up until about a year ago, the only customization I thougt was
-possible was the type of switch you choose, but there are many more options to
-consider that will improve your typing experience, your hands posture and even
-your typing speed and accuracy. We'll start with the most basic options, like
-the type of switch and then move to the more advanced ones.
-
-<!--toc:start-->
+#### Table of Contents
 
 - [Switches](#switches)
   - [Linear vs Tactile vs Clicky](#linear-vs-tactile-vs-clicky)
@@ -30,7 +23,15 @@ the type of switch and then move to the more advanced ones.
   - [Ortholinear vs Staggered](#ortholinear-vs-staggered)
   - [Split Keyboards](#split-keyboards)
   - [Firmware tweaks](#firmware-tweaks)
-  <!--toc:end-->
+
+---
+
+If you are a~~n office~~ desk worker, you spend most of the time on your
+keyboard. Up until about a year ago, the only customization I thougt was
+possible was the type of switch you choose, but there are many more options to
+consider that will improve your typing experience, your hands posture and even
+your typing speed and accuracy. We'll start with the most basic options, like
+the type of switch and then move to the more advanced ones.
 
 ### Switches
 

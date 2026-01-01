@@ -7,6 +7,19 @@ category: tech
 tags: ["leadership"]
 ---
 
+#### Table of Contents
+
+- [The Stages](#the-stages)
+  - [Forming](#forming)
+  - [Storming](#storming)
+  - [Norming](#norming)
+  - [Performing](#performing)
+  - [Adjourning](#adjourning)
+- [Startup edition](#startup-edition)
+- [Questions to ask yourself and your team](#questions-to-ask-yourself-and-your-team)
+
+---
+
 Teams and groups within organizations are chaotic environments, people come and
 go, projects start, get cancelled, paused, or end, and the organization itself
 is constantly changing.
