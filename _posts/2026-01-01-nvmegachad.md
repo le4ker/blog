@@ -62,8 +62,8 @@ brings Lua as the scripting interface for configuration, built-in LSP support,
 and an extensible architecture that makes it a joy to customize. You will never
 appreciate Lua, unless you write Vimscript. Also, when compared to traditional
 IDEs, Neovim is lightweight, runs in the terminal, and can be tailored to fit
-exactly how you work. The "Edit Text at the Speed of Thought" mantra, which you
-can't comprehend unless you experience it.
+exactly how you work. And of course, the "Edit Text at the Speed of Thought"
+mantra, which you can't comprehend unless you experience it.
 
 ### General Structure of a Neovim Config
 
