@@ -18,7 +18,7 @@ tags: ["productivity", "opensource"]
   - [Debugging with DAP](#debugging-with-dap)
   - [Mason for Tool Management](#mason-for-tool-management)
   - [AI-Powered Development with CodeCompanion](#ai-powered-development-with-codecompanion)
-- [Wrapping Up](#wrapping-up)
+- [What's Next?](#whats-next)
 
 ---
 
