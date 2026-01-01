@@ -117,7 +117,8 @@ flowchart TD
 The `init.lua` file is the entry point that bootstraps everything. It loads the
 plugin manager, which in turn loads all plugins. Core options and key mappings
 are kept separate for maintainability. LSP configurations live in their own
-directory, making it easy to customize each language server independently.
+directory, making it easy to customize each language server independently. Last,
+Mason is used to manage all the LSP, linting and debugging dependencies.
 
 ### Overview of the main modern Neovim plugins
 
