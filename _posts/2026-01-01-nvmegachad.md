@@ -18,6 +18,7 @@ tags: ["productivity", "opensource"]
   - [Debugging with DAP](#debugging-with-dap)
   - [Mason for Tool Management](#mason-for-tool-management)
   - [AI-Powered Development with CodeCompanion](#ai-powered-development-with-codecompanion)
+- [Wrapping Up](#wrapping-up)
 
 ---
 
@@ -59,7 +60,7 @@ simple text editing over ssh, I started to understand why Neovim was the cool
 kid on the block. Neovim is a modern fork of [Vim](https://www.vim.org/) that
 brings Lua as the scripting interface for configuration, built-in LSP support,
 and an extensible architecture that makes it a joy to customize. You will never
-appreciate Lua, unless you write vim script. Also, when compared to traditional
+appreciate Lua, unless you write Vimscript. Also, when compared to traditional
 IDEs, Neovim is lightweight, runs in the terminal, and can be tailored to fit
 exactly how you work. The "Edit Text at the Speed of Thought" mantra, which you
 can't comprehend unless you experience it.
@@ -324,3 +325,14 @@ return {
 With `<leader>cc`, I can open a chat window and ask questions about my codebase,
 generate code, or get explanations for complex logic, all without leaving my
 editor.
+
+### What's next?
+
+I consider it a done project which has entered maintenance mode. If you're
+interested in trying it, it's the NvMegaChad configuration and you can find it
+on [GitHub](https://github.com/le4ker/NvMegaChad). The installation is
+straightforward, and you'll have a fully configured environment for polyglot
+development in seconds. Feel free to use it as-is, fork it, or just cherry-pick
+the parts that work for you.
+
+Happy editing!
