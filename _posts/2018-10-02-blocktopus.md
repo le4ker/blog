@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: "Blocktopus, the one-stop KYC gateway"
+title: Blocktopus, the One-Stop KYC Gateway
 category: tech
 tags: ["security", "blocktopus"]
 ---

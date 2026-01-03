@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: Choosing the right keyboard for you
+title: Choosing the Right Keyboard for You
 category: tech
 tags: ["productivity"]
 ---

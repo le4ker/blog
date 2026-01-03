@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: Tuckman's stages, startup edition
+title: Tuckman's Stages, Startup Edition
 category: tech
 tags: ["leadership"]
 ---

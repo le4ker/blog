@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: A Suite of Whitehat Rootkits for the Linux kernel
+title: A Suite of Whitehat Rootkits for the Linux Kernel
 category: tech
 tags: ["security", "opensource"]
 ---

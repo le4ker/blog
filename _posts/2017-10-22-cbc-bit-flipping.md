@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: "Exploring Bit-Flipping Attacks on CBC Block Cipher Mode in Cryptography"
+title: Exploring Bit-Flipping Attacks on CBC Block Cipher Mode
 category: tech
 tags: ["security", "redteam", "cryptography"]
 ---

@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: User Experience, the Unseen Hero in Security Products
+title: User Experience, the Unseen Hero of Security Products
 category: tech
 tags: ["security", "siem"]
 ---
