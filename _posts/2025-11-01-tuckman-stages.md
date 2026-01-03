@@ -32,9 +32,9 @@ it is formed to the moment it is disbanded. These stages were defined in the
 [“Developmental Sequence in Small Groups”](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Group_Dynamics/Tuckman_1965_Developmental_sequence_in_small_groups.pdf)
 paper that was published in 1965.
 
-## The Stages
+### The Stages
 
-### Forming
+#### Forming
 
 This is the first stage of a team, when team members are recruited and assigned
 with a team wide goal. During this stage the team members are usually polite and
@@ -45,7 +45,7 @@ in this stage and will take the most initiatives, by assigning tasks and roles
 to the team members. During the forming stage the team is naturally not very
 productive.
 
-### Storming
+#### Storming
 
 This is the second stage of a team, when the team members start to push against
 the boundaries that were established in the first stage. Conflict and
@@ -56,7 +56,7 @@ to group influence and task requirements. The team members are usually more
 productive in this stage, as they grow more confident in their roles, while the
 team leader is usually less active.
 
-### Norming
+#### Norming
 
 Norming is the next stage, where the resistance of the previous stage is
 overcome, and ingroup feeling and cohesiveness develop, new standards evolve and
@@ -94,7 +94,7 @@ At this stage the team members have to accept that the team is disbanding and
 that they have to move on. This can be an intense stage, as the team members
 have to say goodbye to their team members and the team leader.
 
-## Startup edition
+### Startup edition
 
 Startups are traditionally more chaotic environments than established companies,
 which affects the Tuckman's stages in two ways. First, the stage cycles are
@@ -109,7 +109,7 @@ it’s common to see teams oscillating back and forth between the Forming,
 Storming and Norming stages, even within a quarter. This is one of the startup
 roller coasters that you have to ride if you have signed up for working in one.
 
-## Questions to ask yourself and your team
+### Questions to ask yourself and your team
 
 - Has my team a conscious end goal?
 - What stage is my team in?
