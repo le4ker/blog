@@ -67,7 +67,7 @@ result of the psychological safety that the team members start to feel as part
 of the group. As a result, the productivity is increased during norming,
 compared to the previous stages.
 
-### Performing
+#### Performing
 
 During the Performing stage, interpersonal structures have been well established
 and become a tool for accomplishing tasks. Roles become flexible and functional,
@@ -83,7 +83,7 @@ frustration, but it's important to understand that this is normal and that the
 team will eventually move to the next stage, usually faster than it did the last
 time.
 
-### Adjourning
+#### Adjourning
 
 In 1977, Tuckman and Mary Ann Jensen
 [published](https://journals.sagepub.com/doi/10.1177/105960117700200404) a fifth
