@@ -76,30 +76,31 @@ flowchart TD
     A[init.lua] --> B[Plugin Manager<br/>lazy.nvim]
 
     B --> C[Core Options<br/>options.lua]
+    B --> C1[NvChad settings<br/>chadrc.lua]
     B --> D[Key Mappings<br/>mappings.lua]
     B --> E[UI Plugins]
     B --> F[LSP]
-    B --> G[Formatting & Linting]
+    B --> G[Formatting]
+    B --> Q[Linting]
     B --> H[Debugging]
-    B --> I[Utilities]
+    B --> I[AI]
+    B --> P[Mason]
 
     E --> E1[nvim-tree]
-    E --> E2[bufferline]
-    E --> E3[lualine]
+    E --> E2[tabufline]
+    E --> E3[statusline]
+    E --> E4[telescope]
 
+    F --> K[nvim-lspconfig]
     F --> J[LSP Configs<br/>lua/lsp/*.lua]
-    F --> K[nvim-cmp]
 
     G --> L[conform.nvim]
-    G --> M[nvim-lint]
+    Q --> M[nvim-lint]
 
     H --> N[nvim-dap]
     H --> O[nvim-dap-ui]
 
-    P[Mason] --> J
-    P --> L
-    P --> M
-    P --> N
+    I --> I1[codecompanion]
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#bbf,stroke:#333,stroke-width:2px
@@ -107,12 +108,14 @@ flowchart TD
     style E1 fill:#ffd,stroke:#333
     style E2 fill:#ffd,stroke:#333
     style E3 fill:#ffd,stroke:#333
+    style E4 fill:#ffd,stroke:#333
     style J fill:#ffd,stroke:#333
     style K fill:#ffd,stroke:#333
     style L fill:#ffd,stroke:#333
     style M fill:#ffd,stroke:#333
     style N fill:#ffd,stroke:#333
     style O fill:#ffd,stroke:#333
+    style I1 fill:#ffd,stroke:#333
 ```
 
 The `init.lua` file is the entry point that bootstraps everything. It loads the
