@@ -73,7 +73,7 @@ p {
   padding: 0.5rem 0rem;
   line-height: 1.5;
   /* Apply Golden Ratio related measure */
-  max-width: 66ch;
+  max-width: 80ch; /* Wider than paragraphs for code readability */
   @media (min-width: 768px) {
     padding: 0.3rem 0rem;
     line-height: 1.6;
@@ -308,8 +308,8 @@ a {
 
   // Center paragraphs when section has text-center class
   &.text-center p {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1.5rem auto; /* Vertical spacing + horizontal centering */
+    padding: 1rem 1.25rem; /* Better padding for readability */
     text-align: center;
   }
 }
@@ -428,12 +428,12 @@ footer {
   padding: 3.11rem 0; /* Golden Ratio Spacing */
   text-align: center;
   .container {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1.5rem auto; /* Vertical spacing + horizontal centering */
+    padding: 1rem 1.25rem; /* Better padding for readability */
   }
   p {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1.5rem auto; /* Vertical spacing + horizontal centering */
+    padding: 1rem 1.25rem; /* Better padding for readability */
     text-align: center;
   }
 }
@@ -720,7 +720,7 @@ body {
 .highlight {
   border-radius: 0.3125rem;
   overflow-x: auto; /* Add horizontal scroll for wide code */
-  max-width: 66ch; /* Match paragraph width */
-  margin-left: auto; /* Center the block */
-  margin-right: auto; /* Center the block */
+  max-width: 80ch; /* Wider than paragraphs for code readability */
+  margin: 1.5rem auto; /* Vertical spacing + horizontal centering */
+  padding: 1rem 1.25rem; /* Better padding for readability */
 }
