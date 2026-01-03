@@ -138,6 +138,10 @@ files under `lua/lsp/`:
 
 ```lua
 -- lua/configs/lspconfig.lua
+require("nvchad.configs.lspconfig").defaults()
+
+-- All LSP servers to enable
+-- Custom configurations are in lua/lsp/<server>.lua
 local servers = {
   "bashls",
   "clangd",
@@ -198,11 +202,10 @@ for each file type and the formatting on save elegantly:
 local options = {
   formatters_by_ft = {
     c = { "clang-format" },
+    cpp = { "clang-format" },
+    css = { "prettier" },
     go = { "goimports", "gofmt" },
-    javascript = { "prettier" },
-    lua = { "stylua" },
-    python = { "isort", "black" },
-    terraform = { "terraform_fmt" },
+    graphql = { "prettier" },
     -- ... and more
   },
 }
@@ -276,18 +279,39 @@ all required tools are installed automatically:
 
 ```lua
 -- lua/plugins/mason.lua
-opts = {
-  ensure_installed = {
-    "bash-language-server",
-    "black",
-    "clangd",
-    "debugpy",
-    "delve",
-    "gopls",
-    "prettier",
-    "pylint",
-    "pyright",
-    -- ... and more
+return {
+  "williamboman/mason.nvim",
+  config = function(_, opts)
+    require("mason").setup(opts)
+    local mason_registry = require "mason-registry"
+    local ensure_installed = opts.ensure_installed or {}
+
+    -- Ensure all listed tools are installed
+    mason_registry.refresh(function()
+      for _, tool in ipairs(ensure_installed) do
+        local ok, package = pcall(mason_registry.get_package, tool)
+        if ok and not package:is_installed() then
+          package:install()
+        end
+      end
+    end)
+  end,
+  opts = {
+    max_concurrent_installers = 10,
+    ensure_installed = {
+      "bash-language-server",
+      "black",
+      "clangd",
+      "clang-format",
+      "css-lsp",
+      "debugpy",
+      "delve",
+      "dockerfile-language-server",
+      "goimports",
+      "golangci-lint",
+      "gopls",
+        -- ... and more
+   },
   },
 }
 ```
@@ -308,16 +332,26 @@ integrates AI assistance directly into Neovim:
 -- lua/plugins/codecompanion.lua
 return {
   "olimorris/codecompanion.nvim",
+  cmd = { "CodeCompanion", "CodeCompanionChat", "CodeCompanionActions" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+  },
   opts = {
     strategies = {
       chat = {
         adapter = {
+          -- ANTHROPIC_API_KEY must be set in your environment
           name = "anthropic",
           model = "claude-opus-4-5-20251101",
         },
+        roles = {
+          user = "NvMegaChad Companion",
+        },
         tools = {
           opts = {
-            default_tools = { "full_stack_dev" },
+            -- Enable tools for exploring the codebase (includes cmd_runner, file_search, grep_search, etc.)
+            default_tools = { "full_stack_dev", "cmd_runner", "web_search", "fetch_webpage" },
           },
         },
       },
