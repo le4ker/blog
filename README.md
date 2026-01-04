@@ -2,7 +2,12 @@
 
 [![Deploy to Production](https://github.com/le4ker/blog/actions/workflows/deploy.yml/badge.svg)](https://github.com/le4ker/blog/actions/workflows/deploy.yml)
 
-Source code and content for [memoryleaks.blog](https://memoryleaks.blog) — a personal blog about cybersecurity, privacy, leadership, and developer productivity.
+Source code and content for [memoryleaks.blog](https://memoryleaks.blog) — a
+personal blog about cybersecurity, privacy, leadership, and developer
+productivity.
+
+Built with the [{ Personal }](https://github.com/le4ker/personal-jekyll-theme)
+Jekyll theme.
 
 ### Tech Stack
 
@@ -22,17 +27,17 @@ Source code and content for [memoryleaks.blog](https://memoryleaks.blog) — a p
 
 ### Local Development with Docker (Recommended)
 
-````bash
+```bash
 # Build and start the development server
 docker compose up --build
 
 # The blog will be available at http://localhost:4000
 # Live reload is enabled — changes will auto-refresh
-````
+```
 
 ### Local Development without Docker
 
-````bash
+```bash
 # Install dependencies
 bundle install
 
@@ -44,24 +49,24 @@ ruby bin/generate_categories.rb
 bundle exec jekyll serve --livereload
 
 # The blog will be available at http://localhost:4000
-````
+```
 
 ---
 
 ## Helper Scripts
 
-| Script | Description |
-|--------|-------------|
-| `bin/new_post.rb <slug>` | Create a new blog post with today's date |
-| `bin/generate_tags.rb` | Generate tag pages from post frontmatter |
+| Script                       | Description                                   |
+| ---------------------------- | --------------------------------------------- |
+| `bin/new_post.rb <slug>`     | Create a new blog post with today's date      |
+| `bin/generate_tags.rb`       | Generate tag pages from post frontmatter      |
 | `bin/generate_categories.rb` | Generate category pages from post frontmatter |
 
 ### Creating a New Post
 
-````bash
+```bash
 ruby bin/new_post.rb my-new-post
 # Creates: _posts/2026-01-04-my-new-post.md
-````
+```
 
 Then edit the generated file to add your content and update the frontmatter.
 
@@ -69,7 +74,7 @@ Then edit the generated file to add your content and update the frontmatter.
 
 ## Project Structure
 
-````
+```
 .
 ├── _posts/           # Blog posts (Markdown)
 ├── _layouts/         # Page layouts
@@ -83,7 +88,7 @@ Then edit the generated file to add your content and update the frontmatter.
 ├── _config.yml       # Jekyll configuration
 ├── Dockerfile        # Docker image definition
 └── docker-compose.yml
-````
+```
 
 ---
 
