@@ -154,8 +154,7 @@ files under `lua/lsp/`:
 -- lua/configs/lspconfig.lua
 require("nvchad.configs.lspconfig").defaults()
 
--- All LSP servers to enable
--- Custom configurations are in lua/lsp/<server>.lua
+-- LSP servers to enable
 local servers = {
   "bashls",
   "clangd",
@@ -183,12 +182,18 @@ for _, server in ipairs(servers) do
   end
 end
 
+-- Enable inlay hints
+vim.lsp.inlay_hint.enable(true)
+
+-- Enable native LSP completion
+require "configs.completion"
+
 vim.lsp.enable(servers)
 ```
 
 This approach keeps the main configuration clean while allowing for
-server-specific customizations. For example, my Go LSP configuration enables
-auto-importing and placeholder completion:
+server-specific customizations. For example, my Go LSP configuration has the
+auto-importing feature enabled:
 
 ```lua
 -- lua/lsp/gopls.lua
@@ -196,7 +201,6 @@ return {
   settings = {
     gopls = {
       completeUnimported = true,
-      usePlaceholders = true,
       analyses = {
         unusedparams = true,
       },
@@ -364,9 +368,30 @@ return {
         },
         tools = {
           opts = {
-            -- Enable tools for exploring the codebase (includes cmd_runner, file_search, grep_search, etc.)
-            default_tools = { "full_stack_dev", "cmd_runner", "web_search", "fetch_webpage" },
+            default_tools = { "full_stack_dev", "cmd_runner", "fetch_webpage" },
           },
+          -- Disable approval for read-only tools
+          ["read_file"] = {
+            opts = { require_approval_before = false },
+          },
+          ["file_search"] = {
+            opts = { require_approval_before = false },
+          },
+          ["grep_search"] = {
+            opts = { require_approval_before = false },
+          },
+          ["list_code_usages"] = {
+            opts = { require_approval_before = false },
+          },
+          ["get_changed_files"] = {
+            opts = { require_approval_before = false },
+          },
+        },
+      },
+      inline = {
+        adapter = {
+          name = "anthropic",
+          model = "claude-sonnet-4-20250514",
         },
       },
     },
