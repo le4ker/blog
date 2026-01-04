@@ -216,4 +216,6 @@ Last, QMK supports a huge variety of features, like
 [Key Lock](https://docs.qmk.fm/#/feature_key_lock),
 [WPM Calculation](https://docs.qmk.fm/#/feature_wpm), manipulating OLED screens
 and more, and of course with this great power great responsibility comes as
-well, so tread carefully.
+well, so tread carefully. If you're curious about how all these pieces fit
+together, feel free to explore
+[my firmware](https://github.com/le4ker/keyboard-firmware).
