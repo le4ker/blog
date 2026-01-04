@@ -107,7 +107,6 @@ flowchart TD
     R --> R1[treesitter]
     R --> R2[gitsigns]
     R --> R3[markdown-preview]
-    R --> R4[nvim-cmp]
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style B fill:#bbf,stroke:#333,stroke-width:2px
@@ -126,7 +125,6 @@ flowchart TD
     style R1 fill:#ffd,stroke:#333
     style R2 fill:#ffd,stroke:#333
     style R3 fill:#ffd,stroke:#333
-    style R4 fill:#ffd,stroke:#333
 ```
 
 The `init.lua` file is the entry point that bootstraps everything. It loads the
