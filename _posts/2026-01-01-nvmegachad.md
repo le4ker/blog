@@ -398,7 +398,7 @@ return {
 ```
 
 With `<leader>cc`, I can open a chat window and ask questions about my codebase,
-generate code, or get explanations for complex logic, all without leaving my
+generate code, or get explanations for complex logic, all without leaving the
 editor.
 
 ### What's next?
