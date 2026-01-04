@@ -17,7 +17,11 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          bundler-cache: true
+
+      - name: Configure Bundler for Linux
+        run: |
+          bundle config set --local force_ruby_platform true
+          bundle install --jobs 4
 
       - name: Generate categories
         run: ruby bin/generate_categories.rb
