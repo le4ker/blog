@@ -73,11 +73,11 @@ starting:
 
 ```mermaid!
 flowchart TD
-    A[init.lua] --> B[Plugin Manager<br/>lazy.nvim]
+    A[init.lua] --> C[Core Options<br/>options.lua]
+    A --> C1[NvChad settings<br/>chadrc.lua]
+    A --> D[Key Mappings<br/>mappings.lua]
+    A --> B[Plugin Manager<br/>lazy.nvim]
 
-    B --> C[Core Options<br/>options.lua]
-    B --> C1[NvChad settings<br/>chadrc.lua]
-    B --> D[Key Mappings<br/>mappings.lua]
     B --> E[UI Plugins<br/>NvChad built-in]
 
     E --> E1[nvim-tree]
