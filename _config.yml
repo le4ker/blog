@@ -16,7 +16,8 @@ paginate: 12
 email-share: True
 linkedin-share: True
 reddit-share: True
-twitter-share: True
+x-share: True
+hackernews-share: True
 vkontakte-share: True
 disqus-shortname: "panossakkos"
 events:
