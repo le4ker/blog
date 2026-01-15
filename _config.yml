@@ -19,7 +19,7 @@ reddit-share: True
 x-share: True
 hackernews-share: True
 vkontakte-share: True
-disqus-shortname: "panossakkos"
+cusdis-app-id: "d34a3968-9be5-46d7-98f1-c4263cd1a220"
 events:
   - image: "/img/career/panther.jpeg"
     date: "October 2022 - today"

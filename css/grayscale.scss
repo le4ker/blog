@@ -728,3 +728,30 @@ body {
   margin: 1.5rem auto;
   padding: 1rem 1.25rem;
 }
+
+// Cusdis comments
+#cusdis_thread {
+  iframe {
+    width: 100% !important;
+    border: none !important;
+    min-height: 21.9rem;
+  }
+
+  @media (min-width: 768px) {
+    iframe {
+      min-height: 18.75rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    iframe {
+      min-height: 17.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    iframe {
+      min-height: 16.25rem;
+    }
+  }
+}
