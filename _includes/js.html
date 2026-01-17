@@ -35,6 +35,32 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
 
   // Smooth scrolling for page-scroll links
   document.addEventListener("DOMContentLoaded", function () {
+    // Custom smooth scroll with easing
+    function smoothScrollTo(targetPosition, duration) {
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      let startTime = null;
+
+      function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = easeOutCubic(progress);
+
+        window.scrollTo(0, startPosition + distance * easeProgress);
+
+        if (elapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      }
+
+      requestAnimationFrame(animation);
+    }
+
     document.querySelectorAll("a.page-scroll").forEach(function (link) {
       link.addEventListener("click", function (e) {
         const href = this.getAttribute("href");
@@ -43,10 +69,7 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
           e.preventDefault();
           const targetPosition =
             target.getBoundingClientRect().top + window.scrollY - 50;
-          window.scrollTo({
-            top: targetPosition,
-            behavior: "smooth",
-          });
+          smoothScrollTo(targetPosition, 800);
           this.blur();
         }
       });
@@ -115,7 +138,7 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
   document.addEventListener("DOMContentLoaded", function () {
     new Typed(".intro-text", {
       strings: ["{{ site.quote }}"],
-      typeSpeed: 3,
+      typeSpeed: 50,
       startDelay: 1000,
       loop: false,
       cursorChar: "|",
