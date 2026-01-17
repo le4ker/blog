@@ -66,6 +66,58 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
     defer
   />
 
+  <!-- JSON-LD Structured Data -->
+  {% if page.layout == "post" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.content | strip_html | truncatewords: 50 | jsonify }},
+    "image": "{{ site.url }}{{ site.me-img }}",
+    "author": {
+      "@type": "Person",
+      "name": {{ site.author | jsonify }},
+      "url": "{{ site.url }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ site.title | jsonify }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}/img/favicon-32x32.png"
+      }
+    },
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ site.url }}{{ page.url }}"
+    },
+    "keywords": {{ page.tags | join: ", " | jsonify }}
+  }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "description": {{ site.description | jsonify }},
+    "url": "{{ site.url }}",
+    "author": {
+      "@type": "Person",
+      "name": {{ site.author | jsonify }},
+      "url": "{{ site.url }}",
+      "sameAs": [
+        {% for social in site.social %}"{{ social.url }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  }
+  </script>
+  {% endif %}
+
   {% if site.google-tracking-id %}
 
   <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
