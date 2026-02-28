@@ -67,8 +67,8 @@ re-establishing context.
 
 - Divide with `##` or `###` headers as needed. Go two levels deep max (`###` +
   `####`).
-- Add a `#### Table of Contents` with anchor links at the top for longer
-  reference-style posts, followed by `---`.
+- Always add a `#### Table of Contents` with anchor links at the top of every
+  post, followed by `---`.
 - Use a horizontal rule (`---`) only after a Table of Contents, not elsewhere.
 - Always explain the "why" and historical/conceptual context before the "how."
 - Code blocks are never dropped in isolation — precede them with a plain-English
