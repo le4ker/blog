@@ -94,6 +94,7 @@ flowchart LR
   claude --> API2["Anthropic API"]
   claude --> tools["Built-in Tools"]
   claude --> skills[".claude/ Skills"]
+  claude --> mcp["MCP Servers"]
 ```
 
 ### The switch
@@ -142,7 +143,9 @@ Opening a CodeCompanion chat with `<leader>cc` now drops you into a session
 backed by Claude Code. Any Skills defined in the project's `.claude/` directory
 are available, exactly as they are in the terminal. If your team has a skill for
 writing runbooks, triaging alerts, or reviewing PRs, it works the same way in
-Neovim as it does in your shell.
+Neovim as it does in your shell. The same goes for MCP servers — any servers
+configured in `~/.claude/mcp.json` are loaded by the underlying Claude Code
+process, so tools you've wired up there are reachable from the chat session too.
 
 The other thing you gain is that Claude Code's own tool set is considerably more
 capable than what CodeCompanion would orchestrate on its own — and it's actively
