@@ -543,7 +543,8 @@ body {
   top: 3rem;
   bottom: 1rem;
   width: 0.4375rem;
-  left: 2.31rem;
+  left: calc(5.02rem / 2);
+  transform: translateX(-50%);
   background-color: var(--background-color);
 }
 
