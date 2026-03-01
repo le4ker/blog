@@ -751,6 +751,15 @@ body {
   }
 }
 
+// Mermaid diagrams are pre-rendered by mermaid.ink as SVGs with transparent
+// backgrounds and dark lines. In dark mode, give them a light island so the
+// diagram remains legible without changing the upstream SVG.
+[data-theme="dark"] img.mermaid {
+  background-color: #fdf6e3;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.3125rem;
+}
+
 // Theme toggle button
 .theme-toggle {
   background: none;
