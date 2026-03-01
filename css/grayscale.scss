@@ -765,9 +765,9 @@ body {
     color: var(--secondary-color);
   }
 }
-.theme-icon-dark { display: none; }
-[data-theme="dark"] .theme-icon-light { display: none; }
-[data-theme="dark"] .theme-icon-dark  { display: inline; }
+.theme-toggle .theme-icon-dark { display: none; }
+[data-theme="dark"] .theme-toggle .theme-icon-light { display: none; }
+[data-theme="dark"] .theme-toggle .theme-icon-dark  { display: inline-block; }
 
 // Cusdis comments
 #cusdis_thread {
