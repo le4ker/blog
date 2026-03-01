@@ -92,9 +92,10 @@ flowchart LR
   N2["Neovim + CodeCompanion"] -->|ACP| bridge["claude-agent-acp"]
   bridge -->|stdio| claude["Claude Code"]
   claude --> API2["Anthropic API"]
-  claude --> tools["Built-in Tools"]
-  claude --> skills[".claude/ Skills"]
   claude --> mcp["MCP Servers"]
+  claude --> tools["Built-in Tools"]
+  claude --> memory["Memory Files"]
+  claude --> skills[".claude/ Skills"]
 ```
 
 ### The switch
@@ -146,6 +147,10 @@ writing runbooks, triaging alerts, or reviewing PRs, it works the same way in
 Neovim as it does in your shell. The same goes for MCP servers — any servers
 configured in `~/.claude/mcp.json` are loaded by the underlying Claude Code
 process, so tools you've wired up there are reachable from the chat session too.
+Memory works the same way: anything Claude Code has stored in its project memory
+files is in context from the first message, so the session is already aware of
+your project's conventions and past decisions without you having to repeat
+yourself.
 
 The other thing you gain is that Claude Code's own tool set is considerably more
 capable than what CodeCompanion would orchestrate on its own — and it's actively
