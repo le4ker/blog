@@ -138,6 +138,9 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
       try {
         localStorage.setItem("theme", next);
       } catch (e) {}
+      if (window.cusdisApplyTheme) {
+        window.cusdisApplyTheme(next === "dark");
+      }
     });
   })();
 </script>
