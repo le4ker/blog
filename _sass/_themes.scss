@@ -1,0 +1,49 @@
+@import "variables";
+
+// ─── Light theme (default) ───────────────────────────────────────────────────
+// Base values come from $variables so they stay in sync.
+// Derived values are pre-computed by SCSS at build time.
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --font-color: #{$font-color};
+  --background-color: #{$background-color};
+
+  // secondary-color derivatives
+  --secondary-dark:   #{darken($secondary-color, 20%)};
+  --secondary-mid:    #{darken($secondary-color, 10%)};
+  --secondary-subtle: #{rgba($secondary-color, 0.05)};
+  --secondary-half:   #{rgba($secondary-color, 0.5)};
+
+  // font-color derivatives
+  --font-color-dark:    #{darken($font-color, 10%)};
+  --font-color-light:   #{lighten($font-color, 8%)};
+  --font-color-faint-2: #{rgba($font-color, 0.2)};
+  --font-color-faint-3: #{rgba($font-color, 0.3)};
+}
+
+// ─── Dark theme ──────────────────────────────────────────────────────────────
+// Everforest dark palette — harmonises with the existing dark code blocks.
+[data-theme="dark"] {
+  --primary-color: #272e33;
+  --secondary-color: #6aafd4;
+  --font-color: #d3c6aa;
+  --background-color: #2e383c;
+
+  // secondary-color derivatives
+  --secondary-dark:   #307ea8;
+  --secondary-mid:    #429ac9;
+  --secondary-subtle: rgba(106, 175, 212, 0.08);
+  --secondary-half:   rgba(106, 175, 212, 0.5);
+
+  // font-color derivatives
+  --font-color-dark:    #e1d8c5;
+  --font-color-light:   #c5b48f;
+  --font-color-faint-2: rgba(211, 198, 170, 0.2);
+  --font-color-faint-3: rgba(211, 198, 170, 0.3);
+}
+
+// Smooth transitions when switching themes
+html {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}

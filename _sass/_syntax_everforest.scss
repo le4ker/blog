@@ -19,6 +19,12 @@
   -webkit-hyphens: none;
 }
 
+// In dark mode, inline code flips from dark-tint-on-light to light-tint-on-dark
+[data-theme="dark"] .language-plaintext {
+  background-color: rgba(211, 198, 170, 0.12);
+  color: #d3c6aa;
+}
+
 .highlight {
   background-color: #2d353b;
   color: #d3c6aa;

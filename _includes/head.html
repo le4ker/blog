@@ -5,6 +5,16 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
 -->
 <head>
   <meta charset="utf-8" />
+  <!-- Apply saved theme before CSS loads to prevent flash -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme") ||
+          (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{{site.description}}" />
   <meta name="author" content="{{site.author}}" />
