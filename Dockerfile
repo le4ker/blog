@@ -1,4 +1,6 @@
-FROM jekyll/jekyll:4.2.2
+FROM ruby:3.2-alpine
+
+RUN apk add --no-cache build-base git
 
 # install dependencies
 WORKDIR /srv/jekyll
@@ -11,4 +13,4 @@ COPY . .
 # generate tags and categories
 RUN ruby bin/generate_tags.rb && ruby bin/generate_categories.rb
 
-CMD ["jekyll", "serve", "--livereload", "--force_polling"]
+CMD ["bundle", "exec", "jekyll", "serve", "--livereload", "--force_polling"]

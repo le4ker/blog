@@ -9,6 +9,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
+    ffi (1.17.0-aarch64-linux-musl)
     ffi (1.17.0-arm64-darwin)
     ffi (1.17.0-x86_64-linux)
     ffi (1.17.0-x86_64-linux-musl)
@@ -51,6 +52,8 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    nokogiri (1.18.9-aarch64-linux-musl)
+      racc (~> 1.4)
     nokogiri (1.18.9-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.18.9-x86_64-linux-gnu)
@@ -76,6 +79,7 @@ GEM
     webrick (1.8.2)
 
 PLATFORMS
+  aarch64-linux-musl
   arm64-darwin-23
   arm64-darwin-24
   x86_64-linux
