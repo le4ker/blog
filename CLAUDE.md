@@ -1,3 +1,77 @@
+# Developer Guide
+
+## Stack
+
+- **Jekyll 4.2.2** static site generator (Ruby 3.2)
+- **Plugins:** `jekyll-paginate`, `jekyll-spaceship` (Mermaid diagrams, enhanced
+  Markdown)
+- **Themes:** light (grayscale) / dark (everforest) — toggled via localStorage,
+  defined in `_sass/_themes.scss`
+- **Comments:** Cusdis | **Analytics:** Google Analytics G-7FXE996VCB
+
+## Local Development
+
+```bash
+# With Docker (recommended — no Ruby install needed)
+docker compose up --build
+# → http://localhost:4000 with live reload
+
+# Without Docker
+bundle install
+ruby bin/generate_tags.rb
+ruby bin/generate_categories.rb
+bundle exec jekyll serve --livereload
+```
+
+## Creating a New Post
+
+```bash
+ruby bin/new_post.rb <slug>   # creates _posts/YYYY-MM-DD-<slug>.md with today's date
+```
+
+After adding or changing tags/categories in any post's frontmatter, regenerate
+the index pages:
+
+```bash
+ruby bin/generate_tags.rb
+ruby bin/generate_categories.rb
+```
+
+These are also run automatically during CI build and in the Dockerfile.
+
+## Project Layout
+
+| Path                    | Purpose                                                    |
+| ----------------------- | ---------------------------------------------------------- |
+| `_posts/`               | Blog posts (`YYYY-MM-DD-slug.md`)                          |
+| `_layouts/`             | Page templates                                             |
+| `_includes/`            | Reusable HTML partials                                     |
+| `_sass/`                | SCSS source (themes, variables, syntax)                    |
+| `css/`                  | Compiled CSS entry points                                  |
+| `img/posts/<slug>/`     | Per-post images                                            |
+| `bin/`                  | Helper scripts (new post, tag/category generation, deploy) |
+| `tags/` / `categories/` | Auto-generated index pages — do not edit manually          |
+| `_config.yml`           | Site config (URL, pagination, social sharing, plugins)     |
+
+## Deploy
+
+CI (`.github/workflows/deploy.yml`) triggers on push to `main`:
+
+1. `bundle install` → `generate_categories.rb` → `generate_tags.rb`
+2. `JEKYLL_ENV=production bundle exec jekyll build`
+3. `rsync _site/* ec2-user@<ec2-host>:/usr/share/nginx/html`
+
+Manual deploy: `bash bin/deploy.sh` (requires `~/keys/memoryleaks.pem`).
+
+## Linting
+
+```bash
+markdownlint **/*.md   # config in .markdownlint.yaml (100-char line limit)
+prettier --write **/*.md  # config in .prettierrc.yaml
+```
+
+---
+
 # Writing Style Guide — Panos's Blog
 
 This file captures the writing conventions and style patterns from existing blog
@@ -41,6 +115,13 @@ tags: ["tag1", "tag2"]
   weirdo zone."_ / _"Enter a bit deeper into the weirdo zone."_
 - **No filler.** Don't pad with summaries of what you just said. Make the point
   and move on.
+- **Em-dashes for conviction and separation.** Use `—` to attach a sharp
+  follow-up or reframe: _"think of it as the LSP of AI agents — a standard
+  protocol, not a specific tool."_
+- **Sentence fragments as full stops.** A one-sentence paragraph ending in a
+  period signals a conclusion or punchline: _"Nowhere to be seen."_
+- **Parenthetical deepening.** Use inline asides for technical nuance without
+  derailing: _"Keep in mind that..."_ / _"A few things worth noting here."_
 
 ---
 
@@ -60,8 +141,9 @@ Three accepted opening patterns:
 3. **Broad problem → personal response:** State a general issue (e.g., OSS
    funding, team dynamics), then narrow to your own experience/solution.
 
-For **series posts**, open with a callback to the previous entry,
-re-establishing context.
+For **series posts**, use this exact callback structure: _"[Timeframe] ago I
+[wrote/built/explored] [link to previous post]. Back then, [recap]. But then
+[new context], and I realized [gap or evolution]."_
 
 ### Body
 
@@ -73,6 +155,20 @@ re-establishing context.
 - Always explain the "why" and historical/conceptual context before the "how."
 - Code blocks are never dropped in isolation — precede them with a plain-English
   explanation, follow with interpretation if needed.
+- **Exception — config/reference content:** It's fine to show the code block
+  first, then explain its shape. _"Here's what the config looks like. Let's walk
+  through what each part does."_
+- **Open sections with a problem statement.** Establish what's broken or missing
+  before presenting the fix: _"That works, but it means you end up with... which
+  is ugly. Here's a cleaner approach."_
+- **Scope escalators are structural, not just flavor.** _"Enter weirdo zone."_
+  signals to the reader that we're going deeper into niche territory. Use them
+  at the boundary where the audience narrows.
+- **Diagrams as roadmap.** For long or complex posts, place a Mermaid flowchart
+  early to show the full system before diving into parts.
+- **Pacing: alternate long and short.** Follow a long explanatory paragraph with
+  a short declarative: _"Simple enough."_ / _"That's it."_ This creates rhythm
+  and lets the reader breathe.
 
 ### Conclusion
 
@@ -162,6 +258,10 @@ Keep it brief. Choose one pattern:
 | `"Why not..."`                                  | Introducing an optional extension                         |
 | `"Less than a minute later..."`                 | Highlighting tool responsiveness in demos                 |
 | `"Happy X!"`                                    | Signoff in the final line (e.g., _"Happy editing!"_)      |
+| `"Keep in mind that..."`                        | Parenthetical technical caveat, mid-explanation           |
+| `"In practice you should expect..."`            | Setting realistic expectations after a demo or claim      |
+| `"There will be times that you'll want..."`     | Introducing an edge case or advanced option               |
+| `"A few things worth noting here."`             | Preceding a numbered list of technical asides             |
 
 ---
 
