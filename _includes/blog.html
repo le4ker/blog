@@ -27,7 +27,7 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
       </h4>
 
       <section class="text-justify">
-        {{ post.content | strip_html | truncatewords: site.post-preview-words |
+        {{ post.content | split: '<hr />' | last | strip_html | truncatewords: site.post-preview-words |
         markdownify }}
       </section>
 
