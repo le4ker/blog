@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 has-comments: true
-title: "QMK Firmware: Taking Keyboard Ownership Further"
+title: "QMK Firmware: Optimizing for Feel"
 category: tech
 tags: ["productivity"]
 ---
@@ -26,11 +26,11 @@ tags: ["productivity"]
 Almost two years ago I wrote about [choosing the right
 keyboard]({% post_url 2024-05-11-choosing-the-right-keyboard %}). Back then, I
 ended with a brief section on QMK firmware tweaks — debounce algorithms, N-Key
-Rollover, scan rate. The weirdo zone was introduced, and we moved on. But then I
-built a Lily58, spent way too long thinking about keymap design, and realized
-firmware deserves a post of its own.
-
-This is that post.
+Rollover, scan rate — but didn't go into the design decisions behind them. Since
+then, after many iterations, I ended up with a firmware that trades WPM for
+feel. My WPM dropped from 100 to 85 after switching to my split keyboard. The
+typing experience is incomparably better — in ergonomics and responsiveness
+both. This post documents the decisions that got me there.
 
 ## What Is QMK
 
@@ -42,19 +42,24 @@ large ecosystem of features: tap dance, combos, home row mods, macros, OLED
 displays, and more.
 
 The interesting thing is that most writing about QMK focuses on enabling
-features. This post is mostly about turning them off.
+features. This post is mostly about turning them off and changing the QMK
+defaults for Lily58 in order to build a noticeable crisper keyboard experience.
+.
 
 ## The Keyboard: Lily58
 
 The Lily58 is a 58-key column-staggered split keyboard. I covered split
-keyboards briefly in the previous post — "enter weirdo zone" — and the Lily58
-earns that warning. Two halves connected by a TRRS cable, each with its own
-microcontroller, communicating over serial. At 58 keys you're in 60% territory,
-which means everything needs to be reachable across two layers.
+keyboards briefly in the previous post. Two halves connected by a TRRS cable,
+each with its own microcontroller, communicating over serial. At 58 keys you're
+in 60% territory, which means everything needs to be reachable across two
+layers.
 
 ## Two Layers Are Enough
 
-The keymap is called `minimal-code` for a reason. Two layers. No more.
+The keymap is called `minimal-code` for a reason. Two layers are enough to cover
+a developer use case at 60% form factor. This layering also minimizes the layer
+switching, since all the keycodes that a developer would need are present in the
+first layer.
 
 ### Base Layer
 
@@ -247,15 +252,13 @@ bool oled_task_user(void) {
 Constant OLED writes are expensive — the display shares the same I²C bus the two
 halves use to communicate. Skipping unnecessary redraws keeps that bus free for
 what actually matters: key state. The display shows the current layer name in
-ASCII art, fades out after 60 seconds, and that's it.
+ASCII art and fades out after 60 seconds.
 
 ```c
 #define OLED_TIMEOUT 60000
 #define OLED_FADE_OUT
 #define OLED_FADE_OUT_INTERVAL 15  // slowest fade
 ```
-
-Simple enough.
 
 The full firmware is on [GitHub](https://github.com/le4ker/keyboard-firmware).
 If you're building a keymap from scratch, it's worth reading — less as a
