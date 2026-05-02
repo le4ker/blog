@@ -21,31 +21,31 @@ hackernews-share: True
 vkontakte-share: True
 cusdis-app-id: "d34a3968-9be5-46d7-98f1-c4263cd1a220"
 events:
-  - image: "/img/career/panther.jpeg"
+  - image: "/img/timeline/panther.jpeg"
     date: "October 2022 - today"
     description: 'Director of Engineering @ <a href="https://panther.com" target="_blank">Panther</a>'
-  - image: "/img/career/orfium.png"
+  - image: "/img/timeline/orfium.png"
     date: "June 2021 - September 2022"
     description: 'Engineering Manager, Ingestion @ <a href="https://orfium.com" target="_blank">Orfium</a>'
-  - image: "/img/career/plum.jpeg"
+  - image: "/img/timeline/plum.jpeg"
     date: "November 2019 - May 2021"
     description: 'Tech Lead, Payments @ <a href="https://withplum.com" target="_blank">Plum Fintech</a>'
-  - image: "/img/career/blocktopus.png"
+  - image: "/img/timeline/blocktopus.png"
     date: "November 2017 - October 2019"
     description: 'Founder & CTO @ <a href="https://blocktopus.ai" target="_blank">Blocktopus</a>'
-  - image: "/img/career/microsoft.png"
+  - image: "/img/timeline/microsoft.png"
     date: "October 2014 - October 2017"
     description: 'Security Software Engineer @ Microsoft <a href="https://www.office.com/" target="_blank">Office 365</a>'
-  - image: "/img/career/cern.jpg"
+  - image: "/img/timeline/cern.jpg"
     date: "October 2011 - September 2012"
     description: 'Computer Security Researcher, Linux Kernel Hardening @ <a href="https://www.cern.ch" target="_blank">CERN</a>'
-  - image: "/img/career/pwnmail.jpg"
+  - image: "/img/timeline/pwnmail.jpg"
     date: "June 2010 - September 2010"
     description: 'Built <a href="https://youtube.com/playlist?list=PLh7UGpg9S9DJhJhbOh7VoTk6hbERTsJPB&si=mwnrKrgyVECAlDT" target="_blank">Pwn Mail</a>, a Cydia iPhone app for spoofing emails. It served more than 260,000 emails but it was discontinued after a legal threat by Steve Jobs'
-  - image: "/img/career/uoa.jpeg"
+  - image: "/img/timeline/uoa.jpeg"
     date: "October 2007 - September 2014"
     description: '<a href="https://scholar.google.com/citations?user=UtV6LFYAAAAJ" target="_blank">Machine Learning researcher</a> @ <a href="http://kddlab.di.uoa.gr" target="_blank">KDD lab</a><br/><br/>Master studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Software Engineering<br/><br/>Bachelor studies @ <a href="https://www.di.uoa.gr/en" target="_blank">Department of Informatics and Telecommunications</a> on Computer Science and Telecomunications'
-timeline-img: "/img/career/default.png"
+timeline-img: "/img/timeline/luffy.png"
 email: "panos.sakkos@gmail.com"
 author_blurb: >
   Panos is an engineering leader at Panther, with over a decade of experience in cybersecurity and engineering leadership. His career includes security research at CERN, security engineering at Microsoft Office 365, and founding Blocktopus, a KYC/AML startup. He holds patents, has published research in security and machine learning, and has helped scale startups from pre-seed through Series B. On this blog, he writes about security, leadership, and developer productivity.
