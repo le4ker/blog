@@ -183,7 +183,7 @@ reach your previous typing accuracy and speed.
 [Monkeytype](https://monkeytype.com/) can be very helpful for measuring your
 before and after typing speed and accuracy.
 
-![split-keyboard](/img/posts/choosing-the-right-keyboard/split.jpg) _Final
+![split-keyboard](/img/posts/choosing-the-right-keyboard/split.jpg) _My final
 build_
 
 #### Firmware tweaks
