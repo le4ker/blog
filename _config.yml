@@ -21,8 +21,11 @@ hackernews-share: True
 vkontakte-share: True
 cusdis-app-id: "d34a3968-9be5-46d7-98f1-c4263cd1a220"
 events:
+  - image: "/img/timeline/databricks.jpeg"
+    date: "July 2026 - today"
+    description: 'Member of Technical Staff @ <a href="https://databricks.com" target="_blank">Databricks</a>'
   - image: "/img/timeline/panther.jpeg"
-    date: "October 2022 - today"
+    date: "October 2022 - July 2026"
     description: 'Director of Engineering @ <a href="https://panther.com" target="_blank">Panther</a>'
   - image: "/img/timeline/orfium.png"
     date: "June 2021 - September 2022"
