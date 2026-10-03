@@ -9,7 +9,7 @@ productivity.
 Built with the [{ Personal }](https://github.com/le4ker/personal-jekyll-theme)
 Jekyll theme.
 
-### Tech Stack
+## Tech Stack
 
 - **Static Site Generator:** [Jekyll](https://jekyllrb.com/) 4.2.2
 - **Language:** Ruby 3.2
@@ -71,28 +71,6 @@ ruby bin/new_post.rb my-new-post
 Then edit the generated file to add your content and update the frontmatter.
 
 ---
-
-## Project Structure
-
-```
-.
-├── _posts/           # Blog posts (Markdown)
-├── _layouts/         # Page layouts
-├── _includes/        # Reusable HTML partials
-├── _sass/            # SCSS stylesheets
-├── bin/              # Helper scripts
-├── css/              # Compiled CSS
-├── img/              # Images and assets
-├── tags/             # Generated tag pages
-├── categories/       # Generated category pages
-├── _config.yml       # Jekyll configuration
-├── Dockerfile        # Docker image definition
-└── docker-compose.yml
-```
-
----
-
-## Deployment
 
 Deployment is automated via GitHub Actions. Pushing to `main` triggers:
 
