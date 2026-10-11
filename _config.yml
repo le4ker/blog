@@ -72,6 +72,7 @@ exclude:
   - scripts
   - Dockerfile
   - docker-compose.yml
+  - AGENTS.md
 plugins:
   - jekyll-paginate
   - jekyll-spaceship
