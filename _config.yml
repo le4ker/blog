@@ -29,10 +29,10 @@ events:
     description: 'Director of Engineering @ <a href="https://panther.com" target="_blank">Panther</a>'
   - image: "/img/timeline/orfium.png"
     date: "June 2021 - September 2022"
-    description: 'Engineering Manager, Ingestion @ <a href="https://orfium.com" target="_blank">Orfium</a>'
+    description: 'Engineering Manager @ <a href="https://orfium.com" target="_blank">Orfium</a>'
   - image: "/img/timeline/plum.jpeg"
     date: "November 2019 - May 2021"
-    description: 'Tech Lead, Payments @ <a href="https://withplum.com" target="_blank">Plum Fintech</a>'
+    description: 'Tech Lead @ <a href="https://withplum.com" target="_blank">Plum Fintech</a>'
   - image: "/img/timeline/blocktopus.png"
     date: "November 2017 - October 2019"
     description: 'Founder & CTO @ <a href="https://blocktopus.ai" target="_blank">Blocktopus</a>'
