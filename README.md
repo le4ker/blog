@@ -1,6 +1,6 @@
 # Memory Leaks Blog
 
-[![Deploy to Production](https://github.com/le4ker/blog/actions/workflows/deploy.yml/badge.svg)](https://github.com/le4ker/blog/actions/workflows/deploy.yml)
+[![CI and Deploy](https://github.com/le4ker/blog/actions/workflows/ci.yml/badge.svg)](https://github.com/le4ker/blog/actions/workflows/ci.yml)
 
 Source code and content for [memoryleaks.blog](https://memoryleaks.blog) — a
 personal blog about cybersecurity, privacy, leadership, and developer

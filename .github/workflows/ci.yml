@@ -1,4 +1,4 @@
-name: CI
+name: CI and Deploy
 
 on:
   pull_request:
@@ -35,3 +35,36 @@ jobs:
 
       - name: Build Jekyll site
         run: JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Upload built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-site
+          path: _site/
+          include-hidden-files: true
+          if-no-files-found: error
+
+  deploy:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download built site
+        uses: actions/download-artifact@v4
+        with:
+          name: jekyll-site
+          path: _site
+
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ec2-18-196-68-187.eu-central-1.compute.amazonaws.com >> ~/.ssh/known_hosts
+
+      - name: Deploy to production
+        run: |
+          rsync --delete --progress --stats -ru _site/ \
+            -e "ssh -i ~/.ssh/deploy_key" \
+            ec2-user@ec2-18-196-68-187.eu-central-1.compute.amazonaws.com:/usr/share/nginx/html
