@@ -38,7 +38,7 @@ events:
     description: 'Founder & CTO @ Blocktopus'
   - image: "/img/timeline/microsoft.png"
     date: "October 2014 - October 2017"
-    description: 'Security Software Engineer, Office 365 @ <a href="https://microsoft.com" target="_blank">Microsoft</a>
+    description: 'Security Software Engineer, Office 365 @ <a href="https://microsoft.com" target="_blank">Microsoft</a>'
   - image: "/img/timeline/cern.jpg"
     date: "October 2011 - September 2012"
     description: 'Computer Security Researcher, Linux Kernel Hardening @ <a href="https://www.cern.ch" target="_blank">CERN</a>'
