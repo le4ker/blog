@@ -26,7 +26,7 @@ events:
     description: 'Member of Technical Staff, Lakewatch @ <a href="https://databricks.com" target="_blank">Databricks</a>'
   - image: "/img/timeline/panther.jpeg"
     date: "October 2022 - July 2026"
-    description: 'Director of Engineering @ <a href="https://panther.com" target="_blank">Panther</a>'
+    description: 'Head of Engineering @ <a href="https://panther.com" target="_blank">Panther</a>'
   - image: "/img/timeline/orfium.png"
     date: "June 2021 - September 2022"
     description: 'Engineering Manager @ <a href="https://orfium.com" target="_blank">Orfium</a>'
