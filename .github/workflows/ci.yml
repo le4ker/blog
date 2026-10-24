@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Install dependencies
+        run: |
+          bundle config set --local force_ruby_platform true
+          bundle install --jobs 4
+
+      - name: Generate categories
+        run: ruby bin/generate_categories.rb
+
+      - name: Generate tags
+        run: ruby bin/generate_tags.rb
+
+      - name: Build Jekyll site
+        run: JEKYLL_ENV=production bundle exec jekyll build
