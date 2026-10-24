@@ -2,7 +2,7 @@
 
 ## Stack
 
-- **Jekyll 4.2.2** static site generator (Ruby 3.2)
+- **Jekyll 4.2.2** static site generator (Ruby 3.4)
 - **Plugins:** `jekyll-paginate`, `jekyll-spaceship` (Mermaid diagrams, enhanced
   Markdown)
 - **Themes:** light (grayscale) / dark (everforest) — toggled via localStorage,
