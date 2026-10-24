@@ -41,6 +41,6 @@ jobs:
 
       - name: Deploy to production
         run: |
-          rsync --delete --progress --stats -ru _site/* \
+          rsync --delete --progress --stats -ru _site/ \
             -e "ssh -i ~/.ssh/deploy_key" \
             ec2-user@ec2-18-196-68-187.eu-central-1.compute.amazonaws.com:/usr/share/nginx/html
