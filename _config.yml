@@ -35,10 +35,10 @@ events:
     description: 'Tech Lead @ <a href="https://withplum.com" target="_blank">Plum Fintech</a>'
   - image: "/img/timeline/blocktopus.png"
     date: "November 2017 - October 2019"
-    description: 'Founder & CTO @ <a href="https://blocktopus.ai" target="_blank">Blocktopus</a>'
+    description: 'Founder & CTO @ Blocktopus'
   - image: "/img/timeline/microsoft.png"
     date: "October 2014 - October 2017"
-    description: 'Security Software Engineer @ Microsoft <a href="https://www.office.com/" target="_blank">Office 365</a>'
+    description: 'Security Software Engineer, Office 365 @ <a href="https://microsoft.com" target="_blank">Microsoft</a>
   - image: "/img/timeline/cern.jpg"
     date: "October 2011 - September 2012"
     description: 'Computer Security Researcher, Linux Kernel Hardening @ <a href="https://www.cern.ch" target="_blank">CERN</a>'
