@@ -20,7 +20,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.4"
+          ruby-version: "4.0.9"
 
       - name: Install dependencies
         run: |
@@ -35,6 +35,25 @@ jobs:
 
       - name: Build Jekyll site
         run: JEKYLL_ENV=production bundle exec jekyll build
+
+      - name: Start Docker Compose site
+        run: docker compose up --build --detach
+
+      - name: Check Docker Compose site responds
+        run: |
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://localhost:4000/ >/dev/null; then
+              echo "Site responded successfully."
+              exit 0
+            fi
+            sleep 2
+          done
+          docker compose logs --no-color
+          exit 1
+
+      - name: Stop Docker Compose site
+        if: always()
+        run: docker compose down
 
       - name: Upload built site
         uses: actions/upload-artifact@v7
