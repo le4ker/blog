@@ -82,6 +82,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-musl)
       racc (~> 1.4)
+    ostruct (0.6.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (7.0.5)
@@ -119,7 +120,8 @@ DEPENDENCIES
   jekyll (= 4.4.1)
   jekyll-paginate (= 1.1.0)
   jekyll-spaceship (= 0.10.2)
+  ostruct (= 0.6.3)
   webrick (= 1.9.2)
 
 BUNDLED WITH
-   2.4.10
+  4.0.20
