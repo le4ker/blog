@@ -5,11 +5,14 @@ To use this Jekyll theme, visit: https://github.com/le4ker/personal-jekyll-theme
 -->
 <head>
   <meta charset="utf-8" />
-  <!-- Apply saved theme before CSS loads to prevent flash -->
+  <!-- Apply saved theme or time-based default before CSS loads to prevent flash -->
   <script>
     (function () {
       try {
-        var t = localStorage.getItem("theme") || "light";
+        var savedTheme = localStorage.getItem("theme");
+        var hour = new Date().getHours();
+        var defaultTheme = hour >= 6 && hour < 18 ? "light" : "dark";
+        var t = savedTheme || defaultTheme;
         document.documentElement.setAttribute("data-theme", t);
       } catch (e) {}
     })();
